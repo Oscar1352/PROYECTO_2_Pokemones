@@ -25,10 +25,13 @@ movimiento_4 = []
 
 #Función para movimientos, 30 movimientos
 def movimientos(numero_aleatorio):
+    # Variables a utilziar
     global movimientos_pokemon
     tipo_de_movimiento = ""
     potencia = 0
     precision = 0
+
+    # Movimientos según el anexo del enunciado
     if numero_aleatorio == 1:
         movimientos_pokemon = "Látigo_cepa"
         tipo_de_movimiento = "Planta"
@@ -187,6 +190,8 @@ def movimientos(numero_aleatorio):
 
 # Listado de pokemon con sus caractersiticas, 20 personajes
 def listado_de_pokemon(numero_aleatorio):
+
+    #Variables a utilizar
     nombre = ""
     tipo = ""
     puntos_de_salud = 0
@@ -195,6 +200,7 @@ def listado_de_pokemon(numero_aleatorio):
     velocidad = 0
     experiencia_base = 0
 
+    # Listado de pokemones según el anexo del listado
     if numero_aleatorio == 1:
         nombre = "Bulbasaur"
         tipo = "Planta"
@@ -385,8 +391,11 @@ def batalla():
 
 # Bloque de codigo para chequear estadísticas
 def estadísticas():
+    #Variables globales
     global pokemon_inicial, apodo_pokemon, nivel_pokemon, experiencia_pokemon, \
         tipo_pokemon, movimientos_pokemon, ataque, defensa, velocidad, puntos_de_vida
+
+    #Características principales
     print("\x1b[1;34m" + "DATOS ")
     print("\x1b[1;0m" + f"Nombre: {pokemon_inicial}")
     print(f"Apodo: {apodo_pokemon}")
@@ -394,6 +403,8 @@ def estadísticas():
     print(f"Experiencia: {experiencia_pokemon}")
     print(f"Tipo: {tipo_pokemon}")
     print(f"Movimientos: {movimientos_pokemon}")
+
+    # Características de datos de combate
     print("\x1b[1;34m" + "DATOS DE COMBATE")
     print("\x1b[1;0m" + f"Puntos de Salud: {puntos_de_vida}")
     print("\x1b[1;0m" + f"Ataque: {ataque}")
@@ -416,17 +427,20 @@ def seleccion_pokemon():
     opcionPokemon = input("\nInserta la variable del menú que desees ingresar: ")
     while opcionPokemon != ["a", "b", "c"]:
         if opcionPokemon == "a":
+            # El usuario escogío a Bulbasaur
             pokemon_inicial = "Bulbasaur"
             print("\x1b[1;32m" + f"\t\t\t\t\t\tUsted ha escogido correctamente a: {pokemon_inicial}\n")
             modificar_estadísticas_iniciales()
             break
         elif opcionPokemon == "b":
+            # El usuario escogío a Charmander
             pokemon_inicial = "Charmander"
             print("\x1b[1;32m" + f"\t\t\t\t\t\tUsted ha escogido correctamente a: {pokemon_inicial}\n")
             modificar_estadísticas_iniciales()
             break
         elif opcionPokemon == "c":
             pokemon_inicial = "Squirtle"
+            # El usuario escogío a Squirtle
             print("\x1b[1;32m" + f"\t\t\t\t\t\tUsted ha escogido correctamente a: {pokemon_inicial}\n")
             modificar_estadísticas_iniciales()
             break
@@ -469,7 +483,6 @@ def menu():
 def main():
     # Mensaje de bienvenida al juego
     print("\t\t\tBienvenido a Pokémon Rojo, uno de los juegos más populares de consola para GameBoy del año 1996, ¿LISTO PARA SER EL CAMPÉON DE LA REGIÓN?")
-
     #Solicitar los datos para el incio del juego
     seleccion_pokemon()
     menu()
