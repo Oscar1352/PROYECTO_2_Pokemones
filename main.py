@@ -18,6 +18,207 @@ pokemon_inicial = {
     "experiencia_base" : 0,
     "nivel" : 0
 }
+# Pokémones enemigos
+pokemon_Bulbasaur = {
+    "nombre" : "",
+    "tipo" : "",
+    "puntos_de_vida" : 0,
+    "ataque" : 0,
+    "defensa" : 0,
+    "velocidad" : 0,
+    "experiencia_base" : 0,
+    "nivel" : 0
+}
+pokemon_Charmander = {
+    "nombre" : "",
+    "tipo" : "",
+    "puntos_de_vida" : 0,
+    "ataque" : 0,
+    "defensa" : 0,
+    "velocidad" : 0,
+    "experiencia_base" : 0,
+    "nivel" : 0
+}
+pokemon_Squirtle = {
+    "nombre" : "",
+    "tipo" : "",
+    "puntos_de_vida" : 0,
+    "ataque" : 0,
+    "defensa" : 0,
+    "velocidad" : 0,
+    "experiencia_base" : 0,
+    "nivel" : 0
+}
+pokemon_Caterpie = {
+    "nombre" : "",
+    "tipo" : "",
+    "puntos_de_vida" : 0,
+    "ataque" : 0,
+    "defensa" : 0,
+    "velocidad" : 0,
+    "experiencia_base" : 0,
+    "nivel" : 0
+}
+pokemon_Weedle = {
+    "nombre" : "",
+    "tipo" : "",
+    "puntos_de_vida" : 0,
+    "ataque" : 0,
+    "defensa" : 0,
+    "velocidad" : 0,
+    "experiencia_base" : 0,
+    "nivel" : 0
+}
+pokemon_Pidgey = {
+    "nombre" : "",
+    "tipo" : "",
+    "puntos_de_vida" : 0,
+    "ataque" : 0,
+    "defensa" : 0,
+    "velocidad" : 0,
+    "experiencia_base" : 0,
+    "nivel" : 0
+}
+pokemon_Rattata = {
+    "nombre" : "",
+    "tipo" : "",
+    "puntos_de_vida" : 0,
+    "ataque" : 0,
+    "defensa" : 0,
+    "velocidad" : 0,
+    "experiencia_base" : 0,
+    "nivel" : 0
+}
+pokemon_Spearow = {
+    "nombre" : "",
+    "tipo" : "",
+    "puntos_de_vida" : 0,
+    "ataque" : 0,
+    "defensa" : 0,
+    "velocidad" : 0,
+    "experiencia_base" : 0,
+    "nivel" : 0
+}
+pokemon_Ekans = {
+    "nombre" : "",
+    "tipo" : "",
+    "puntos_de_vida" : 0,
+    "ataque" : 0,
+    "defensa" : 0,
+    "velocidad" : 0,
+    "experiencia_base" : 0,
+    "nivel" : 0
+}
+pokemon_Pikachu = {
+    "nombre" : "",
+    "tipo" : "",
+    "puntos_de_vida" : 0,
+    "ataque" : 0,
+    "defensa" : 0,
+    "velocidad" : 0,
+    "experiencia_base" : 0,
+    "nivel" : 0
+}
+pokemon_Sandshrew = {
+    "nombre" : "",
+    "tipo" : "",
+    "puntos_de_vida" : 0,
+    "ataque" : 0,
+    "defensa" : 0,
+    "velocidad" : 0,
+    "experiencia_base" : 0,
+    "nivel" : 0
+}
+pokemon_Vulpix = {
+    "nombre" : "",
+    "tipo" : "",
+    "puntos_de_vida" : 0,
+    "ataque" : 0,
+    "defensa" : 0,
+    "velocidad" : 0,
+    "experiencia_base" : 0,
+    "nivel" : 0
+}
+pokemon_Jigglypuff = {
+    "nombre" : "",
+    "tipo" : "",
+    "puntos_de_vida" : 0,
+    "ataque" : 0,
+    "defensa" : 0,
+    "velocidad" : 0,
+    "experiencia_base" : 0,
+    "nivel" : 0
+}
+pokemon_Zubat = {
+    "nombre" : "",
+    "tipo" : "",
+    "puntos_de_vida" : 0,
+    "ataque" : 0,
+    "defensa" : 0,
+    "velocidad" : 0,
+    "experiencia_base" : 0,
+    "nivel" : 0
+}
+pokemon_Oddish = {
+    "nombre" : "",
+    "tipo" : "",
+    "puntos_de_vida" : 0,
+    "ataque" : 0,
+    "defensa" : 0,
+    "velocidad" : 0,
+    "experiencia_base" : 0,
+    "nivel" : 0
+}
+pokemon_Gloom = {
+    "nombre" : "",
+    "tipo" : "",
+    "puntos_de_vida" : 0,
+    "ataque" : 0,
+    "defensa" : 0,
+    "velocidad" : 0,
+    "experiencia_base" : 0,
+    "nivel" : 0
+}
+pokemon_Diglett = {
+    "nombre" : "",
+    "tipo" : "",
+    "puntos_de_vida" : 0,
+    "ataque" : 0,
+    "defensa" : 0,
+    "velocidad" : 0,
+    "experiencia_base" : 0,
+    "nivel" : 0
+}
+pokemon_Meowth = {
+    "nombre" : "",
+    "tipo" : "",
+    "puntos_de_vida" : 0,
+    "ataque" : 0,
+    "defensa" : 0,
+    "velocidad" : 0,
+    "experiencia_base" : 0,
+    "nivel" : 0
+}
+pokemon_Psyduck = {
+    "nombre" : "",
+    "tipo" : "",
+    "puntos_de_vida" : 0,
+    "ataque" : 0,
+    "defensa" : 0,
+    "velocidad" : 0,
+    "experiencia_base" : 0,
+    "nivel" : 0
+}
+pokemon_Mewtwo = {
+    "nombre" : "",
+    "tipo" : "",
+    "puntos_de_vida" : 0,
+    "ataque" : 0,
+    "defensa" : 0,
+    "velocidad" : 0,
+    "experiencia_base" : 0,
+    "nivel" : 0
+}
 
 # Guardar datos de movimientos
 movimiento_1 = []
@@ -193,178 +394,192 @@ def movimientos(numero_aleatorio):
 
 # Listado de pokemon con sus caractersiticas, 20 personajes
 def listado_de_pokemon(numero_aleatorio):
-
     #Variables a utilizar
-    nombre = ""
-    tipo = ""
-    puntos_de_salud = 0
-    ataque = 0
-    defensa = 0
-    velocidad = 0
-    experiencia_base = 0
+    global pokemon_Bulbasaur, pokemon_Charmander, pokemon_Squirtle, pokemon_Caterpie, pokemon_Weedle, pokemon_Pidgey, pokemon_Rattata, \
+    pokemon_Spearow, pokemon_Ekans, pokemon_Pikachu, pokemon_Sandshrew, pokemon_Vulpix, pokemon_Jigglypuff, pokemon_Zubat, pokemon_Oddish, \
+    pokemon_Gloom, pokemon_Diglett, pokemon_Meowth, pokemon_Psyduck, pokemon_Mewtwo
 
     # Listado de pokemones según el anexo del listado
     if numero_aleatorio == 1:
-        nombre = "Bulbasaur"
-        tipo = "Planta"
-        puntos_de_salud = 45
-        ataque = 49
-        defensa = 49
-        velocidad = 45
-        experiencia_base = 64
+        pokemon_Bulbasaur["nombre"] = "Bulbasaur"
+        pokemon_Bulbasaur["tipo"] = "Planta"
+        pokemon_Bulbasaur["puntos_de_salud"] = 45
+        pokemon_Bulbasaur["ataque"] = 49
+        pokemon_Bulbasaur["defensa"] = 49
+        pokemon_Bulbasaur["velocidad"] = 45
+        pokemon_Bulbasaur["experiencia_base"] = 64
+        pokemon_Bulbasaur["nivel"] = 0
     elif numero_aleatorio == 2:
-        nombre = "Charmander"
-        tipo = "Fuego"
-        puntos_de_salud = 39
-        ataque = 52
-        defensa = 43
-        velocidad = 65
-        experiencia_base = 65
+        pokemon_Charmander["nombre"] = "Charmander"
+        pokemon_Charmander["tipo"] = "Fuego"
+        pokemon_Charmander["puntos_de_salud"] = 39
+        pokemon_Charmander["ataque"] = 52
+        pokemon_Charmander["defensa"] = 43
+        pokemon_Charmander["velocidad"] = 65
+        pokemon_Charmander["experiencia_base"] = 65
+        pokemon_Charmander["nivel"] = 0
     elif numero_aleatorio == 3:
-        nombre = "Squirtle"
-        tipo = "Agua"
-        puntos_de_salud = 44
-        ataque = 48
-        defensa = 65
-        velocidad = 43
-        experiencia_base = 66
+        pokemon_Squirtle["nombre"] = "Squirtle"
+        pokemon_Squirtle["tipo"] = "Agua"
+        pokemon_Squirtle["puntos_de_salud"] = 44
+        pokemon_Squirtle["ataque"] = 48
+        pokemon_Squirtle["defensa"] = 65
+        pokemon_Squirtle["velocidad"] = 43
+        pokemon_Squirtle["experiencia_base"] = 66
+        pokemon_Squirtle["nivel"] = 0
     elif numero_aleatorio == 4:
-        nombre = "Caterpie"
-        tipo = "Bicho"
-        puntos_de_salud = 45
-        ataque = 30
-        defensa = 35
-        velocidad = 45
-        experiencia_base = 53
+        pokemon_Caterpie["nombre"] = "Caterpie"
+        pokemon_Caterpie["tipo"] = "Bicho"
+        pokemon_Caterpie["puntos_de_salud"] = 45
+        pokemon_Caterpie["ataque"] = 30
+        pokemon_Caterpie["defensa"] = 35
+        pokemon_Caterpie["velocidad"] = 45
+        pokemon_Caterpie["experiencia_base"] = 53
+        pokemon_Caterpie["nivel"] = 0
     elif numero_aleatorio == 5:
-        nombre = "Weedle"
-        tipo = "Bicho"
-        puntos_de_salud = 40
-        ataque = 35
-        defensa = 30
-        velocidad = 50
-        experiencia_base = 52
+        pokemon_Weedle["nombre"] = "Weedle"
+        pokemon_Weedle["tipo"] = "Bicho"
+        pokemon_Weedle["puntos_de_salud"] = 40
+        pokemon_Weedle["ataque"] = 35
+        pokemon_Weedle["defensa"] = 30
+        pokemon_Weedle["velocidad"] = 50
+        pokemon_Weedle["experiencia_base"] = 52
+        pokemon_Weedle["nivel"] = 0
     elif numero_aleatorio == 6:
-        nombre = "Pidgey"
-        tipo = "Volador"
-        puntos_de_salud = 40
-        ataque = 45
-        defensa = 40
-        velocidad = 56
-        experiencia_base = 55
+        pokemon_Pidgey["nombre"] = "Pidgey"
+        pokemon_Pidgey["tipo"] = "Volador"
+        pokemon_Pidgey["puntos_de_salud"] = 40
+        pokemon_Pidgey["ataque"] = 45
+        pokemon_Pidgey["defensa"] = 40
+        pokemon_Pidgey["velocidad"] = 56
+        pokemon_Pidgey["experiencia_base"] = 55
+        pokemon_Pidgey["nivel"] = 0
     elif numero_aleatorio == 7:
-        nombre = "Rattata"
-        tipo = "Normal"
-        puntos_de_salud = 30
-        ataque = 56
-        defensa = 35
-        velocidad = 72
-        experiencia_base = 57
+        pokemon_Rattata["nombre"] = "Rattata"
+        pokemon_Rattata["tipo"] = "Normal"
+        pokemon_Rattata["puntos_de_salud"] = 30
+        pokemon_Rattata["ataque"] = 56
+        pokemon_Rattata["defensa"] = 35
+        pokemon_Rattata["velocidad"] = 72
+        pokemon_Rattata["experiencia_base"] = 57
+        pokemon_Rattata["nivel"] = 0
     elif numero_aleatorio == 8:
-        nombre = "Spearow"
-        tipo = "Volador"
-        puntos_de_salud = 40
-        ataque = 60
-        defensa = 30
-        velocidad = 70
-        experiencia_base = 58
+        pokemon_Spearow["nombre"] = "Spearow"
+        pokemon_Spearow["tipo"] = "Volador"
+        pokemon_Spearow["puntos_de_salud"] = 40
+        pokemon_Spearow["ataque"] = 60
+        pokemon_Spearow["defensa"] = 30
+        pokemon_Spearow["velocidad"] = 70
+        pokemon_Spearow["experiencia_base"] = 58
+        pokemon_Spearow["nivel"] = 0
     elif numero_aleatorio == 9:
-        nombre = "Ekans"
-        tipo = "Veneno"
-        puntos_de_salud = 35
-        ataque = 60
-        defensa = 44
-        velocidad = 55
-        experiencia_base = 62
+        pokemon_Ekans["nombre"] = "Ekans"
+        pokemon_Ekans["tipo"] = "Veneno"
+        pokemon_Ekans["puntos_de_salud"] = 35
+        pokemon_Ekans["ataque"] = 60
+        pokemon_Ekans["defensa"] = 44
+        pokemon_Ekans["velocidad"] = 55
+        pokemon_Ekans["experiencia_base"] = 62
+        pokemon_Ekans["nivel"] = 0
     elif numero_aleatorio == 10:
-        nombre = "Pikachu"
-        tipo = "Eléctrico"
-        puntos_de_salud = 35
-        ataque = 55
-        defensa = 40
-        velocidad = 90
-        experiencia_base = 82
+        pokemon_Pikachu["nombre"] = "Pikachu"
+        pokemon_Pikachu["tipo"] = "Eléctrico"
+        pokemon_Pikachu["puntos_de_salud"] = 35
+        pokemon_Pikachu["ataque"] = 55
+        pokemon_Pikachu["defensa"] = 40
+        pokemon_Pikachu["velocidad"] = 90
+        pokemon_Pikachu["experiencia_base"] = 82
+        pokemon_Pikachu["nivel"] = 0
     elif numero_aleatorio == 11:
-        nombre = "Sandshrew"
-        tipo = "Tierra"
-        puntos_de_salud = 50
-        ataque = 75
-        defensa = 85
-        velocidad = 40
-        experiencia_base = 93
+        pokemon_Sandshrew["nombre"] = "Sandshrew"
+        pokemon_Sandshrew["tipo"] = "Tierra"
+        pokemon_Sandshrew["puntos_de_salud"] = 50
+        pokemon_Sandshrew["ataque"] = 75
+        pokemon_Sandshrew["defensa"] = 85
+        pokemon_Sandshrew["velocidad"] = 40
+        pokemon_Sandshrew["experiencia_base"] = 93
+        pokemon_Sandshrew["nivel"] = 0
     elif numero_aleatorio == 12:
-        nombre = "Vulpix"
-        tipo = "Fuego"
-        puntos_de_salud = 38
-        ataque = 41
-        defensa = 40
-        velocidad = 65
-        experiencia_base = 63
+        pokemon_Vulpix["nombre"] = "Vulpix"
+        pokemon_Vulpix["tipo"] = "Fuego"
+        pokemon_Vulpix["puntos_de_salud"] = 38
+        pokemon_Vulpix["ataque"] = 41
+        pokemon_Vulpix["defensa"] = 40
+        pokemon_Vulpix["velocidad"] = 65
+        pokemon_Vulpix["experiencia_base"] = 63
+        pokemon_Vulpix["nivel"] = 0
     elif numero_aleatorio == 13:
-        nombre = "Jigglypuff"
-        tipo = "Normal"
-        puntos_de_salud = 115
-        ataque = 45
-        defensa = 20
-        velocidad = 20
-        experiencia_base = 76
+        pokemon_Jigglypuff["nombre"] = "Jigglypuff"
+        pokemon_Jigglypuff["tipo"] = "Normal"
+        pokemon_Jigglypuff["puntos_de_salud"] = 115
+        pokemon_Jigglypuff["ataque"] = 45
+        pokemon_Jigglypuff["defensa"] = 20
+        pokemon_Jigglypuff["velocidad"] = 20
+        pokemon_Jigglypuff["experiencia_base"] = 76
+        pokemon_Jigglypuff["nivel"] = 0
     elif numero_aleatorio == 14:
-        nombre = "Zubat"
-        tipo = "Veneno"
-        puntos_de_salud = 40
-        ataque = 45
-        defensa = 35
-        velocidad = 55
-        experiencia_base = 54
+        pokemon_Zubat["nombre"] = "Zubat"
+        pokemon_Zubat["tipo"] = "Veneno"
+        pokemon_Zubat["puntos_de_salud"] = 40
+        pokemon_Zubat["ataque"] = 45
+        pokemon_Zubat["defensa"] = 35
+        pokemon_Zubat["velocidad"] = 55
+        pokemon_Zubat["experiencia_base"] = 54
+        pokemon_Zubat["nivel"] = 0
     elif numero_aleatorio == 15:
-        nombre = "Oddish"
-        tipo = "Planta"
-        puntos_de_salud = 45
-        ataque = 50
-        defensa = 55
-        velocidad = 30
-        experiencia_base = 78
+        pokemon_Oddish["nombre"] = "Oddish"
+        pokemon_Oddish["tipo"] = "Planta"
+        pokemon_Oddish["puntos_de_salud"] = 45
+        pokemon_Oddish["ataque"] = 50
+        pokemon_Oddish["defensa"] = 55
+        pokemon_Oddish["velocidad"] = 30
+        pokemon_Oddish["experiencia_base"] = 78
+        pokemon_Oddish["nivel"] = 0
     elif numero_aleatorio == 16:
-        nombre = "Gloom"
-        tipo = "Planta"
-        puntos_de_salud = 60
-        ataque = 65
-        defensa = 70
-        velocidad = 40
-        experiencia_base = 132
+        pokemon_Gloom["nombre"] = "Gloom"
+        pokemon_Gloom["tipo"] = "Planta"
+        pokemon_Gloom["puntos_de_salud"] = 60
+        pokemon_Gloom["ataque"] = 65
+        pokemon_Gloom["defensa"] = 70
+        pokemon_Gloom["velocidad"] = 40
+        pokemon_Gloom["experiencia_base"] = 132
+        pokemon_Gloom["nivel"] = 0
     elif numero_aleatorio == 17:
-        nombre = "Diglett"
-        tipo = "Tierra"
-        puntos_de_salud = 10
-        ataque = 55
-        defensa = 25
-        velocidad = 95
-        experiencia_base = 81
+        pokemon_Diglett["nombre"] = "Diglett"
+        pokemon_Diglett["tipo"] = "Tierra"
+        pokemon_Diglett["puntos_de_salud"] = 10
+        pokemon_Diglett["ataque"] = 55
+        pokemon_Diglett["defensa"] = 25
+        pokemon_Diglett["velocidad"] = 95
+        pokemon_Diglett["experiencia_base"] = 81
+        pokemon_Diglett["nivel"] = 0
     elif numero_aleatorio == 18:
-        nombre = "Meowth"
-        tipo = "Normal"
-        puntos_de_salud = 40
-        ataque = 45
-        defensa = 35
-        velocidad = 90
-        experiencia_base = 69
+        pokemon_Meowth["nombre"] = "Meowth"
+        pokemon_Meowth["tipo"] = "Normal"
+        pokemon_Meowth["puntos_de_salud"] = 40
+        pokemon_Meowth["ataque"] = 45
+        pokemon_Meowth["defensa"] = 35
+        pokemon_Meowth["velocidad"] = 90
+        pokemon_Meowth["experiencia_base"] = 69
+        pokemon_Meowth["nivel"] = 0
     elif numero_aleatorio == 19:
-        nombre = "Psyduck"
-        tipo = "Agua"
-        puntos_de_salud = 50
-        ataque = 52
-        defensa = 48
-        velocidad = 55
-        experiencia_base = 80
+        pokemon_Psyduck["nombre"] = "Psyduck"
+        pokemon_Psyduck["tipo"] = "Agua"
+        pokemon_Psyduck["puntos_de_salud"] = 50
+        pokemon_Psyduck["ataque"] = 52
+        pokemon_Psyduck["defensa"] = 48
+        pokemon_Psyduck["velocidad"] = 55
+        pokemon_Psyduck["experiencia_base"] = 80
+        pokemon_Psyduck["nivel"] = 0
     elif numero_aleatorio == 20:
-        nombre = "Mewtwo"
-        tipo = "Psíquico"
-        puntos_de_salud = 106
-        ataque = 110
-        defensa = 90
-        velocidad = 130
-        experiencia_base = 220
-    return nombre, tipo, puntos_de_salud, ataque ,defensa, velocidad,experiencia_base
+        pokemon_Mewtwo["nombre"] = "Mewtwo"
+        pokemon_Mewtwo["tipo"] = "Psíquico"
+        pokemon_Mewtwo["puntos_de_salud"] = 106
+        pokemon_Mewtwo["ataque"] = 110
+        pokemon_Mewtwo["defensa"] = 90
+        pokemon_Mewtwo["velocidad"] = 130
+        pokemon_Mewtwo["experiencia_base"] = 220
+        pokemon_Mewtwo["nivel"] = 0
 
 # Función para generar números aletorios
 def numero_aleatorio(limite_inferior, limite_superior):
