@@ -19,6 +19,16 @@ pokemon_inicial = {
     "nivel" : 0
 }
 # Pokémones enemigos
+pokemon_enemigos = {
+    "nombre": "",
+    "tipo": "",
+    "puntos_de_vida": 0,
+    "ataque": 0,
+    "defensa": 0,
+    "velocidad": 0,
+    "experiencia_base": 0,
+    "nivel": 0
+}
 pokemon_Bulbasaur = {
     "nombre" : "",
     "tipo" : "",
@@ -220,175 +230,394 @@ pokemon_Mewtwo = {
     "nivel" : 0
 }
 
+#Movimientos
+movimientos_pokemon = {
+    "nombre" : "",
+    "tipo_de_movimiento" : "",
+    "potencia" : 0,
+    "precision" : 0
+}
+movimientos_pokemon_Latigazo = {
+    "nombre" : "",
+    "tipo_de_movimiento" : "",
+    "potencia" : 0,
+    "precision" : 0
+}
+movimientos_pokemon_Látigo_cepa = {
+    "nombre" : "",
+    "tipo_de_movimiento" : "",
+    "potencia" : 0,
+    "precision" : 0
+}
+movimientos_pokemon_Rayo_solar = {
+    "nombre" : "",
+    "tipo_de_movimiento" : "",
+    "potencia" : 0,
+    "precision" : 0
+}
+movimientos_pokemon_Ascuas = {
+    "nombre" : "",
+    "tipo_de_movimiento" : "",
+    "potencia" : 0,
+    "precision" : 0
+}
+movimientos_pokemon_Lanzallamas = {
+    "nombre" : "",
+    "tipo_de_movimiento" : "",
+    "potencia" : 0,
+    "precision" : 0
+}
+movimientos_pokemon_Puño_fuego = {
+    "nombre" : "",
+    "tipo_de_movimiento" : "",
+    "potencia" : 0,
+    "precision" : 0
+}
+movimientos_pokemon_Hidrobomba = {
+    "nombre" : "",
+    "tipo_de_movimiento" : "",
+    "potencia" : 0,
+    "precision" : 0
+}
+movimientos_pokemon_Pistola_agua = {
+    "nombre" : "",
+    "tipo_de_movimiento" : "",
+    "potencia" : 0,
+    "precision" : 0
+}
+movimientos_pokemon_Rayo_burbuja = {
+    "nombre" : "",
+    "tipo_de_movimiento" : "",
+    "potencia" : 0,
+    "precision" : 0
+}
+movimientos_pokemon_Chupa_vidas = {
+    "nombre" : "",
+    "tipo_de_movimiento" : "",
+    "potencia" : 0,
+    "precision" : 0
+}
+movimientos_pokemon_Pin_misil = {
+    "nombre" : "",
+    "tipo_de_movimiento" : "",
+    "potencia" : 0,
+    "precision" : 0
+}
+movimientos_pokemon_Tijera_X = {
+    "nombre" : "",
+    "tipo_de_movimiento" : "",
+    "potencia" : 0,
+    "precision" : 0
+}
+movimientos_pokemon_Picotazo = {
+    "nombre" : "",
+    "tipo_de_movimiento" : "",
+    "potencia" : 0,
+    "precision" : 0
+}
+movimientos_pokemon_Pico_taladro = {
+    "nombre" : "",
+    "tipo_de_movimiento" : "",
+    "potencia" : 0,
+    "precision" : 0
+}
+movimientos_pokemon_Tornado = {
+    "nombre" : "",
+    "tipo_de_movimiento" : "",
+    "potencia" : 0,
+    "precision" : 0
+}
+movimientos_pokemon_Agarre = {
+    "nombre" : "",
+    "tipo_de_movimiento" : "",
+    "potencia" : 0,
+    "precision" : 0
+}
+movimientos_pokemon_Ataque_rápido = {
+    "nombre" : "",
+    "tipo_de_movimiento" : "",
+    "potencia" : 0,
+    "precision" : 0
+}
+movimientos_pokemon_Bomba_huevo = {
+    "nombre" : "",
+    "tipo_de_movimiento" : "",
+    "potencia" : 0,
+    "precision" : 0
+}
+movimientos_pokemon_Ácido = {
+    "nombre" : "",
+    "tipo_de_movimiento" : "",
+    "potencia" : 0,
+    "precision" : 0
+}
+movimientos_pokemon_Picotazo_venenoso = {
+    "nombre" : "",
+    "tipo_de_movimiento" : "",
+    "potencia" : 0,
+    "precision" : 0
+}
+movimientos_pokemon_Residuos = {
+    "nombre" : "",
+    "tipo_de_movimiento" : "",
+    "potencia" : 0,
+    "precision" : 0
+}
+movimientos_pokemon_Pueño_trueno = {
+    "nombre" : "",
+    "tipo_de_movimiento" : "",
+    "potencia" : 0,
+    "precision" : 0
+}
+movimientos_pokemon_Trueo = {
+    "nombre" : "",
+    "tipo_de_movimiento" : "",
+    "potencia" : 0,
+    "precision" : 0
+}
+movimientos_pokemon_Rayo = {
+    "nombre" : "",
+    "tipo_de_movimiento" : "",
+    "potencia" : 0,
+    "precision" : 0
+}
+movimientos_pokemon_Hueso_palo = {
+    "nombre" : "",
+    "tipo_de_movimiento" : "",
+    "potencia" : 0,
+    "precision" : 0
+}
+movimientos_pokemon_Huesomerang = {
+    "nombre" : "",
+    "tipo_de_movimiento" : "",
+    "potencia" : 0,
+    "precision" : 0
+}
+movimientos_pokemon_Terremoto = {
+    "nombre" : "",
+    "tipo_de_movimiento" : "",
+    "potencia" : 0,
+    "precision" : 0
+}
+movimientos_pokemon_Come_sueños = {
+    "nombre" : "",
+    "tipo_de_movimiento" : "",
+    "potencia" : 0,
+    "precision" : 0
+}
+movimientos_pokemon_Bola_neblina = {
+    "nombre" : "",
+    "tipo_de_movimiento" : "",
+    "potencia" : 0,
+    "precision" : 0
+}
+movimientos_pokemon_Resplandor = {
+    "nombre" : "",
+    "tipo_de_movimiento" : "",
+    "potencia" : 0,
+    "precision" : 0
+}
+
 # Guardar datos de movimientos
 movimiento_1 = []
 movimiento_2 = []
 movimiento_3 = []
 movimiento_4 = []
-movimientos_pokemon = []
 
 #Función para movimientos, 30 movimientos
 def movimientos(numero_aleatorio):
     # Variables a utilziar
-    global movimientos_pokemon
-    tipo_de_movimiento = ""
-    potencia = 0
-    precision = 0
+    global movimientos_pokemon_Látigo_cepa, movimientos_pokemon, movimientos_pokemon_Latigazo, movimientos_pokemon_Rayo_solar, movimientos_pokemon_Ascuas, \
+    movimientos_pokemon_Lanzallamas, movimientos_pokemon_Puño_fuego, movimientos_pokemon_Hidrobomba, movimientos_pokemon_Pistola_agua,\
+    movimientos_pokemon_Rayo_burbuja, movimientos_pokemon_Chupa_vidas, movimientos_pokemon_Pin_misil, movimientos_pokemon_Tijera_X, \
+    movimientos_pokemon_Picotazo, movimientos_pokemon_Pico_taladro, movimientos_pokemon_Tornado, movimientos_pokemon_Agarre, movimientos_pokemon_Ataque_rápido, \
+    movimientos_pokemon_Bomba_huevo, movimientos_pokemon_Ácido, movimientos_pokemon_Picotazo_venenoso, movimientos_pokemon_Residuos, movimientos_pokemon_Pueño_trueno, \
+    movimientos_pokemon_Trueo, movimientos_pokemon_Rayo, movimientos_pokemon_Hueso_palo, movimientos_pokemon_Huesomerang, movimientos_pokemon_Terremoto, \
+    movimientos_pokemon_Come_sueños, movimientos_pokemon_Bola_neblina, movimientos_pokemon_Resplandor
 
     # Movimientos según el anexo del enunciado
     if numero_aleatorio == 1:
-        movimientos_pokemon = "Látigo_cepa"
-        tipo_de_movimiento = "Planta"
-        potencia = 35
-        precision = 100
+        movimientos_pokemon_Látigo_cepa["nombre"] = "Látigo_cepa"
+        movimientos_pokemon_Látigo_cepa["tipo_de_movimiento"] = "Planta"
+        movimientos_pokemon_Látigo_cepa["potencia"] = 35
+        movimientos_pokemon_Látigo_cepa["precision"] = 100
+        movimientos_pokemon = movimientos_pokemon_Látigo_cepa
     elif numero_aleatorio == 2:
-        movimientos_pokemon = "Latigazo"
-        tipo_de_movimiento = "Planta"
-        potencia = 120
-        precision = 85
+        movimientos_pokemon_Latigazo["nombre"] = "Latigazo"
+        movimientos_pokemon_Latigazo["tipo_de_movimiento"] = "Planta"
+        movimientos_pokemon_Latigazo["potencia"] = 120
+        movimientos_pokemon_Latigazo["precision"] = 85
+        movimientos_pokemon = movimientos_pokemon_Latigazo
     elif numero_aleatorio == 3:
-        movimientos_pokemon = "Rayo solar"
-        tipo_de_movimiento = "Planta"
-        potencia = 120
-        precision = 100
+        movimientos_pokemon_Rayo_solar["nombre"] = "Rayo solar"
+        movimientos_pokemon_Rayo_solar["tipo_de_movimiento"] = "Planta"
+        movimientos_pokemon_Rayo_solar["potencia"] = 120
+        movimientos_pokemon_Rayo_solar["precision"] = 100
+        movimientos_pokemon = movimientos_pokemon_Rayo_solar
     elif numero_aleatorio == 4:
-        movimientos_pokemon = "Ascuas"
-        tipo_de_movimiento = "Fuego"
-        potencia = 40
-        precision = 100
+        movimientos_pokemon_Ascuas["nombre"] = "Ascuas"
+        movimientos_pokemon_Ascuas["tipo_de_movimiento"] = "Fuego"
+        movimientos_pokemon_Ascuas["potencia"] = 40
+        movimientos_pokemon_Ascuas["precision"] = 100
+        movimientos_pokemon = movimientos_pokemon_Ascuas
     elif numero_aleatorio == 5:
-        movimientos_pokemon = "Lanzallamas"
-        tipo_de_movimiento = "Fuego"
-        potencia = 90
-        precision = 100
+        movimientos_pokemon_Lanzallamas["nombre"] = "Lanzallamas"
+        movimientos_pokemon_Lanzallamas["tipo_de_movimiento"] = "Fuego"
+        movimientos_pokemon_Lanzallamas["potencia"] = 90
+        movimientos_pokemon_Lanzallamas["precision"] = 100
+        movimientos_pokemon = movimientos_pokemon_Lanzallamas
     elif numero_aleatorio == 6:
-        movimientos_pokemon = "Puño fuego"
-        tipo_de_movimiento = "Fuego"
-        potencia = 75
-        precision = 100
+        movimientos_pokemon_Puño_fuego["nombre"] = "Puño fuego"
+        movimientos_pokemon_Puño_fuego["tipo_de_movimiento"] = "Fuego"
+        movimientos_pokemon_Puño_fuego["potencia"] = 75
+        movimientos_pokemon_Puño_fuego["precision"] = 100
+        movimientos_pokemon = movimientos_pokemon_Puño_fuego
     elif numero_aleatorio == 7:
-        movimientos_pokemon = "Hidrobomba"
-        tipo_de_movimiento = "Agua"
-        potencia = 120
-        precision = 80
+        movimientos_pokemon_Hidrobomba["nombre"] = "Hidrobomba"
+        movimientos_pokemon_Hidrobomba["tipo_de_movimiento"] = "Agua"
+        movimientos_pokemon_Hidrobomba["potencia"] = 120
+        movimientos_pokemon_Hidrobomba["precision"] = 80
+        movimientos_pokemon = movimientos_pokemon_Hidrobomba
     elif numero_aleatorio == 8:
-        movimientos_pokemon = "Pistola agua"
-        tipo_de_movimiento = "Agua"
-        potencia = 40
-        precision = 100
+        movimientos_pokemon_Pistola_agua["nombre"] = "Pistola agua"
+        movimientos_pokemon_Pistola_agua["tipo_de_movimiento"] = "Agua"
+        movimientos_pokemon_Pistola_agua["potencia"] = 40
+        movimientos_pokemon_Pistola_agua["precision"] = 100
+        movimientos_pokemon = movimientos_pokemon_Pistola_agua
     elif numero_aleatorio == 9:
-        movimientos_pokemon = "Rayo burbuja"
-        tipo_de_movimiento = "Agua"
-        potencia = 65
-        precision = 100
+        movimientos_pokemon_Rayo_burbuja["nombre"] = "Rayo burbuja"
+        movimientos_pokemon_Rayo_burbuja["tipo_de_movimiento"] = "Agua"
+        movimientos_pokemon_Rayo_burbuja["potencia"] = 65
+        movimientos_pokemon_Rayo_burbuja["precision"] = 100
+        movimientos_pokemon = movimientos_pokemon_Rayo_burbuja
     elif numero_aleatorio == 10:
-        movimientos_pokemon = "Chupa vidas"
-        tipo_de_movimiento = "Bicho"
-        potencia = 20
-        precision = 100
+        movimientos_pokemon_Chupa_vidas["nombre"] = "Chupa vidas"
+        movimientos_pokemon_Chupa_vidas["tipo_de_movimiento"] = "Bicho"
+        movimientos_pokemon_Chupa_vidas["potencia"] = 20
+        movimientos_pokemon_Chupa_vidas["precision"] = 100
+        movimientos_pokemon = movimientos_pokemon_Chupa_vidas
     elif numero_aleatorio == 11:
-        movimientos_pokemon = "Pin misil"
-        tipo_de_movimiento = "Bicho"
-        potencia = 14
-        precision = 85
+        movimientos_pokemon_Pin_misil["nombre"] = "Pin misil"
+        movimientos_pokemon_Pin_misil["tipo_de_movimiento"] = "Bicho"
+        movimientos_pokemon_Pin_misil["potencia"] = 14
+        movimientos_pokemon_Pin_misil["precision"] = 85
+        movimientos_pokemon = movimientos_pokemon_Pin_misil
     elif numero_aleatorio == 12:
-        movimientos_pokemon = "Tijera X"
-        tipo_de_movimiento = "Bicho"
-        potencia = 80
-        precision = 100
+        movimientos_pokemon_Tijera_X["nombre"] = "Tijera X"
+        movimientos_pokemon_Tijera_X["tipo_de_movimiento"] = "Bicho"
+        movimientos_pokemon_Tijera_X["potencia"] = 80
+        movimientos_pokemon_Tijera_X["precision"] = 100
+        movimientos_pokemon = movimientos_pokemon_Tijera_X
     elif numero_aleatorio == 13:
-        movimientos_pokemon = "Picotazo"
-        tipo_de_movimiento = "Volador"
-        potencia = 35
-        precision = 100
+        movimientos_pokemon_Picotazo["nombre"] = "Picotazo"
+        movimientos_pokemon_Picotazo["tipo_de_movimiento"] = "Volador"
+        movimientos_pokemon_Picotazo["potencia"] = 35
+        movimientos_pokemon_Picotazo["precision"] = 100
+        movimientos_pokemon = movimientos_pokemon_Picotazo
     elif numero_aleatorio == 14:
-        movimientos_pokemon = "Pico taladro"
-        tipo_de_movimiento = "Volador"
-        potencia = 80
-        precision = 100
+        movimientos_pokemon_Pico_taladro["nombre"] = "Pico taladro"
+        movimientos_pokemon_Pico_taladro["tipo_de_movimiento"] = "Volador"
+        movimientos_pokemon_Pico_taladro["potencia"] = 80
+        movimientos_pokemon_Pico_taladro["precision"] = 100
+        movimientos_pokemon = movimientos_pokemon_Pico_taladro
     elif numero_aleatorio == 15:
-        movimientos_pokemon = "Tornado"
-        tipo_de_movimiento = "Volador"
-        potencia = 40
-        precision = 100
+        movimientos_pokemon_Tornado["nombre"] = "Tornado"
+        movimientos_pokemon_Tornado["tipo_de_movimiento"] = "Volador"
+        movimientos_pokemon_Tornado["potencia"] = 40
+        movimientos_pokemon_Tornado["precision"] = 100
+        movimientos_pokemon = movimientos_pokemon_Tornado
     elif numero_aleatorio == 16:
-        movimientos_pokemon = "Agarre"
-        tipo_de_movimiento = "Normal"
-        potencia = 55
-        precision = 100
+        movimientos_pokemon_Agarre["nombre"] = "Agarre"
+        movimientos_pokemon_Agarre["tipo_de_movimiento"] = "Normal"
+        movimientos_pokemon_Agarre["potencia"] = 55
+        movimientos_pokemon_Agarre["precision"] = 100
+        movimientos_pokemon = movimientos_pokemon_Agarre
     elif numero_aleatorio == 17:
-        movimientos_pokemon = "Ataque rápido"
-        tipo_de_movimiento = "Normal"
-        potencia = 40
-        precision = 100
+        movimientos_pokemon_Ataque_rápido["nombre"] = "Ataque rápido"
+        movimientos_pokemon_Ataque_rápido["tipo_de_movimiento"] = "Normal"
+        movimientos_pokemon_Ataque_rápido["potencia"] = 40
+        movimientos_pokemon_Ataque_rápido["precision"] = 100
+        movimientos_pokemon = movimientos_pokemon_Ataque_rápido
     elif numero_aleatorio == 18:
-        movimientos_pokemon = "Bomba huevo"
-        tipo_de_movimiento = "Normal"
-        potencia = 100
-        precision = 75
+        movimientos_pokemon_Bomba_huevo["nombre"] = "Bomba huevo"
+        movimientos_pokemon_Bomba_huevo["tipo_de_movimiento"] = "Normal"
+        movimientos_pokemon_Bomba_huevo["potencia"] = 100
+        movimientos_pokemon_Bomba_huevo["precision"] = 75
+        movimientos_pokemon = movimientos_pokemon_Ataque_rápido
     elif numero_aleatorio == 19:
-        movimientos_pokemon = "Ácido"
-        tipo_de_movimiento = "Veneno"
-        potencia = 40
-        precision = 100
+        movimientos_pokemon_Ácido["nombre"] = "Ácido"
+        movimientos_pokemon_Ácido["tipo_de_movimiento"] = "Veneno"
+        movimientos_pokemon_Ácido["potencia"] = 40
+        movimientos_pokemon_Ácido["precision"] = 100
+        movimientos_pokemon = movimientos_pokemon_Ácido
     elif numero_aleatorio == 20:
-        movimientos_pokemon = "Picotazo venenoso"
-        tipo_de_movimiento = "Veneno"
-        potencia = 55
-        precision = 100
+        movimientos_pokemon_Picotazo_venenoso["nombre"] = "Picotazo venenoso"
+        movimientos_pokemon_Picotazo_venenoso["tipo_de_movimiento"] = "Veneno"
+        movimientos_pokemon_Picotazo_venenoso["potencia"] = 55
+        movimientos_pokemon_Picotazo_venenoso["precision"] = 100
+        movimientos_pokemon = movimientos_pokemon_Ácido
     elif numero_aleatorio == 21:
-        movimientos_pokemon = "Residuos"
-        tipo_de_movimiento = "Veneno"
-        potencia = 65
-        precision = 100
+        movimientos_pokemon_Residuos["nombre"] = "Residuos"
+        movimientos_pokemon_Residuos["tipo_de_movimiento"] = "Veneno"
+        movimientos_pokemon_Residuos["potencia"] = 65
+        movimientos_pokemon_Residuos["precision"] = 100
+        movimientos_pokemon = movimientos_pokemon_Residuos
     elif numero_aleatorio == 22:
-        movimientos_pokemon = "Pueño trueno"
-        tipo_de_movimiento = "Eléctrico"
-        potencia = 75
-        precision = 100
+        movimientos_pokemon_Pueño_trueno["nombre"] = "Pueño trueno"
+        movimientos_pokemon_Pueño_trueno["tipo_de_movimiento"] = "Eléctrico"
+        movimientos_pokemon_Pueño_trueno["potencia"] = 75
+        movimientos_pokemon_Pueño_trueno["precision"] = 100
+        movimientos_pokemon = movimientos_pokemon_Pueño_trueno
     elif numero_aleatorio == 23:
-        movimientos_pokemon = "Trueo"
-        tipo_de_movimiento = "Eléctrico"
-        potencia = 120
-        precision = 70
+        movimientos_pokemon_Trueo["nombre"] = "Trueo"
+        movimientos_pokemon_Trueo["tipo_de_movimiento"] = "Eléctrico"
+        movimientos_pokemon_Trueo["potencia"] = 120
+        movimientos_pokemon_Trueo["precision"] = 70
+        movimientos_pokemon = movimientos_pokemon_Trueo
     elif numero_aleatorio == 24:
-        movimientos_pokemon = "Rayo"
-        tipo_de_movimiento = "Veneno"
-        potencia = 95
-        precision = 100
+        movimientos_pokemon_Rayo["nombre"] = "Rayo"
+        movimientos_pokemon_Rayo["tipo_de_movimiento"] = "Eléctrico"
+        movimientos_pokemon_Rayo["potencia"] = 95
+        movimientos_pokemon_Rayo["precision"] = 100
+        movimientos_pokemon = movimientos_pokemon_Rayo
     elif numero_aleatorio == 25:
-        movimientos_pokemon = "Hueso palo"
-        tipo_de_movimiento = "Tierra"
-        potencia = 65
-        precision = 85
+        movimientos_pokemon_Hueso_palo["nombre"] = "Hueso palo"
+        movimientos_pokemon_Hueso_palo["tipo_de_movimiento"] = "Tierra"
+        movimientos_pokemon_Hueso_palo["potencia"] = 65
+        movimientos_pokemon_Hueso_palo["precision"] = 85
+        movimientos_pokemon = movimientos_pokemon_Hueso_palo
     elif numero_aleatorio == 26:
-        movimientos_pokemon = "Huesomerang"
-        tipo_de_movimiento = "Tierra"
-        potencia = 50
-        precision = 90
+        movimientos_pokemon_Huesomerang["nombre"] = "Huesomerang"
+        movimientos_pokemon_Huesomerang["tipo_de_movimiento"] = "Tierra"
+        movimientos_pokemon_Huesomerang["potencia"] = 50
+        movimientos_pokemon_Huesomerang["precision"] = 90
+        movimientos_pokemon = movimientos_pokemon_Huesomerang
     elif numero_aleatorio == 27:
-        movimientos_pokemon = "Terremoto"
-        tipo_de_movimiento = "Tierra"
-        potencia = 100
-        precision = 100
+        movimientos_pokemon_Terremoto["nombre"] = "Terremoto"
+        movimientos_pokemon_Terremoto["tipo_de_movimiento"] = "Tierra"
+        movimientos_pokemon_Terremoto["potencia"] = 100
+        movimientos_pokemon_Terremoto["precision"] = 100
+        movimientos_pokemon = movimientos_pokemon_Terremoto
     elif numero_aleatorio == 28:
-        movimientos_pokemon = "Come sueños"
-        tipo_de_movimiento = "Psíquico"
-        potencia = 100
-        precision = 100
+        movimientos_pokemon_Come_sueños["nombre"] = "Come sueños"
+        movimientos_pokemon_Come_sueños["tipo_de_movimiento"] = "Psíquico"
+        movimientos_pokemon_Come_sueños["potencia"] = 100
+        movimientos_pokemon_Come_sueños["precision"] = 100
+        movimientos_pokemon = movimientos_pokemon_Come_sueños
     elif numero_aleatorio == 29:
-        movimientos_pokemon = "Bola neblina"
-        tipo_de_movimiento = "Psíquico"
-        potencia = 70
-        precision = 100
+        movimientos_pokemon_Bola_neblina["nombre"] = "Bola neblina"
+        movimientos_pokemon_Bola_neblina["tipo_de_movimiento"] = "Psíquico"
+        movimientos_pokemon_Bola_neblina["potencia"] = 70
+        movimientos_pokemon_Bola_neblina["precision"] = 100
+        movimientos_pokemon = movimientos_pokemon_Bola_neblina
     elif numero_aleatorio == 30:
-        movimientos_pokemon = "Resplandor"
-        tipo_de_movimiento = "Psíquico"
-        potencia = 70
-        precision = 100
+        movimientos_pokemon_Resplandor["nombre"] = "Resplandor"
+        movimientos_pokemon_Resplandor["tipo_de_movimiento"] = "Psíquico"
+        movimientos_pokemon_Resplandor["potencia"] = 70
+        movimientos_pokemon_Resplandor["precision"] = 100
+        movimientos_pokemon = movimientos_pokemon_Resplandor
         # Se mantiene un arreglo con los datos de características de cada movimiento
-    return movimientos_pokemon, tipo_de_movimiento, potencia, precision
-
+    return movimientos_pokemon
 
     # Generar número aleatorio para las funciones a utulizar de 1-15
 
@@ -397,7 +626,7 @@ def listado_de_pokemon(numero_aleatorio):
     #Variables a utilizar
     global pokemon_Bulbasaur, pokemon_Charmander, pokemon_Squirtle, pokemon_Caterpie, pokemon_Weedle, pokemon_Pidgey, pokemon_Rattata, \
     pokemon_Spearow, pokemon_Ekans, pokemon_Pikachu, pokemon_Sandshrew, pokemon_Vulpix, pokemon_Jigglypuff, pokemon_Zubat, pokemon_Oddish, \
-    pokemon_Gloom, pokemon_Diglett, pokemon_Meowth, pokemon_Psyduck, pokemon_Mewtwo
+    pokemon_Gloom, pokemon_Diglett, pokemon_Meowth, pokemon_Psyduck, pokemon_Mewtwo, pokemon_enemigos
 
     # Listado de pokemones según el anexo del listado
     if numero_aleatorio == 1:
@@ -409,6 +638,7 @@ def listado_de_pokemon(numero_aleatorio):
         pokemon_Bulbasaur["velocidad"] = 45
         pokemon_Bulbasaur["experiencia_base"] = 64
         pokemon_Bulbasaur["nivel"] = 0
+        pokemon_enemigos = pokemon_Bulbasaur
     elif numero_aleatorio == 2:
         pokemon_Charmander["nombre"] = "Charmander"
         pokemon_Charmander["tipo"] = "Fuego"
@@ -418,6 +648,7 @@ def listado_de_pokemon(numero_aleatorio):
         pokemon_Charmander["velocidad"] = 65
         pokemon_Charmander["experiencia_base"] = 65
         pokemon_Charmander["nivel"] = 0
+        pokemon_enemigos = pokemon_Charmander
     elif numero_aleatorio == 3:
         pokemon_Squirtle["nombre"] = "Squirtle"
         pokemon_Squirtle["tipo"] = "Agua"
@@ -427,6 +658,7 @@ def listado_de_pokemon(numero_aleatorio):
         pokemon_Squirtle["velocidad"] = 43
         pokemon_Squirtle["experiencia_base"] = 66
         pokemon_Squirtle["nivel"] = 0
+        pokemon_enemigos = pokemon_Squirtle
     elif numero_aleatorio == 4:
         pokemon_Caterpie["nombre"] = "Caterpie"
         pokemon_Caterpie["tipo"] = "Bicho"
@@ -436,6 +668,7 @@ def listado_de_pokemon(numero_aleatorio):
         pokemon_Caterpie["velocidad"] = 45
         pokemon_Caterpie["experiencia_base"] = 53
         pokemon_Caterpie["nivel"] = 0
+        pokemon_enemigos = pokemon_Caterpie
     elif numero_aleatorio == 5:
         pokemon_Weedle["nombre"] = "Weedle"
         pokemon_Weedle["tipo"] = "Bicho"
@@ -445,6 +678,7 @@ def listado_de_pokemon(numero_aleatorio):
         pokemon_Weedle["velocidad"] = 50
         pokemon_Weedle["experiencia_base"] = 52
         pokemon_Weedle["nivel"] = 0
+        pokemon_enemigos = pokemon_Weedle
     elif numero_aleatorio == 6:
         pokemon_Pidgey["nombre"] = "Pidgey"
         pokemon_Pidgey["tipo"] = "Volador"
@@ -454,6 +688,7 @@ def listado_de_pokemon(numero_aleatorio):
         pokemon_Pidgey["velocidad"] = 56
         pokemon_Pidgey["experiencia_base"] = 55
         pokemon_Pidgey["nivel"] = 0
+        pokemon_enemigos = pokemon_Pidgey
     elif numero_aleatorio == 7:
         pokemon_Rattata["nombre"] = "Rattata"
         pokemon_Rattata["tipo"] = "Normal"
@@ -463,6 +698,7 @@ def listado_de_pokemon(numero_aleatorio):
         pokemon_Rattata["velocidad"] = 72
         pokemon_Rattata["experiencia_base"] = 57
         pokemon_Rattata["nivel"] = 0
+        pokemon_enemigos = pokemon_Rattata
     elif numero_aleatorio == 8:
         pokemon_Spearow["nombre"] = "Spearow"
         pokemon_Spearow["tipo"] = "Volador"
@@ -472,6 +708,7 @@ def listado_de_pokemon(numero_aleatorio):
         pokemon_Spearow["velocidad"] = 70
         pokemon_Spearow["experiencia_base"] = 58
         pokemon_Spearow["nivel"] = 0
+        pokemon_enemigos = pokemon_Spearow
     elif numero_aleatorio == 9:
         pokemon_Ekans["nombre"] = "Ekans"
         pokemon_Ekans["tipo"] = "Veneno"
@@ -481,6 +718,7 @@ def listado_de_pokemon(numero_aleatorio):
         pokemon_Ekans["velocidad"] = 55
         pokemon_Ekans["experiencia_base"] = 62
         pokemon_Ekans["nivel"] = 0
+        pokemon_enemigos = pokemon_Ekans
     elif numero_aleatorio == 10:
         pokemon_Pikachu["nombre"] = "Pikachu"
         pokemon_Pikachu["tipo"] = "Eléctrico"
@@ -490,6 +728,7 @@ def listado_de_pokemon(numero_aleatorio):
         pokemon_Pikachu["velocidad"] = 90
         pokemon_Pikachu["experiencia_base"] = 82
         pokemon_Pikachu["nivel"] = 0
+        pokemon_enemigos = pokemon_Pikachu
     elif numero_aleatorio == 11:
         pokemon_Sandshrew["nombre"] = "Sandshrew"
         pokemon_Sandshrew["tipo"] = "Tierra"
@@ -499,6 +738,7 @@ def listado_de_pokemon(numero_aleatorio):
         pokemon_Sandshrew["velocidad"] = 40
         pokemon_Sandshrew["experiencia_base"] = 93
         pokemon_Sandshrew["nivel"] = 0
+        pokemon_enemigos = pokemon_Sandshrew
     elif numero_aleatorio == 12:
         pokemon_Vulpix["nombre"] = "Vulpix"
         pokemon_Vulpix["tipo"] = "Fuego"
@@ -508,6 +748,7 @@ def listado_de_pokemon(numero_aleatorio):
         pokemon_Vulpix["velocidad"] = 65
         pokemon_Vulpix["experiencia_base"] = 63
         pokemon_Vulpix["nivel"] = 0
+        pokemon_enemigos = pokemon_Vulpix
     elif numero_aleatorio == 13:
         pokemon_Jigglypuff["nombre"] = "Jigglypuff"
         pokemon_Jigglypuff["tipo"] = "Normal"
@@ -517,6 +758,7 @@ def listado_de_pokemon(numero_aleatorio):
         pokemon_Jigglypuff["velocidad"] = 20
         pokemon_Jigglypuff["experiencia_base"] = 76
         pokemon_Jigglypuff["nivel"] = 0
+        pokemon_enemigos = pokemon_Jigglypuff
     elif numero_aleatorio == 14:
         pokemon_Zubat["nombre"] = "Zubat"
         pokemon_Zubat["tipo"] = "Veneno"
@@ -526,6 +768,7 @@ def listado_de_pokemon(numero_aleatorio):
         pokemon_Zubat["velocidad"] = 55
         pokemon_Zubat["experiencia_base"] = 54
         pokemon_Zubat["nivel"] = 0
+        pokemon_enemigos = pokemon_Zubat
     elif numero_aleatorio == 15:
         pokemon_Oddish["nombre"] = "Oddish"
         pokemon_Oddish["tipo"] = "Planta"
@@ -535,6 +778,7 @@ def listado_de_pokemon(numero_aleatorio):
         pokemon_Oddish["velocidad"] = 30
         pokemon_Oddish["experiencia_base"] = 78
         pokemon_Oddish["nivel"] = 0
+        pokemon_enemigos = pokemon_Oddish
     elif numero_aleatorio == 16:
         pokemon_Gloom["nombre"] = "Gloom"
         pokemon_Gloom["tipo"] = "Planta"
@@ -544,6 +788,7 @@ def listado_de_pokemon(numero_aleatorio):
         pokemon_Gloom["velocidad"] = 40
         pokemon_Gloom["experiencia_base"] = 132
         pokemon_Gloom["nivel"] = 0
+        pokemon_enemigos = pokemon_Gloom
     elif numero_aleatorio == 17:
         pokemon_Diglett["nombre"] = "Diglett"
         pokemon_Diglett["tipo"] = "Tierra"
@@ -553,6 +798,7 @@ def listado_de_pokemon(numero_aleatorio):
         pokemon_Diglett["velocidad"] = 95
         pokemon_Diglett["experiencia_base"] = 81
         pokemon_Diglett["nivel"] = 0
+        pokemon_enemigos = pokemon_Diglett
     elif numero_aleatorio == 18:
         pokemon_Meowth["nombre"] = "Meowth"
         pokemon_Meowth["tipo"] = "Normal"
@@ -562,6 +808,7 @@ def listado_de_pokemon(numero_aleatorio):
         pokemon_Meowth["velocidad"] = 90
         pokemon_Meowth["experiencia_base"] = 69
         pokemon_Meowth["nivel"] = 0
+        pokemon_enemigos = pokemon_Meowth
     elif numero_aleatorio == 19:
         pokemon_Psyduck["nombre"] = "Psyduck"
         pokemon_Psyduck["tipo"] = "Agua"
@@ -571,6 +818,7 @@ def listado_de_pokemon(numero_aleatorio):
         pokemon_Psyduck["velocidad"] = 55
         pokemon_Psyduck["experiencia_base"] = 80
         pokemon_Psyduck["nivel"] = 0
+        pokemon_enemigos = pokemon_Psyduck
     elif numero_aleatorio == 20:
         pokemon_Mewtwo["nombre"] = "Mewtwo"
         pokemon_Mewtwo["tipo"] = "Psíquico"
@@ -580,6 +828,8 @@ def listado_de_pokemon(numero_aleatorio):
         pokemon_Mewtwo["velocidad"] = 130
         pokemon_Mewtwo["experiencia_base"] = 220
         pokemon_Mewtwo["nivel"] = 0
+        pokemon_enemigos = pokemon_Mewtwo
+    return pokemon_enemigos
 
 # Función para generar números aletorios
 def numero_aleatorio(limite_inferior, limite_superior):
@@ -598,9 +848,9 @@ def modificar_estadísticas_iniciales():
     pokemon_inicial["defensa"] = numero_aleatorio(1,15)
     pokemon_inicial["velocidad"] = numero_aleatorio(1,15)
     pokemon_inicial["puntos_de_vida"] = numero_aleatorio(1,15)
-    movimiento_1 = movimientos(numero_aleatorio(1,30))
+    movimiento_1 = movimientos(movimientos(numero_aleatorio(1,30)))
     movimiento_2 = movimientos(numero_aleatorio(1,30))
-    movimientos_pokemon = [movimiento_1[0], movimiento_2[0]]
+    movimientos_pokemon = movimiento_1["nombre"], movimiento_2["nombre"]
 
 # Bloque de codigo batallas salvajes
 def batalla():
@@ -645,18 +895,21 @@ def seleccion_pokemon():
         if opcionPokemon == "a":
             # El usuario escogío a Bulbasaur
             pokemon_inicial["nombre"] = "Bulbasaur"
+            pokemon_inicial["tipo"] = "Planta"
             print("\x1b[1;32m" + "\t\t\t\t\t\tUsted ha escogido correctamente a: "+ pokemon_inicial["nombre"]+"\n")
             modificar_estadísticas_iniciales()
             break
         elif opcionPokemon == "b":
             # El usuario escogío a Charmander
             pokemon_inicial["nombre"] =  "Charmander"
+            pokemon_inicial["tipo"] = "Fuego"
             print("\x1b[1;32m" + "\t\t\t\t\t\tUsted ha escogido correctamente a: "+ pokemon_inicial["nombre"]+"\n")
             modificar_estadísticas_iniciales()
             break
         elif opcionPokemon == "c":
-            pokemon_inicial["nombre"] =  "Squirtle"
             # El usuario escogío a Squirtle
+            pokemon_inicial["nombre"] =  "Squirtle"
+            pokemon_inicial["tipo"] = "Agua"
             print("\x1b[1;32m" + "\t\t\t\t\t\tUsted ha escogido correctamente a: "+ pokemon_inicial["nombre"]+"\n")
             modificar_estadísticas_iniciales()
             break
