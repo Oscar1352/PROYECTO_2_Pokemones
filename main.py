@@ -849,7 +849,7 @@ def modificar_estadísticas_iniciales():
     pokemon_inicial["velocidad"] = numero_aleatorio(1,15)
     pokemon_inicial["puntos_de_vida"] = numero_aleatorio(1,15)
     # Se extrae los movimientos de manera aleatoria
-    movimiento_1 = movimientos(movimientos(numero_aleatorio(1,30)))
+    movimiento_1 = movimientos(numero_aleatorio(1,30))
     movimiento_2 = movimientos(numero_aleatorio(1,30))
     movimientos_pokemon = movimiento_1["nombre"], movimiento_2["nombre"]
 
