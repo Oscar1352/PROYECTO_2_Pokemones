@@ -7,6 +7,7 @@ import random
 
 # Características iniciales del pokémon
 movimientos_pokemon = []
+movimientos_pokemon_enemigo = [0, 0, 0, 0]
 pokemon_inicial = {
     "nombre" : "",
     "apodo" : "",
@@ -21,6 +22,7 @@ pokemon_inicial = {
     "nivel" : 0
 }
 pokemon_inicial_global = []
+
 # Pokémones enemigos
 pokemon_enemigos = []
 pokemon_Bulbasaur = {
@@ -452,11 +454,17 @@ movimientos_pokemon_Resplandor = {
     "precision" : 0
 }
 
-# Guardar datos de movimientos
+# Guardar datos de movimientos usuario
 movimiento_1 = []
 movimiento_2 = []
 movimiento_3 = []
 movimiento_4 = []
+
+# Guardar datos de movimientos enemigo
+movimiento_1_enemigo = []
+movimiento_2_enemigo = []
+movimiento_3_enemigo = []
+movimiento_4_enemigo = []
 
 #Función para movimientos, 30 movimientos
 def movimientos(numero_aleatorio):
@@ -864,7 +872,6 @@ def listado_de_pokemon(numero_aleatorio):
         pokemon_Mewtwo["nivel"] = 0
         pokemon_enemigos = pokemon_Mewtwo
         # Le otorgo los datos de puntos de salud al pokemon
-        pokemon_enemigos["puntos_de_salud"] = numero_aleatorio(1,15)
     return pokemon_enemigos
 
 # Función para generar números aletorios
@@ -872,9 +879,14 @@ def numero_aleatorio(limite_inferior, limite_superior):
     numero_aleatorio = random.randint(limite_inferior,limite_superior)
     return numero_aleatorio
 
+#mostrar los datos en pantalla
+def mostrar_datos():
+    print("\x1b[1;34m", pokemon_inicial["nombre"],pokemon_inicial["nivel"])
+    print("\x1b[1;31m", pokemon_enemigos["nombre"],pokemon_enemigos["nivel"])
+
 # Bloque de codigo para modificar los datos iniciales
 def modificar_estadísticas_iniciales():
-    global pokemon_inicial, movimientos_pokemon
+    global pokemon_inicial, movimientos_pokemon, movimiento_1, movimiento_2
     # Dar apodo al pokémon
     pokemon_inicial["apodo"] = input("\x1b[1;0m" + f"Por favor ingrese el apodo que quiera darle a su pokémon "+pokemon_inicial["nombre"]+": ")
     # Dar nivel al pokémnon
@@ -897,16 +909,32 @@ def datos_de_combate_usuario():
 
 # Calcular los datos de combate del usuario
 def datos_de_combate_enemigo():
-    pokemon_enemigo = []
-    pokemon_enemigo = listado_de_pokemon(numero_aleatorio(1,20))
-    pokemon_enemigo["puntos_de_vida"] = ((pokemon_enemigo["salud"] + 2 * pokemon_enemigo["puntos_de_salud"]) * (pokemon_enemigo["nivel"] / 100) + 10 + pokemon_enemigo["nivel"])
-    pokemon_enemigo["dato_de_combate"] = (((pokemon_enemigo["ataque"] + 2 * pokemon_enemigo["ataque"]) * (pokemon_enemigo["nivel"] / 100)) + 5 )
+    global pokemon_inicial, pokemon_enemigos
+    pokemon_enemigos = listado_de_pokemon(numero_aleatorio(1,20))
+    pokemon_enemigos["puntos_de_vida"] = ((pokemon_enemigos["salud"] + 2 * pokemon_enemigos["puntos_de_salud"]) * (pokemon_enemigos["nivel"] / 100) + 10 + pokemon_enemigos["nivel"])
+    pokemon_enemigos["dato_de_combate"] = (((pokemon_enemigos["ataque"] + 2 * pokemon_enemigos["ataque"]) * (pokemon_enemigos["nivel"] / 100)) + 5 )
+    pokemon_enemigos["puntos_de_salud"] = numero_aleatorio(1,15)
+    if numero_aleatorio(1,2) == 1:
+        pokemon_enemigos["nivel"] = pokemon_inicial["nivel"] + 4
+    else:
+        pokemon_enemigos["nivel"] = pokemon_inicial["nivel"] - 4
 
+# Calcular los movimientos aleatorios del enemigo
+def movimientos_enemigo():
+    global movimientos_pokemon_enemigo, movimiento_1_enemigo, movimiento_2_enemigo, movimiento_3_enemigo, movimiento_4_enemigo
+    movimiento_1_enemigo = movimientos(numero_aleatorio(1,30))
+    movimiento_2_enemigo = movimientos(numero_aleatorio(2,30))
+    movimiento_3_enemigo = movimientos(numero_aleatorio(2,30))
+    movimiento_4_enemigo = movimientos(numero_aleatorio(2,30))
+    movimientos_pokemon_enemigo = movimiento_1_enemigo["nombre"], movimiento_2_enemigo["nombre"], movimiento_3_enemigo["nombre"], movimiento_4_enemigo["nombre"]
+    print(movimientos_pokemon_enemigo)
+    return movimientos_pokemon_enemigo
 
 # Bloque de codigo batallas salvajes
 def batalla():
     datos_de_combate_usuario()
     datos_de_combate_enemigo()
+    movimientos_enemigo()
     return
 
 # Bloque de codigo para chequear estadísticas
@@ -1010,11 +1038,10 @@ def menu():
 # Bloque de codigo main
 def main():
     # Mensaje de bienvenida al juego
-    print("\t\t\tBienvenido a Pokémon Rojo, uno de los juegos más populares de consola para GameBoy del año 1996, ¿LISTO PARA SER EL CAMPÉON DE LA REGIÓN?")
+    print("\n\t\t\tBienvenido a Pokémon Rojo, uno de los juegos más populares de consola para GameBoy del año 1996, ¿LISTO PARA SER EL CAMPÉON DE LA REGIÓN?")
     #Solicitar los datos para el incio del juego
     seleccion_pokemon()
     menu()
-
 
 #Ejecución del programa
 main()
