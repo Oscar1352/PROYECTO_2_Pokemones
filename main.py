@@ -11,28 +11,24 @@ pokemon_inicial = {
     "nombre" : "",
     "apodo" : "",
     "tipo" : "",
+    "salud" : 0,
     "puntos_de_vida" : 0,
+    "dato_de_combate" : 0,
     "ataque" : 0,
     "defensa" : 0,
     "velocidad" : 0,
     "experiencia_base" : 0,
     "nivel" : 0
 }
+pokemon_inicial_global = []
 # Pokémones enemigos
-pokemon_enemigos = {
-    "nombre": "",
-    "tipo": "",
-    "puntos_de_vida": 0,
-    "ataque": 0,
-    "defensa": 0,
-    "velocidad": 0,
-    "experiencia_base": 0,
-    "nivel": 0
-}
+pokemon_enemigos = []
 pokemon_Bulbasaur = {
     "nombre" : "",
     "tipo" : "",
-    "puntos_de_vida" : 0,
+    "salud": 0,
+    "puntos_de_salud": 0,
+    "dato_de_combate": 0,
     "ataque" : 0,
     "defensa" : 0,
     "velocidad" : 0,
@@ -42,7 +38,9 @@ pokemon_Bulbasaur = {
 pokemon_Charmander = {
     "nombre" : "",
     "tipo" : "",
-    "puntos_de_vida" : 0,
+    "salud": 0,
+    "puntos_de_salud": 0,
+    "dato_de_combate": 0,
     "ataque" : 0,
     "defensa" : 0,
     "velocidad" : 0,
@@ -52,7 +50,9 @@ pokemon_Charmander = {
 pokemon_Squirtle = {
     "nombre" : "",
     "tipo" : "",
-    "puntos_de_vida" : 0,
+    "salud": 0,
+    "puntos_de_salud": 0,
+    "dato_de_combate": 0,
     "ataque" : 0,
     "defensa" : 0,
     "velocidad" : 0,
@@ -62,7 +62,9 @@ pokemon_Squirtle = {
 pokemon_Caterpie = {
     "nombre" : "",
     "tipo" : "",
-    "puntos_de_vida" : 0,
+    "salud": 0,
+    "puntos_de_salud": 0,
+    "dato_de_combate": 0,
     "ataque" : 0,
     "defensa" : 0,
     "velocidad" : 0,
@@ -72,7 +74,9 @@ pokemon_Caterpie = {
 pokemon_Weedle = {
     "nombre" : "",
     "tipo" : "",
-    "puntos_de_vida" : 0,
+    "salud": 0,
+    "puntos_de_salud": 0,
+    "dato_de_combate": 0,
     "ataque" : 0,
     "defensa" : 0,
     "velocidad" : 0,
@@ -82,7 +86,9 @@ pokemon_Weedle = {
 pokemon_Pidgey = {
     "nombre" : "",
     "tipo" : "",
-    "puntos_de_vida" : 0,
+    "salud": 0,
+    "puntos_de_salud": 0,
+    "dato_de_combate": 0,
     "ataque" : 0,
     "defensa" : 0,
     "velocidad" : 0,
@@ -92,7 +98,9 @@ pokemon_Pidgey = {
 pokemon_Rattata = {
     "nombre" : "",
     "tipo" : "",
-    "puntos_de_vida" : 0,
+    "salud": 0,
+    "puntos_de_salud": 0,
+    "dato_de_combate": 0,
     "ataque" : 0,
     "defensa" : 0,
     "velocidad" : 0,
@@ -102,7 +110,9 @@ pokemon_Rattata = {
 pokemon_Spearow = {
     "nombre" : "",
     "tipo" : "",
-    "puntos_de_vida" : 0,
+    "salud": 0,
+    "puntos_de_salud": 0,
+    "dato_de_combate": 0,
     "ataque" : 0,
     "defensa" : 0,
     "velocidad" : 0,
@@ -112,7 +122,9 @@ pokemon_Spearow = {
 pokemon_Ekans = {
     "nombre" : "",
     "tipo" : "",
-    "puntos_de_vida" : 0,
+    "salud": 0,
+    "puntos_de_salud": 0,
+    "dato_de_combate": 0,
     "ataque" : 0,
     "defensa" : 0,
     "velocidad" : 0,
@@ -122,7 +134,9 @@ pokemon_Ekans = {
 pokemon_Pikachu = {
     "nombre" : "",
     "tipo" : "",
-    "puntos_de_vida" : 0,
+    "salud": 0,
+    "puntos_de_salud": 0,
+    "dato_de_combate": 0,
     "ataque" : 0,
     "defensa" : 0,
     "velocidad" : 0,
@@ -132,7 +146,9 @@ pokemon_Pikachu = {
 pokemon_Sandshrew = {
     "nombre" : "",
     "tipo" : "",
-    "puntos_de_vida" : 0,
+    "salud": 0,
+    "puntos_de_salud": 0,
+    "dato_de_combate": 0,
     "ataque" : 0,
     "defensa" : 0,
     "velocidad" : 0,
@@ -142,7 +158,9 @@ pokemon_Sandshrew = {
 pokemon_Vulpix = {
     "nombre" : "",
     "tipo" : "",
-    "puntos_de_vida" : 0,
+    "salud": 0,
+    "puntos_de_salud": 0,
+    "dato_de_combate": 0,
     "ataque" : 0,
     "defensa" : 0,
     "velocidad" : 0,
@@ -152,7 +170,9 @@ pokemon_Vulpix = {
 pokemon_Jigglypuff = {
     "nombre" : "",
     "tipo" : "",
-    "puntos_de_vida" : 0,
+    "salud": 0,
+    "puntos_de_salud": 0,
+    "dato_de_combate": 0,
     "ataque" : 0,
     "defensa" : 0,
     "velocidad" : 0,
@@ -162,7 +182,9 @@ pokemon_Jigglypuff = {
 pokemon_Zubat = {
     "nombre" : "",
     "tipo" : "",
-    "puntos_de_vida" : 0,
+    "salud": 0,
+    "puntos_de_salud": 0,
+    "dato_de_combate": 0,
     "ataque" : 0,
     "defensa" : 0,
     "velocidad" : 0,
@@ -172,7 +194,9 @@ pokemon_Zubat = {
 pokemon_Oddish = {
     "nombre" : "",
     "tipo" : "",
-    "puntos_de_vida" : 0,
+    "salud": 0,
+    "puntos_de_salud": 0,
+    "dato_de_combate": 0,
     "ataque" : 0,
     "defensa" : 0,
     "velocidad" : 0,
@@ -182,7 +206,9 @@ pokemon_Oddish = {
 pokemon_Gloom = {
     "nombre" : "",
     "tipo" : "",
-    "puntos_de_vida" : 0,
+    "salud": 0,
+    "puntos_de_salud": 0,
+    "dato_de_combate": 0,
     "ataque" : 0,
     "defensa" : 0,
     "velocidad" : 0,
@@ -192,7 +218,9 @@ pokemon_Gloom = {
 pokemon_Diglett = {
     "nombre" : "",
     "tipo" : "",
-    "puntos_de_vida" : 0,
+    "salud": 0,
+    "puntos_de_salud": 0,
+    "dato_de_combate": 0,
     "ataque" : 0,
     "defensa" : 0,
     "velocidad" : 0,
@@ -202,7 +230,9 @@ pokemon_Diglett = {
 pokemon_Meowth = {
     "nombre" : "",
     "tipo" : "",
-    "puntos_de_vida" : 0,
+    "salud": 0,
+    "puntos_de_salud": 0,
+    "dato_de_combate": 0,
     "ataque" : 0,
     "defensa" : 0,
     "velocidad" : 0,
@@ -212,7 +242,9 @@ pokemon_Meowth = {
 pokemon_Psyduck = {
     "nombre" : "",
     "tipo" : "",
-    "puntos_de_vida" : 0,
+    "salud": 0,
+    "puntos_de_salud": 0,
+    "dato_de_combate": 0,
     "ataque" : 0,
     "defensa" : 0,
     "velocidad" : 0,
@@ -222,7 +254,9 @@ pokemon_Psyduck = {
 pokemon_Mewtwo = {
     "nombre" : "",
     "tipo" : "",
-    "puntos_de_vida" : 0,
+    "salud": 0,
+    "puntos_de_salud": 0,
+    "dato_de_combate": 0,
     "ataque" : 0,
     "defensa" : 0,
     "velocidad" : 0,
@@ -632,7 +666,7 @@ def listado_de_pokemon(numero_aleatorio):
     if numero_aleatorio == 1:
         pokemon_Bulbasaur["nombre"] = "Bulbasaur"
         pokemon_Bulbasaur["tipo"] = "Planta"
-        pokemon_Bulbasaur["puntos_de_salud"] = 45
+        pokemon_Bulbasaur["salud"] = 45
         pokemon_Bulbasaur["ataque"] = 49
         pokemon_Bulbasaur["defensa"] = 49
         pokemon_Bulbasaur["velocidad"] = 45
@@ -642,7 +676,7 @@ def listado_de_pokemon(numero_aleatorio):
     elif numero_aleatorio == 2:
         pokemon_Charmander["nombre"] = "Charmander"
         pokemon_Charmander["tipo"] = "Fuego"
-        pokemon_Charmander["puntos_de_salud"] = 39
+        pokemon_Charmander["salud"] = 39
         pokemon_Charmander["ataque"] = 52
         pokemon_Charmander["defensa"] = 43
         pokemon_Charmander["velocidad"] = 65
@@ -652,7 +686,7 @@ def listado_de_pokemon(numero_aleatorio):
     elif numero_aleatorio == 3:
         pokemon_Squirtle["nombre"] = "Squirtle"
         pokemon_Squirtle["tipo"] = "Agua"
-        pokemon_Squirtle["puntos_de_salud"] = 44
+        pokemon_Squirtle["salud"] = 44
         pokemon_Squirtle["ataque"] = 48
         pokemon_Squirtle["defensa"] = 65
         pokemon_Squirtle["velocidad"] = 43
@@ -662,7 +696,7 @@ def listado_de_pokemon(numero_aleatorio):
     elif numero_aleatorio == 4:
         pokemon_Caterpie["nombre"] = "Caterpie"
         pokemon_Caterpie["tipo"] = "Bicho"
-        pokemon_Caterpie["puntos_de_salud"] = 45
+        pokemon_Caterpie["salud"] = 45
         pokemon_Caterpie["ataque"] = 30
         pokemon_Caterpie["defensa"] = 35
         pokemon_Caterpie["velocidad"] = 45
@@ -672,7 +706,7 @@ def listado_de_pokemon(numero_aleatorio):
     elif numero_aleatorio == 5:
         pokemon_Weedle["nombre"] = "Weedle"
         pokemon_Weedle["tipo"] = "Bicho"
-        pokemon_Weedle["puntos_de_salud"] = 40
+        pokemon_Weedle["salud"] = 40
         pokemon_Weedle["ataque"] = 35
         pokemon_Weedle["defensa"] = 30
         pokemon_Weedle["velocidad"] = 50
@@ -682,7 +716,7 @@ def listado_de_pokemon(numero_aleatorio):
     elif numero_aleatorio == 6:
         pokemon_Pidgey["nombre"] = "Pidgey"
         pokemon_Pidgey["tipo"] = "Volador"
-        pokemon_Pidgey["puntos_de_salud"] = 40
+        pokemon_Pidgey["salud"] = 40
         pokemon_Pidgey["ataque"] = 45
         pokemon_Pidgey["defensa"] = 40
         pokemon_Pidgey["velocidad"] = 56
@@ -692,7 +726,7 @@ def listado_de_pokemon(numero_aleatorio):
     elif numero_aleatorio == 7:
         pokemon_Rattata["nombre"] = "Rattata"
         pokemon_Rattata["tipo"] = "Normal"
-        pokemon_Rattata["puntos_de_salud"] = 30
+        pokemon_Rattata["salud"] = 30
         pokemon_Rattata["ataque"] = 56
         pokemon_Rattata["defensa"] = 35
         pokemon_Rattata["velocidad"] = 72
@@ -702,7 +736,7 @@ def listado_de_pokemon(numero_aleatorio):
     elif numero_aleatorio == 8:
         pokemon_Spearow["nombre"] = "Spearow"
         pokemon_Spearow["tipo"] = "Volador"
-        pokemon_Spearow["puntos_de_salud"] = 40
+        pokemon_Spearow["salud"] = 40
         pokemon_Spearow["ataque"] = 60
         pokemon_Spearow["defensa"] = 30
         pokemon_Spearow["velocidad"] = 70
@@ -712,7 +746,7 @@ def listado_de_pokemon(numero_aleatorio):
     elif numero_aleatorio == 9:
         pokemon_Ekans["nombre"] = "Ekans"
         pokemon_Ekans["tipo"] = "Veneno"
-        pokemon_Ekans["puntos_de_salud"] = 35
+        pokemon_Ekans["salud"] = 35
         pokemon_Ekans["ataque"] = 60
         pokemon_Ekans["defensa"] = 44
         pokemon_Ekans["velocidad"] = 55
@@ -722,7 +756,7 @@ def listado_de_pokemon(numero_aleatorio):
     elif numero_aleatorio == 10:
         pokemon_Pikachu["nombre"] = "Pikachu"
         pokemon_Pikachu["tipo"] = "Eléctrico"
-        pokemon_Pikachu["puntos_de_salud"] = 35
+        pokemon_Pikachu["salud"] = 35
         pokemon_Pikachu["ataque"] = 55
         pokemon_Pikachu["defensa"] = 40
         pokemon_Pikachu["velocidad"] = 90
@@ -732,7 +766,7 @@ def listado_de_pokemon(numero_aleatorio):
     elif numero_aleatorio == 11:
         pokemon_Sandshrew["nombre"] = "Sandshrew"
         pokemon_Sandshrew["tipo"] = "Tierra"
-        pokemon_Sandshrew["puntos_de_salud"] = 50
+        pokemon_Sandshrew["salud"] = 50
         pokemon_Sandshrew["ataque"] = 75
         pokemon_Sandshrew["defensa"] = 85
         pokemon_Sandshrew["velocidad"] = 40
@@ -752,7 +786,7 @@ def listado_de_pokemon(numero_aleatorio):
     elif numero_aleatorio == 13:
         pokemon_Jigglypuff["nombre"] = "Jigglypuff"
         pokemon_Jigglypuff["tipo"] = "Normal"
-        pokemon_Jigglypuff["puntos_de_salud"] = 115
+        pokemon_Jigglypuff["salud"] = 115
         pokemon_Jigglypuff["ataque"] = 45
         pokemon_Jigglypuff["defensa"] = 20
         pokemon_Jigglypuff["velocidad"] = 20
@@ -762,7 +796,7 @@ def listado_de_pokemon(numero_aleatorio):
     elif numero_aleatorio == 14:
         pokemon_Zubat["nombre"] = "Zubat"
         pokemon_Zubat["tipo"] = "Veneno"
-        pokemon_Zubat["puntos_de_salud"] = 40
+        pokemon_Zubat["salud"] = 40
         pokemon_Zubat["ataque"] = 45
         pokemon_Zubat["defensa"] = 35
         pokemon_Zubat["velocidad"] = 55
@@ -772,7 +806,7 @@ def listado_de_pokemon(numero_aleatorio):
     elif numero_aleatorio == 15:
         pokemon_Oddish["nombre"] = "Oddish"
         pokemon_Oddish["tipo"] = "Planta"
-        pokemon_Oddish["puntos_de_salud"] = 45
+        pokemon_Oddish["salud"] = 45
         pokemon_Oddish["ataque"] = 50
         pokemon_Oddish["defensa"] = 55
         pokemon_Oddish["velocidad"] = 30
@@ -782,7 +816,7 @@ def listado_de_pokemon(numero_aleatorio):
     elif numero_aleatorio == 16:
         pokemon_Gloom["nombre"] = "Gloom"
         pokemon_Gloom["tipo"] = "Planta"
-        pokemon_Gloom["puntos_de_salud"] = 60
+        pokemon_Gloom["salud"] = 60
         pokemon_Gloom["ataque"] = 65
         pokemon_Gloom["defensa"] = 70
         pokemon_Gloom["velocidad"] = 40
@@ -792,7 +826,7 @@ def listado_de_pokemon(numero_aleatorio):
     elif numero_aleatorio == 17:
         pokemon_Diglett["nombre"] = "Diglett"
         pokemon_Diglett["tipo"] = "Tierra"
-        pokemon_Diglett["puntos_de_salud"] = 10
+        pokemon_Diglett["salud"] = 10
         pokemon_Diglett["ataque"] = 55
         pokemon_Diglett["defensa"] = 25
         pokemon_Diglett["velocidad"] = 95
@@ -802,7 +836,7 @@ def listado_de_pokemon(numero_aleatorio):
     elif numero_aleatorio == 18:
         pokemon_Meowth["nombre"] = "Meowth"
         pokemon_Meowth["tipo"] = "Normal"
-        pokemon_Meowth["puntos_de_salud"] = 40
+        pokemon_Meowth["salud"] = 40
         pokemon_Meowth["ataque"] = 45
         pokemon_Meowth["defensa"] = 35
         pokemon_Meowth["velocidad"] = 90
@@ -812,7 +846,7 @@ def listado_de_pokemon(numero_aleatorio):
     elif numero_aleatorio == 19:
         pokemon_Psyduck["nombre"] = "Psyduck"
         pokemon_Psyduck["tipo"] = "Agua"
-        pokemon_Psyduck["puntos_de_salud"] = 50
+        pokemon_Psyduck["salud"] = 50
         pokemon_Psyduck["ataque"] = 52
         pokemon_Psyduck["defensa"] = 48
         pokemon_Psyduck["velocidad"] = 55
@@ -822,13 +856,15 @@ def listado_de_pokemon(numero_aleatorio):
     elif numero_aleatorio == 20:
         pokemon_Mewtwo["nombre"] = "Mewtwo"
         pokemon_Mewtwo["tipo"] = "Psíquico"
-        pokemon_Mewtwo["puntos_de_salud"] = 106
+        pokemon_Mewtwo["salud"] = 106
         pokemon_Mewtwo["ataque"] = 110
         pokemon_Mewtwo["defensa"] = 90
         pokemon_Mewtwo["velocidad"] = 130
         pokemon_Mewtwo["experiencia_base"] = 220
         pokemon_Mewtwo["nivel"] = 0
         pokemon_enemigos = pokemon_Mewtwo
+        # Le otorgo los datos de puntos de salud al pokemon
+        pokemon_enemigos["puntos_de_salud"] = numero_aleatorio(1,15)
     return pokemon_enemigos
 
 # Función para generar números aletorios
@@ -847,21 +883,38 @@ def modificar_estadísticas_iniciales():
     pokemon_inicial["ataque"] = numero_aleatorio(1,15)
     pokemon_inicial["defensa"] = numero_aleatorio(1,15)
     pokemon_inicial["velocidad"] = numero_aleatorio(1,15)
-    pokemon_inicial["puntos_de_vida"] = numero_aleatorio(1,15)
+    pokemon_inicial["salud"] = numero_aleatorio(1,15)
     # Se extrae los movimientos de manera aleatoria
     movimiento_1 = movimientos(numero_aleatorio(1,30))
     movimiento_2 = movimientos(numero_aleatorio(1,30))
     movimientos_pokemon = movimiento_1["nombre"], movimiento_2["nombre"]
 
+# Calcular los datos de combate del usuario
+def datos_de_combate_usuario():
+    global pokemon_inicial, pokemon_inicial_global
+    pokemon_inicial["puntos_de_vida"] = ((pokemon_inicial["salud"] + 2 * pokemon_inicial_global["salud"]) * (pokemon_inicial["nivel"] / 100) + 10 + pokemon_inicial["nivel"])
+    pokemon_inicial["dato_de_combate"] = (((pokemon_inicial["ataque"] + 2 * pokemon_inicial_global["ataque"]) * (pokemon_inicial["nivel"] / 100)) + 5 )
+
+# Calcular los datos de combate del usuario
+def datos_de_combate_enemigo():
+    pokemon_enemigo = []
+    pokemon_enemigo = listado_de_pokemon(numero_aleatorio(1,20))
+    pokemon_enemigo["puntos_de_vida"] = ((pokemon_enemigo["salud"] + 2 * pokemon_enemigo["puntos_de_salud"]) * (pokemon_enemigo["nivel"] / 100) + 10 + pokemon_enemigo["nivel"])
+    pokemon_enemigo["dato_de_combate"] = (((pokemon_enemigo["ataque"] + 2 * pokemon_enemigo["ataque"]) * (pokemon_enemigo["nivel"] / 100)) + 5 )
+
+
 # Bloque de codigo batallas salvajes
 def batalla():
+    datos_de_combate_usuario()
+    datos_de_combate_enemigo()
     return
 
 # Bloque de codigo para chequear estadísticas
 def estadísticas():
     #Variables globales
-    global pokemon_inicial, movimientos_pokemon
+    global pokemon_inicial, movimientos_pokemon, pokemon_inicial_global
 
+    datos_de_combate_usuario()
     #Características principales
     print("\x1b[1;34m" + "DATOS ")
     print("\x1b[1;0m" + "Nombre: "+pokemon_inicial["nombre"])
@@ -873,16 +926,18 @@ def estadísticas():
 
     # Características de datos de combate
     print("\x1b[1;34m" + "DATOS DE COMBATE")
-    print("\x1b[1;0m" + "Puntos de Salud: "+str(pokemon_inicial["puntos_de_vida"]))
+    print("\x1b[1;0m" + "Salud: "+str(pokemon_inicial["salud"]))
     print("\x1b[1;0m" + "Ataque: "+str(pokemon_inicial["ataque"]))
     print("\x1b[1;0m" + "Defensa: "+str(pokemon_inicial["defensa"]))
     print("\x1b[1;0m" + "Velocidad: "+str(pokemon_inicial["velocidad"]))
+    print("Datos de Combate: ", pokemon_inicial["dato_de_combate"])
+    print("Datos de Combate: ", pokemon_inicial["puntos_de_vida"])
     input("PRESIONE UNA TECLA PARA REGRESAR AL MENÚ...")
     menu()
 
 # Bloque de codigo inicio del juego
 def seleccion_pokemon():
-    global pokemon_inicial
+    global pokemon_inicial, pokemon_inicial_global
     opcionPokemon = ""
     os.system("cls")  # Función para limpiar la pantalla y mostrar el menú
     print("\n\x1b[1;34m" + "\t\t\t\t\tMENÚ  DE SELECCIÓN DE POKÉMON INICIAL: ")
@@ -897,6 +952,7 @@ def seleccion_pokemon():
             # El usuario escogío a Bulbasaur
             pokemon_inicial["nombre"] = "Bulbasaur"
             pokemon_inicial["tipo"] = "Planta"
+            pokemon_inicial_global = pokemon_Bulbasaur
             print("\x1b[1;32m" + "\t\t\t\t\t\tUsted ha escogido correctamente a: "+ pokemon_inicial["nombre"]+"\n")
             modificar_estadísticas_iniciales()
             break
@@ -904,6 +960,7 @@ def seleccion_pokemon():
             # El usuario escogío a Charmander
             pokemon_inicial["nombre"] =  "Charmander"
             pokemon_inicial["tipo"] = "Fuego"
+            pokemon_inicial_global = pokemon_Charmander
             print("\x1b[1;32m" + "\t\t\t\t\t\tUsted ha escogido correctamente a: "+ pokemon_inicial["nombre"]+"\n")
             modificar_estadísticas_iniciales()
             break
@@ -911,6 +968,7 @@ def seleccion_pokemon():
             # El usuario escogío a Squirtle
             pokemon_inicial["nombre"] =  "Squirtle"
             pokemon_inicial["tipo"] = "Agua"
+            pokemon_inicial_global = pokemon_Squirtle
             print("\x1b[1;32m" + "\t\t\t\t\t\tUsted ha escogido correctamente a: "+ pokemon_inicial["nombre"]+"\n")
             modificar_estadísticas_iniciales()
             break
