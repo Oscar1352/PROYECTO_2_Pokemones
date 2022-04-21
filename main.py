@@ -26,15 +26,15 @@ pokemon_inicial_global = []
 # Pokémones enemigos
 pokemon_enemigos = []
 pokemon_Bulbasaur = {
-    "nombre" : "",
-    "tipo" : "",
-    "salud": 0,
+    "nombre" : "Bulbasaur",
+    "tipo" : "Planta",
+    "salud": 45,
     "puntos_de_salud": 0,
     "dato_de_combate": 0,
-    "ataque" : 0,
-    "defensa" : 0,
-    "velocidad" : 0,
-    "experiencia_base" : 0,
+    "ataque" : 49,
+    "defensa" : 49,
+    "velocidad" : 45,
+    "experiencia_base" : 64,
     "nivel" : 0
 }
 pokemon_Charmander = {
@@ -981,6 +981,7 @@ def seleccion_pokemon():
             pokemon_inicial["nombre"] = "Bulbasaur"
             pokemon_inicial["tipo"] = "Planta"
             pokemon_inicial_global = pokemon_Bulbasaur
+            print(pokemon_inicial_global)
             print("\x1b[1;32m" + "\t\t\t\t\t\tUsted ha escogido correctamente a: "+ pokemon_inicial["nombre"]+"\n")
             modificar_estadísticas_iniciales()
             break
