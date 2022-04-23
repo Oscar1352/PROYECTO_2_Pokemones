@@ -7,7 +7,9 @@ import random
 
 # Características iniciales del pokémon
 movimientos_pokemon = []
-movimientos_pokemon_enemigo = [0, 0, 0, 0]
+movimientos_pokemon_usuario = []
+movimientos_pokemon_enemigo = []
+ataque_a_usar = []
 pokemon_inicial = {
     "nombre" : "",
     "apodo" : "",
@@ -267,12 +269,6 @@ pokemon_Mewtwo = {
 }
 
 #Movimientos
-movimientos_pokemon = {
-    "nombre" : "",
-    "tipo_de_movimiento" : "",
-    "potencia" : 0,
-    "precision" : 0
-}
 movimientos_pokemon_Latigazo = {
     "nombre" : "",
     "tipo_de_movimiento" : "",
@@ -880,13 +876,13 @@ def numero_aleatorio(limite_inferior, limite_superior):
     return numero_aleatorio
 
 #mostrar los datos en pantalla
-def mostrar_datos():
-    print("\x1b[1;34m", pokemon_inicial["nombre"],pokemon_inicial["nivel"])
-    print("\x1b[1;31m", pokemon_enemigos["nombre"],pokemon_enemigos["nivel"])
+def mostrar_datos_en_pantallla():
+    print("\x1b[1;34m", pokemon_inicial["nombre"],pokemon_inicial["nivel"], pokemon_inicial["puntos_de_vida"])
+    print("\x1b[1;31m", pokemon_enemigos["nombre"],pokemon_enemigos["nivel"], pokemon_enemigos["puntos_de_vida"])
 
 # Bloque de codigo para modificar los datos iniciales
 def modificar_estadísticas_iniciales():
-    global pokemon_inicial, movimientos_pokemon, movimiento_1, movimiento_2
+    global pokemon_inicial, movimientos_pokemon_usuario,  movimiento_1, movimiento_2
     # Dar apodo al pokémon
     pokemon_inicial["apodo"] = input("\x1b[1;0m" + f"Por favor ingrese el apodo que quiera darle a su pokémon "+pokemon_inicial["nombre"]+": ")
     # Dar nivel al pokémnon
@@ -899,7 +895,7 @@ def modificar_estadísticas_iniciales():
     # Se extrae los movimientos de manera aleatoria
     movimiento_1 = movimientos(numero_aleatorio(1,30))
     movimiento_2 = movimientos(numero_aleatorio(1,30))
-    movimientos_pokemon = movimiento_1["nombre"], movimiento_2["nombre"]
+    movimientos_pokemon_usuario = movimiento_1["nombre"], movimiento_2["nombre"]
 
 # Calcular los datos de combate del usuario
 def datos_de_combate_usuario():
@@ -923,24 +919,27 @@ def datos_de_combate_enemigo():
 def movimientos_enemigo():
     global movimientos_pokemon_enemigo, movimiento_1_enemigo, movimiento_2_enemigo, movimiento_3_enemigo, movimiento_4_enemigo
     movimiento_1_enemigo = movimientos(numero_aleatorio(1,30))
-    movimiento_2_enemigo = movimientos(numero_aleatorio(2,30))
-    movimiento_3_enemigo = movimientos(numero_aleatorio(2,30))
-    movimiento_4_enemigo = movimientos(numero_aleatorio(2,30))
+    movimiento_2_enemigo = movimientos(numero_aleatorio(1,30))
+    movimiento_3_enemigo = movimientos(numero_aleatorio(1,30))
+    movimiento_4_enemigo = movimientos(numero_aleatorio(1,30))
     movimientos_pokemon_enemigo = movimiento_1_enemigo["nombre"], movimiento_2_enemigo["nombre"], movimiento_3_enemigo["nombre"], movimiento_4_enemigo["nombre"]
-    print(movimientos_pokemon_enemigo)
-    return movimientos_pokemon_enemigo
+    print(f"Movimientos: {movimientos_pokemon_enemigo}")
 
 # Bloque de codigo batallas salvajes
 def batalla():
+    global movimientos_pokemon_usuario,movimientos_pokemon_enemigo
     datos_de_combate_usuario()
     datos_de_combate_enemigo()
     movimientos_enemigo()
+    eleccion = input(f"Por favor de escoger el ataque que usará 1-{len(movimientos_pokemon_usuario)}: ")
+
+
     return
 
 # Bloque de codigo para chequear estadísticas
 def estadísticas():
     #Variables globales
-    global pokemon_inicial, movimientos_pokemon, pokemon_inicial_global
+    global pokemon_inicial, movimientos_pokemon_usuario, pokemon_inicial_global
 
     datos_de_combate_usuario()
     #Características principales
@@ -950,7 +949,7 @@ def estadísticas():
     print("Nivel: "+str(pokemon_inicial["nivel"]))
     print("Experiencia: "+str(pokemon_inicial["experiencia_base"]))
     print("Tipo: "+pokemon_inicial["tipo"])
-    print(f"Movimientos: {movimientos_pokemon}")
+    print(f"Movimientos: {movimientos_pokemon_usuario}")
 
     # Características de datos de combate
     print("\x1b[1;34m" + "DATOS DE COMBATE")
@@ -981,7 +980,6 @@ def seleccion_pokemon():
             pokemon_inicial["nombre"] = "Bulbasaur"
             pokemon_inicial["tipo"] = "Planta"
             pokemon_inicial_global = pokemon_Bulbasaur
-            print(pokemon_inicial_global)
             print("\x1b[1;32m" + "\t\t\t\t\t\tUsted ha escogido correctamente a: "+ pokemon_inicial["nombre"]+"\n")
             modificar_estadísticas_iniciales()
             break
