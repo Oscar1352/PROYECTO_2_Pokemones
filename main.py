@@ -6,7 +6,6 @@ import os
 import random
 
 # Características iniciales del pokémon
-movimientos_pokemon = []
 movimientos_pokemon_usuario = []
 movimientos_pokemon_enemigo = []
 ataque_a_usar = []
@@ -462,16 +461,21 @@ movimiento_2_enemigo = []
 movimiento_3_enemigo = []
 movimiento_4_enemigo = []
 
+def borrarPantalla():
+    borrarPantalla = lambda: os.system ("cls") #Limpia la pantalla
+
 #Función para movimientos, 30 movimientos
 def movimientos(numero_aleatorio):
     # Variables a utilziar
-    global movimientos_pokemon_Látigo_cepa, movimientos_pokemon, movimientos_pokemon_Latigazo, movimientos_pokemon_Rayo_solar, movimientos_pokemon_Ascuas, \
+    global movimientos_pokemon_Látigo_cepa, movimientos_pokemon_Latigazo, movimientos_pokemon_Rayo_solar, movimientos_pokemon_Ascuas, \
     movimientos_pokemon_Lanzallamas, movimientos_pokemon_Puño_fuego, movimientos_pokemon_Hidrobomba, movimientos_pokemon_Pistola_agua,\
     movimientos_pokemon_Rayo_burbuja, movimientos_pokemon_Chupa_vidas, movimientos_pokemon_Pin_misil, movimientos_pokemon_Tijera_X, \
     movimientos_pokemon_Picotazo, movimientos_pokemon_Pico_taladro, movimientos_pokemon_Tornado, movimientos_pokemon_Agarre, movimientos_pokemon_Ataque_rápido, \
     movimientos_pokemon_Bomba_huevo, movimientos_pokemon_Ácido, movimientos_pokemon_Picotazo_venenoso, movimientos_pokemon_Residuos, movimientos_pokemon_Pueño_trueno, \
     movimientos_pokemon_Trueo, movimientos_pokemon_Rayo, movimientos_pokemon_Hueso_palo, movimientos_pokemon_Huesomerang, movimientos_pokemon_Terremoto, \
     movimientos_pokemon_Come_sueños, movimientos_pokemon_Bola_neblina, movimientos_pokemon_Resplandor
+
+    movimientos_pokemon = []
 
     # Movimientos según el anexo del enunciado
     if numero_aleatorio == 1:
@@ -901,16 +905,23 @@ def modificar_estadísticas_iniciales():
 # Calcular los datos de combate del usuario
 def datos_de_combate_usuario():
     global pokemon_inicial, pokemon_inicial_global
+
+    # Se le dan los datos a utilizar al pokemon del usuario durante el combate
     pokemon_inicial["puntos_de_vida"] = ((pokemon_inicial["salud"] + 2 * pokemon_inicial_global["salud"]) * (pokemon_inicial["nivel"] / 100) + 10 + pokemon_inicial["nivel"])
     pokemon_inicial["dato_de_combate"] = (((pokemon_inicial["ataque"] + 2 * pokemon_inicial_global["ataque"]) * (pokemon_inicial["nivel"] / 100)) + 5 )
 
 # Calcular los datos de combate del usuario
 def datos_de_combate_enemigo():
     global pokemon_inicial, pokemon_enemigos
+
+    # Se escoge un pokemon de manera aleatoria
     pokemon_enemigos = listado_de_pokemon(numero_aleatorio(1,20))
+
+    # Se le dan los datos a utilizar durante el ataque
     pokemon_enemigos["puntos_de_vida"] = ((pokemon_enemigos["salud"] + 2 * pokemon_enemigos["puntos_de_salud"]) * (pokemon_enemigos["nivel"] / 100) + 10 + pokemon_enemigos["nivel"])
     pokemon_enemigos["dato_de_combate"] = (((pokemon_enemigos["ataque"] + 2 * pokemon_enemigos["ataque"]) * (pokemon_enemigos["nivel"] / 100)) + 5 )
     pokemon_enemigos["puntos_de_salud"] = numero_aleatorio(1,15)
+    # Se le da el nivel a utilizar
     if numero_aleatorio(1,2) == 1:
         pokemon_enemigos["nivel"] = pokemon_inicial["nivel"] + 4
     else:
@@ -919,11 +930,17 @@ def datos_de_combate_enemigo():
 # Calcular los movimientos aleatorios del enemigo
 def movimientos_enemigo():
     global movimientos_pokemon_enemigo, movimiento_1_enemigo, movimiento_2_enemigo, movimiento_3_enemigo, movimiento_4_enemigo
+
+    # Se dan los movimientos de manera aleatoria al pokemon enemigo
     movimiento_1_enemigo = movimientos(numero_aleatorio(1,30))
     movimiento_2_enemigo = movimientos(numero_aleatorio(1,30))
     movimiento_3_enemigo = movimientos(numero_aleatorio(1,30))
     movimiento_4_enemigo = movimientos(numero_aleatorio(1,30))
-    movimientos_pokemon_enemigo = movimiento_1_enemigo["nombre"], movimiento_2_enemigo["nombre"], movimiento_3_enemigo["nombre"], movimiento_4_enemigo["nombre"]
+    #movimientos_pokemon_enemigo = movimiento_1_enemigo["nombre"], movimiento_2_enemigo["nombre"], movimiento_3_enemigo["nombre"], movimiento_4_enemigo["nombre"]
+    movimientos_pokemon_enemigo.append(movimiento_1_enemigo)
+    movimientos_pokemon_enemigo.append(movimiento_2_enemigo)
+    movimientos_pokemon_enemigo.append(movimiento_3_enemigo)
+    movimientos_pokemon_enemigo.append(movimiento_4_enemigo)
 
 # Bloque de codigo batallas salvajes
 def batalla():
@@ -933,8 +950,8 @@ def batalla():
     datos_de_combate_usuario()
     datos_de_combate_enemigo()
     movimientos_enemigo()
-    # Menú de batalla
-    os.system("cls")  # Función para limpiar la pantalla y mostrar el menú
+    # Menú de batalla  #Limpia la pantalla
+    borrarPantalla()  # Función para limpiar la pantalla y mostrar el menú
     print("\n\x1b[1;34m" + "\t\t\t\t\tMENÚ DE BATALLA: ")
     print("\n\x1b[1;0m" +"Selecciona una opción: ")
     print("\ta - Atacar.")
@@ -951,6 +968,7 @@ def batalla():
                 eleccion = int(
                     input(f"Por favor de escoger el ataque que usará 0-{len(movimientos_pokemon_usuario) - 1}: "))
 
+                # Se guarda el ataque a utilizar
                 if eleccion == 0:
                     ataque_a_usar.append(movimiento_1)
                     movimiento_valido = True
@@ -966,8 +984,11 @@ def batalla():
                 else:
                     print("Opción inválida ")
             opcion_menu = True
+
+        # Se regresa al menú principal
         elif opcionMenu == "b":
             print("Usted regresará al menú principal\n")
+            time.sleep(1.5)
             opcion_menu = True
             menu()
         else:
@@ -1044,7 +1065,7 @@ def seleccion_pokemon():
 # Bloque de codigo del menú principal del juego
 def menu():
     opcionMenu = ""
-    os.system("cls")  # Función para limpiar la pantalla y mostrar el menú
+    borrarPantalla()  # Función para limpiar la pantalla y mostrar el menú
     print("\n\x1b[1;34m" + "\t\t\t\t\tMENÚ PRINCIPAL: ")
     print("\n\x1b[1;0m" +"Selecciona una opción: ")
     print("\ta - Batalla contra Pokémon salvaje.")
