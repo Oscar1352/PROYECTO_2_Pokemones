@@ -895,7 +895,8 @@ def modificar_estadísticas_iniciales():
     # Se extrae los movimientos de manera aleatoria
     movimiento_1 = movimientos(numero_aleatorio(1,30))
     movimiento_2 = movimientos(numero_aleatorio(1,30))
-    movimientos_pokemon_usuario = movimiento_1["nombre"], movimiento_2["nombre"]
+    movimientos_pokemon_usuario.append(movimiento_1["nombre"])
+    movimientos_pokemon_usuario.append(movimiento_2["nombre"])
 
 # Calcular los datos de combate del usuario
 def datos_de_combate_usuario():
@@ -923,18 +924,54 @@ def movimientos_enemigo():
     movimiento_3_enemigo = movimientos(numero_aleatorio(1,30))
     movimiento_4_enemigo = movimientos(numero_aleatorio(1,30))
     movimientos_pokemon_enemigo = movimiento_1_enemigo["nombre"], movimiento_2_enemigo["nombre"], movimiento_3_enemigo["nombre"], movimiento_4_enemigo["nombre"]
-    print(f"Movimientos: {movimientos_pokemon_enemigo}")
 
 # Bloque de codigo batallas salvajes
 def batalla():
-    global movimientos_pokemon_usuario,movimientos_pokemon_enemigo
+    global movimientos_pokemon_usuario, ataque_a_usar, movimientos_pokemon_enemigo, movimiento_1, movimiento_2, movimiento_3, movimiento_4
+    movimiento_valido = False
+    opcion_menu = False
     datos_de_combate_usuario()
     datos_de_combate_enemigo()
     movimientos_enemigo()
-    eleccion = input(f"Por favor de escoger el ataque que usará 1-{len(movimientos_pokemon_usuario)}: ")
+    # Menú de batalla
+    os.system("cls")  # Función para limpiar la pantalla y mostrar el menú
+    print("\n\x1b[1;34m" + "\t\t\t\t\tMENÚ DE BATALLA: ")
+    print("\n\x1b[1;0m" +"Selecciona una opción: ")
+    print("\ta - Atacar.")
+    print("\tb - Regresar.")
+    while not opcion_menu:
+        opcionMenu = input("\nInserta la variable del menú que desees ingresar: ")
+        if opcionMenu == "a":
+            # Imprimo los movimientos que tiene posibilidad el usuario
+            for i in range(0, len(movimientos_pokemon_usuario)):
+                print("\x1b[1;0m", i, "-- ", movimientos_pokemon_usuario[i])
 
+            # Escoger el ataque a utilizar durante el programa
+            while not movimiento_valido:
+                eleccion = int(
+                    input(f"Por favor de escoger el ataque que usará 0-{len(movimientos_pokemon_usuario) - 1}: "))
 
-    return
+                if eleccion == 0:
+                    ataque_a_usar.append(movimiento_1)
+                    movimiento_valido = True
+                elif eleccion == 1:
+                    ataque_a_usar.append(movimiento_2)
+                    movimiento_valido = True
+                elif eleccion == 2:
+                    ataque_a_usar.append(movimiento_3)
+                    movimiento_valido = True
+                elif eleccion == 3:
+                    ataque_a_usar.append(movimiento_4)
+                    movimiento_valido = True
+                else:
+                    print("Opción inválida ")
+            opcion_menu = True
+        elif opcionMenu == "b":
+            print("Usted regresará al menú principal\n")
+            opcion_menu = True
+            menu()
+        else:
+            print("Opción inválida. ")
 
 # Bloque de codigo para chequear estadísticas
 def estadísticas():
