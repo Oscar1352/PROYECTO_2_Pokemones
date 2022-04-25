@@ -1,9 +1,10 @@
 # Segundo proyecto, Pokémones
 
 # Librerias importadas
-import os
+import os, random, time
+from numpy import random
 # Variables globales
-import random
+
 
 # Características iniciales del pokémon
 movimientos_pokemon_usuario = []
@@ -25,7 +26,7 @@ pokemon_inicial = {
 pokemon_inicial_global = []
 
 # Pokémones enemigos
-pokemon_enemigos = []
+pokemon_enemigo = []
 pokemon_Bulbasaur = {
     "nombre" : "Bulbasaur",
     "tipo" : "Planta",
@@ -668,7 +669,7 @@ def listado_de_pokemon(numero_aleatorio):
     #Variables a utilizar
     global pokemon_Bulbasaur, pokemon_Charmander, pokemon_Squirtle, pokemon_Caterpie, pokemon_Weedle, pokemon_Pidgey, pokemon_Rattata, \
     pokemon_Spearow, pokemon_Ekans, pokemon_Pikachu, pokemon_Sandshrew, pokemon_Vulpix, pokemon_Jigglypuff, pokemon_Zubat, pokemon_Oddish, \
-    pokemon_Gloom, pokemon_Diglett, pokemon_Meowth, pokemon_Psyduck, pokemon_Mewtwo, pokemon_enemigos
+    pokemon_Gloom, pokemon_Diglett, pokemon_Meowth, pokemon_Psyduck, pokemon_Mewtwo, pokemon_enemigo
 
     # Listado de pokemones según el anexo del listado
     if numero_aleatorio == 1:
@@ -680,7 +681,7 @@ def listado_de_pokemon(numero_aleatorio):
         pokemon_Bulbasaur["velocidad"] = 45
         pokemon_Bulbasaur["experiencia_base"] = 64
         pokemon_Bulbasaur["nivel"] = 0
-        pokemon_enemigos = pokemon_Bulbasaur
+        pokemon_enemigo = pokemon_Bulbasaur
     elif numero_aleatorio == 2:
         pokemon_Charmander["nombre"] = "Charmander"
         pokemon_Charmander["tipo"] = "Fuego"
@@ -690,7 +691,7 @@ def listado_de_pokemon(numero_aleatorio):
         pokemon_Charmander["velocidad"] = 65
         pokemon_Charmander["experiencia_base"] = 65
         pokemon_Charmander["nivel"] = 0
-        pokemon_enemigos = pokemon_Charmander
+        pokemon_enemigo = pokemon_Charmander
     elif numero_aleatorio == 3:
         pokemon_Squirtle["nombre"] = "Squirtle"
         pokemon_Squirtle["tipo"] = "Agua"
@@ -700,7 +701,7 @@ def listado_de_pokemon(numero_aleatorio):
         pokemon_Squirtle["velocidad"] = 43
         pokemon_Squirtle["experiencia_base"] = 66
         pokemon_Squirtle["nivel"] = 0
-        pokemon_enemigos = pokemon_Squirtle
+        pokemon_enemigo = pokemon_Squirtle
     elif numero_aleatorio == 4:
         pokemon_Caterpie["nombre"] = "Caterpie"
         pokemon_Caterpie["tipo"] = "Bicho"
@@ -710,7 +711,7 @@ def listado_de_pokemon(numero_aleatorio):
         pokemon_Caterpie["velocidad"] = 45
         pokemon_Caterpie["experiencia_base"] = 53
         pokemon_Caterpie["nivel"] = 0
-        pokemon_enemigos = pokemon_Caterpie
+        pokemon_enemigo = pokemon_Caterpie
     elif numero_aleatorio == 5:
         pokemon_Weedle["nombre"] = "Weedle"
         pokemon_Weedle["tipo"] = "Bicho"
@@ -720,7 +721,7 @@ def listado_de_pokemon(numero_aleatorio):
         pokemon_Weedle["velocidad"] = 50
         pokemon_Weedle["experiencia_base"] = 52
         pokemon_Weedle["nivel"] = 0
-        pokemon_enemigos = pokemon_Weedle
+        pokemon_enemigo = pokemon_Weedle
     elif numero_aleatorio == 6:
         pokemon_Pidgey["nombre"] = "Pidgey"
         pokemon_Pidgey["tipo"] = "Volador"
@@ -730,7 +731,7 @@ def listado_de_pokemon(numero_aleatorio):
         pokemon_Pidgey["velocidad"] = 56
         pokemon_Pidgey["experiencia_base"] = 55
         pokemon_Pidgey["nivel"] = 0
-        pokemon_enemigos = pokemon_Pidgey
+        pokemon_enemigo = pokemon_Pidgey
     elif numero_aleatorio == 7:
         pokemon_Rattata["nombre"] = "Rattata"
         pokemon_Rattata["tipo"] = "Normal"
@@ -740,7 +741,7 @@ def listado_de_pokemon(numero_aleatorio):
         pokemon_Rattata["velocidad"] = 72
         pokemon_Rattata["experiencia_base"] = 57
         pokemon_Rattata["nivel"] = 0
-        pokemon_enemigos = pokemon_Rattata
+        pokemon_enemigo = pokemon_Rattata
     elif numero_aleatorio == 8:
         pokemon_Spearow["nombre"] = "Spearow"
         pokemon_Spearow["tipo"] = "Volador"
@@ -750,7 +751,7 @@ def listado_de_pokemon(numero_aleatorio):
         pokemon_Spearow["velocidad"] = 70
         pokemon_Spearow["experiencia_base"] = 58
         pokemon_Spearow["nivel"] = 0
-        pokemon_enemigos = pokemon_Spearow
+        pokemon_enemigo = pokemon_Spearow
     elif numero_aleatorio == 9:
         pokemon_Ekans["nombre"] = "Ekans"
         pokemon_Ekans["tipo"] = "Veneno"
@@ -760,7 +761,7 @@ def listado_de_pokemon(numero_aleatorio):
         pokemon_Ekans["velocidad"] = 55
         pokemon_Ekans["experiencia_base"] = 62
         pokemon_Ekans["nivel"] = 0
-        pokemon_enemigos = pokemon_Ekans
+        pokemon_enemigo = pokemon_Ekans
     elif numero_aleatorio == 10:
         pokemon_Pikachu["nombre"] = "Pikachu"
         pokemon_Pikachu["tipo"] = "Eléctrico"
@@ -770,7 +771,7 @@ def listado_de_pokemon(numero_aleatorio):
         pokemon_Pikachu["velocidad"] = 90
         pokemon_Pikachu["experiencia_base"] = 82
         pokemon_Pikachu["nivel"] = 0
-        pokemon_enemigos = pokemon_Pikachu
+        pokemon_enemigo = pokemon_Pikachu
     elif numero_aleatorio == 11:
         pokemon_Sandshrew["nombre"] = "Sandshrew"
         pokemon_Sandshrew["tipo"] = "Tierra"
@@ -780,7 +781,7 @@ def listado_de_pokemon(numero_aleatorio):
         pokemon_Sandshrew["velocidad"] = 40
         pokemon_Sandshrew["experiencia_base"] = 93
         pokemon_Sandshrew["nivel"] = 0
-        pokemon_enemigos = pokemon_Sandshrew
+        pokemon_enemigo = pokemon_Sandshrew
     elif numero_aleatorio == 12:
         pokemon_Vulpix["nombre"] = "Vulpix"
         pokemon_Vulpix["tipo"] = "Fuego"
@@ -790,7 +791,7 @@ def listado_de_pokemon(numero_aleatorio):
         pokemon_Vulpix["velocidad"] = 65
         pokemon_Vulpix["experiencia_base"] = 63
         pokemon_Vulpix["nivel"] = 0
-        pokemon_enemigos = pokemon_Vulpix
+        pokemon_enemigo = pokemon_Vulpix
     elif numero_aleatorio == 13:
         pokemon_Jigglypuff["nombre"] = "Jigglypuff"
         pokemon_Jigglypuff["tipo"] = "Normal"
@@ -800,7 +801,7 @@ def listado_de_pokemon(numero_aleatorio):
         pokemon_Jigglypuff["velocidad"] = 20
         pokemon_Jigglypuff["experiencia_base"] = 76
         pokemon_Jigglypuff["nivel"] = 0
-        pokemon_enemigos = pokemon_Jigglypuff
+        pokemon_enemigo = pokemon_Jigglypuff
     elif numero_aleatorio == 14:
         pokemon_Zubat["nombre"] = "Zubat"
         pokemon_Zubat["tipo"] = "Veneno"
@@ -810,7 +811,7 @@ def listado_de_pokemon(numero_aleatorio):
         pokemon_Zubat["velocidad"] = 55
         pokemon_Zubat["experiencia_base"] = 54
         pokemon_Zubat["nivel"] = 0
-        pokemon_enemigos = pokemon_Zubat
+        pokemon_enemigo = pokemon_Zubat
     elif numero_aleatorio == 15:
         pokemon_Oddish["nombre"] = "Oddish"
         pokemon_Oddish["tipo"] = "Planta"
@@ -820,7 +821,7 @@ def listado_de_pokemon(numero_aleatorio):
         pokemon_Oddish["velocidad"] = 30
         pokemon_Oddish["experiencia_base"] = 78
         pokemon_Oddish["nivel"] = 0
-        pokemon_enemigos = pokemon_Oddish
+        pokemon_enemigo = pokemon_Oddish
     elif numero_aleatorio == 16:
         pokemon_Gloom["nombre"] = "Gloom"
         pokemon_Gloom["tipo"] = "Planta"
@@ -830,7 +831,7 @@ def listado_de_pokemon(numero_aleatorio):
         pokemon_Gloom["velocidad"] = 40
         pokemon_Gloom["experiencia_base"] = 132
         pokemon_Gloom["nivel"] = 0
-        pokemon_enemigos = pokemon_Gloom
+        pokemon_enemigo = pokemon_Gloom
     elif numero_aleatorio == 17:
         pokemon_Diglett["nombre"] = "Diglett"
         pokemon_Diglett["tipo"] = "Tierra"
@@ -840,7 +841,7 @@ def listado_de_pokemon(numero_aleatorio):
         pokemon_Diglett["velocidad"] = 95
         pokemon_Diglett["experiencia_base"] = 81
         pokemon_Diglett["nivel"] = 0
-        pokemon_enemigos = pokemon_Diglett
+        pokemon_enemigo = pokemon_Diglett
     elif numero_aleatorio == 18:
         pokemon_Meowth["nombre"] = "Meowth"
         pokemon_Meowth["tipo"] = "Normal"
@@ -850,7 +851,7 @@ def listado_de_pokemon(numero_aleatorio):
         pokemon_Meowth["velocidad"] = 90
         pokemon_Meowth["experiencia_base"] = 69
         pokemon_Meowth["nivel"] = 0
-        pokemon_enemigos = pokemon_Meowth
+        pokemon_enemigo = pokemon_Meowth
     elif numero_aleatorio == 19:
         pokemon_Psyduck["nombre"] = "Psyduck"
         pokemon_Psyduck["tipo"] = "Agua"
@@ -860,7 +861,7 @@ def listado_de_pokemon(numero_aleatorio):
         pokemon_Psyduck["velocidad"] = 55
         pokemon_Psyduck["experiencia_base"] = 80
         pokemon_Psyduck["nivel"] = 0
-        pokemon_enemigos = pokemon_Psyduck
+        pokemon_enemigo = pokemon_Psyduck
     elif numero_aleatorio == 20:
         pokemon_Mewtwo["nombre"] = "Mewtwo"
         pokemon_Mewtwo["tipo"] = "Psíquico"
@@ -870,9 +871,9 @@ def listado_de_pokemon(numero_aleatorio):
         pokemon_Mewtwo["velocidad"] = 130
         pokemon_Mewtwo["experiencia_base"] = 220
         pokemon_Mewtwo["nivel"] = 0
-        pokemon_enemigos = pokemon_Mewtwo
+        pokemon_enemigo = pokemon_Mewtwo
         # Le otorgo los datos de puntos de salud al pokemon
-    return pokemon_enemigos
+    return pokemon_enemigo
 
 # Función para generar números aletorios
 def numero_aleatorio(limite_inferior, limite_superior):
@@ -882,7 +883,7 @@ def numero_aleatorio(limite_inferior, limite_superior):
 #mostrar los datos en pantalla
 def mostrar_datos_en_pantallla():
     print("\x1b[1;34m", pokemon_inicial["nombre"],pokemon_inicial["nivel"], pokemon_inicial["puntos_de_vida"])
-    print("\x1b[1;31m", pokemon_enemigos["nombre"],pokemon_enemigos["nivel"], pokemon_enemigos["puntos_de_vida"])
+    print("\x1b[1;31m", pokemon_enemigo["nombre"], pokemon_enemigo["nivel"], pokemon_enemigo["puntos_de_vida"])
 
 # Bloque de codigo para modificar los datos iniciales
 def modificar_estadísticas_iniciales():
@@ -912,20 +913,20 @@ def datos_de_combate_usuario():
 
 # Calcular los datos de combate del usuario
 def datos_de_combate_enemigo():
-    global pokemon_inicial, pokemon_enemigos
+    global pokemon_inicial, pokemon_enemigo
 
     # Se escoge un pokemon de manera aleatoria
-    pokemon_enemigos = listado_de_pokemon(numero_aleatorio(1,20))
+    pokemon_enemigo = listado_de_pokemon(numero_aleatorio(1, 20))
 
     # Se le dan los datos a utilizar durante el ataque
-    pokemon_enemigos["puntos_de_vida"] = ((pokemon_enemigos["salud"] + 2 * pokemon_enemigos["puntos_de_salud"]) * (pokemon_enemigos["nivel"] / 100) + 10 + pokemon_enemigos["nivel"])
-    pokemon_enemigos["dato_de_combate"] = (((pokemon_enemigos["ataque"] + 2 * pokemon_enemigos["ataque"]) * (pokemon_enemigos["nivel"] / 100)) + 5 )
-    pokemon_enemigos["puntos_de_salud"] = numero_aleatorio(1,15)
+    pokemon_enemigo["puntos_de_vida"] = ((pokemon_enemigo["salud"] + 2 * pokemon_enemigo["puntos_de_salud"]) * (pokemon_enemigo["nivel"] / 100) + 10 + pokemon_enemigo["nivel"])
+    pokemon_enemigo["dato_de_combate"] = (((pokemon_enemigo["ataque"] + 2 * pokemon_enemigo["ataque"]) * (pokemon_enemigo["nivel"] / 100)) + 5)
+    pokemon_enemigo["puntos_de_salud"] = numero_aleatorio(1, 15)
     # Se le da el nivel a utilizar
     if numero_aleatorio(1,2) == 1:
-        pokemon_enemigos["nivel"] = pokemon_inicial["nivel"] + 4
+        pokemon_enemigo["nivel"] = pokemon_inicial["nivel"] + 4
     else:
-        pokemon_enemigos["nivel"] = pokemon_inicial["nivel"] - 4
+        pokemon_enemigo["nivel"] = pokemon_inicial["nivel"] - 4
 
 # Calcular los movimientos aleatorios del enemigo
 def movimientos_enemigo():
@@ -942,9 +943,239 @@ def movimientos_enemigo():
     movimientos_pokemon_enemigo.append(movimiento_3_enemigo)
     movimientos_pokemon_enemigo.append(movimiento_4_enemigo)
 
+# Probabilidad de acertar el golpe
+def probabilidad_de_acertar_el_golpe(tipo_de_ataque, pokemon):
+    probabilidad = 0
+
+    # Genera un manejo de ataque según la probabilidad establecida
+    # Se utiliza una escala en donde el 2 de más eficaz es 1, o 100%
+
+    # Tipo de ataque - Planta
+    if tipo_de_ataque == "Planta" and pokemon == "Planta":
+        probabilidad = random.binomial(n=1, p=.25, size=1)
+    elif tipo_de_ataque == "Planta" and pokemon == "Fuego":
+       probabilidad = random.binomial(n=1, p=.25, size=1)
+    elif tipo_de_ataque == "Planta" and pokemon == "Agua":
+       probabilidad = random.binomial(n=1, p=1, size=1)
+    elif tipo_de_ataque == "Planta" and pokemon == "Bicho":
+       probabilidad = random.binomial(n=1, p=.25, size=1)
+    elif tipo_de_ataque == "Planta" and pokemon == "Volador":
+       probabilidad = random.binomial(n=1, p=.25, size=1)
+    elif tipo_de_ataque == "Planta" and pokemon == "Normal":
+       probabilidad = random.binomial(n=1, p=.5, size=1)
+    elif tipo_de_ataque == "Planta" and pokemon == "Veneno":
+        probabilidad = random.binomial(n=1, p=.25, size=1)
+    elif tipo_de_ataque == "Planta" and pokemon == "Eléctrico":
+       probabilidad = random.binomial(n=1, p=.5, size=1)
+    elif tipo_de_ataque == "Planta" and pokemon == "Tierra":
+       probabilidad = random.binomial(n=1, p=1, size=1)
+    elif tipo_de_ataque == "Planta" and pokemon == "Psíquico":
+        probabilidad = random.binomial(n=1, p=.5, size=1)
+
+    # Tipo de ataque - Fuego
+    if tipo_de_ataque == "Fuego" and pokemon == "Planta":
+        probabilidad = random.binomial(n=1, p=1, size=1)
+    elif tipo_de_ataque == "Fuego" and pokemon == "Fuego":
+       probabilidad = random.binomial(n=1, p=.25, size=1)
+    elif tipo_de_ataque == "Fuego" and pokemon == "Agua":
+       probabilidad = random.binomial(n=1, p=.25, size=1)
+    elif tipo_de_ataque == "Fuego" and pokemon == "Bicho":
+       probabilidad = random.binomial(n=1, p=1, size=1)
+    elif tipo_de_ataque == "Fuego" and pokemon == "Volador":
+       probabilidad = random.binomial(n=1, p=.5, size=1)
+    elif tipo_de_ataque == "Fuego" and pokemon == "Normal":
+       probabilidad = random.binomial(n=1, p=.5, size=1)
+    elif tipo_de_ataque == "Fuego" and pokemon == "Veneno":
+        probabilidad = random.binomial(n=1, p=.5, size=1)
+    elif tipo_de_ataque == "Fuego" and pokemon == "Eléctrico":
+       probabilidad = random.binomial(n=1, p=.5, size=1)
+    elif tipo_de_ataque == "Fuego" and pokemon == "Tierra":
+       probabilidad = random.binomial(n=1, p=.5, size=1)
+    elif tipo_de_ataque == "Fuego" and pokemon == "Psíquico":
+        probabilidad = random.binomial(n=1, p=.5, size=1)
+
+    # Tipo de ataque - Agua
+    if tipo_de_ataque == "Agua" and pokemon == "Planta":
+        probabilidad = random.binomial(n=1, p=.25, size=1)
+    elif tipo_de_ataque == "Agua" and pokemon == "Fuego":
+       probabilidad = random.binomial(n=1, p=1, size=1)
+    elif tipo_de_ataque == "Agua" and pokemon == "Agua":
+       probabilidad = random.binomial(n=1, p=.25, size=1)
+    elif tipo_de_ataque == "Agua" and pokemon == "Bicho":
+       probabilidad = random.binomial(n=1, p=.5, size=1)
+    elif tipo_de_ataque == "Agua" and pokemon == "Volador":
+       probabilidad = random.binomial(n=1, p=.5, size=1)
+    elif tipo_de_ataque == "Agua" and pokemon == "Normal":
+       probabilidad = random.binomial(n=1, p=.5, size=1)
+    elif tipo_de_ataque == "Agua" and pokemon == "Veneno":
+        probabilidad = random.binomial(n=1, p=.5, size=1)
+    elif tipo_de_ataque == "Agua" and pokemon == "Eléctrico":
+       probabilidad = random.binomial(n=1, p=.5, size=1)
+    elif tipo_de_ataque == "Agua" and pokemon == "Tierra":
+       probabilidad = random.binomial(n=1, p=1, size=1)
+    elif tipo_de_ataque == "Agua" and pokemon == "Psíquico":
+        probabilidad = random.binomial(n=1, p=.5, size=1)
+
+    # Tipo de ataque - Bicho
+    if tipo_de_ataque == "Bicho" and pokemon == "Planta":
+        probabilidad = random.binomial(n=1, p=1, size=1)
+    elif tipo_de_ataque == "Bicho" and pokemon == "Fuego":
+       probabilidad = random.binomial(n=1, p=.25, size=1)
+    elif tipo_de_ataque == "Bicho" and pokemon == "Agua":
+       probabilidad = random.binomial(n=1, p=.5, size=1)
+    elif tipo_de_ataque == "Bicho" and pokemon == "Bicho":
+       probabilidad = random.binomial(n=1, p=.5, size=1)
+    elif tipo_de_ataque == "Bicho" and pokemon == "Volador":
+       probabilidad = random.binomial(n=1, p=.25, size=1)
+    elif tipo_de_ataque == "Bicho" and pokemon == "Normal":
+       probabilidad = random.binomial(n=1, p=.5, size=1)
+    elif tipo_de_ataque == "Bicho" and pokemon == "Veneno":
+        probabilidad = random.binomial(n=1, p=.25, size=1)
+    elif tipo_de_ataque == "Bicho" and pokemon == "Eléctrico":
+       probabilidad = random.binomial(n=1, p=.5, size=1)
+    elif tipo_de_ataque == "Bicho" and pokemon == "Tierra":
+       probabilidad = random.binomial(n=1, p=.5, size=1)
+    elif tipo_de_ataque == "Bicho" and pokemon == "Psíquico":
+        probabilidad = random.binomial(n=1, p=1, size=1)
+
+    # Tipo de ataque - Volador
+    if tipo_de_ataque == "Volador" and pokemon == "Planta":
+        probabilidad = random.binomial(n=1, p=1, size=1)
+    elif tipo_de_ataque == "Volador" and pokemon == "Fuego":
+       probabilidad = random.binomial(n=1, p=.5, size=1)
+    elif tipo_de_ataque == "Volador" and pokemon == "Agua":
+       probabilidad = random.binomial(n=1, p=.5, size=1)
+    elif tipo_de_ataque == "Volador" and pokemon == "Bicho":
+       probabilidad = random.binomial(n=1, p=1, size=1)
+    elif tipo_de_ataque == "Volador" and pokemon == "Volador":
+       probabilidad = random.binomial(n=1, p=.5, size=1)
+    elif tipo_de_ataque == "Volador" and pokemon == "Normal":
+       probabilidad = random.binomial(n=1, p=.5, size=1)
+    elif tipo_de_ataque == "Volador" and pokemon == "Veneno":
+        probabilidad = random.binomial(n=1, p=.5, size=1)
+    elif tipo_de_ataque == "Volador" and pokemon == "Eléctrico":
+       probabilidad = random.binomial(n=1, p=.25, size=1)
+    elif tipo_de_ataque == "Volador" and pokemon == "Tierra":
+       probabilidad = random.binomial(n=1, p=.5, size=1)
+    elif tipo_de_ataque == "Volador" and pokemon == "Psíquico":
+        probabilidad = random.binomial(n=1, p=.5, size=1)
+
+    # Tipo de ataque - Normal
+    if tipo_de_ataque == "Normal" and pokemon == "Planta":
+        probabilidad = random.binomial(n=1, p=.5, size=1)
+    elif tipo_de_ataque == "Normal" and pokemon == "Fuego":
+       probabilidad = random.binomial(n=1, p=.5, size=1)
+    elif tipo_de_ataque == "Normal" and pokemon == "Agua":
+       probabilidad = random.binomial(n=1, p=.5, size=1)
+    elif tipo_de_ataque == "Normal" and pokemon == "Bicho":
+       probabilidad = random.binomial(n=1, p=.5, size=1)
+    elif tipo_de_ataque == "Normal" and pokemon == "Volador":
+       probabilidad = random.binomial(n=1, p=.5, size=1)
+    elif tipo_de_ataque == "Normal" and pokemon == "Normal":
+       probabilidad = random.binomial(n=1, p=.5, size=1)
+    elif tipo_de_ataque == "Normal" and pokemon == "Veneno":
+        probabilidad = random.binomial(n=1, p=.5, size=1)
+    elif tipo_de_ataque == "Normal" and pokemon == "Eléctrico":
+       probabilidad = random.binomial(n=1, p=.5, size=1)
+    elif tipo_de_ataque == "Normal" and pokemon == "Tierra":
+       probabilidad = random.binomial(n=1, p=.5, size=1)
+    elif tipo_de_ataque == "Normal" and pokemon == "Psíquico":
+        probabilidad = random.binomial(n=1, p=.5, size=1)
+
+    # Tipo de ataque - Veneno
+    if tipo_de_ataque == "Veneno" and pokemon == "Planta":
+        probabilidad = random.binomial(n=1, p=1, size=1)
+    elif tipo_de_ataque == "Veneno" and pokemon == "Fuego":
+       probabilidad = random.binomial(n=1, p=.5, size=1)
+    elif tipo_de_ataque == "Veneno" and pokemon == "Agua":
+       probabilidad = random.binomial(n=1, p=.5, size=1)
+    elif tipo_de_ataque == "Veneno" and pokemon == "Bicho":
+       probabilidad = random.binomial(n=1, p=.5, size=1)
+    elif tipo_de_ataque == "Veneno" and pokemon == "Volador":
+       probabilidad = random.binomial(n=1, p=.5, size=1)
+    elif tipo_de_ataque == "Veneno" and pokemon == "Normal":
+       probabilidad = random.binomial(n=1, p=.5, size=1)
+    elif tipo_de_ataque == "Veneno" and pokemon == "Veneno":
+        probabilidad = random.binomial(n=1, p=.25, size=1)
+    elif tipo_de_ataque == "Veneno" and pokemon == "Eléctrico":
+       probabilidad = random.binomial(n=1, p=.5, size=1)
+    elif tipo_de_ataque == "Veneno" and pokemon == "Tierra":
+       probabilidad = random.binomial(n=1, p=.25, size=1)
+    elif tipo_de_ataque == "Veneno" and pokemon == "Psíquico":
+        probabilidad = random.binomial(n=1, p=.5, size=1)
+
+    # Tipo de ataque - Eléctrico
+    if tipo_de_ataque == "Eléctrico" and pokemon == "Planta":
+        probabilidad = random.binomial(n=1, p=.25, size=1)
+    elif tipo_de_ataque == "Eléctrico" and pokemon == "Fuego":
+       probabilidad = random.binomial(n=1, p=.5, size=1)
+    elif tipo_de_ataque == "Eléctrico" and pokemon == "Agua":
+       probabilidad = random.binomial(n=1, p=1, size=1)
+    elif tipo_de_ataque == "Eléctrico" and pokemon == "Bicho":
+       probabilidad = random.binomial(n=1, p=.5, size=1)
+    elif tipo_de_ataque == "Eléctrico" and pokemon == "Volador":
+       probabilidad = random.binomial(n=1, p=1, size=1)
+    elif tipo_de_ataque == "Eléctrico" and pokemon == "Normal":
+       probabilidad = random.binomial(n=1, p=.5, size=1)
+    elif tipo_de_ataque == "Eléctrico" and pokemon == "Veneno":
+        probabilidad = random.binomial(n=1, p=.5, size=1)
+    elif tipo_de_ataque == "Eléctrico" and pokemon == "Eléctrico":
+       probabilidad = random.binomial(n=1, p=.25, size=1)
+    elif tipo_de_ataque == "Eléctrico" and pokemon == "Tierra":
+       probabilidad = random.binomial(n=1, p=0, size=1)
+    elif tipo_de_ataque == "Eléctrico" and pokemon == "Psíquico":
+        probabilidad = random.binomial(n=1, p=.25, size=1)
+
+    # Tipo de ataque - Tierra
+    if tipo_de_ataque == "Tierra" and pokemon == "Planta":
+        probabilidad = random.binomial(n=1, p=1, size=1)
+    elif tipo_de_ataque == "Tierra" and pokemon == "Fuego":
+       probabilidad = random.binomial(n=1, p=1, size=1)
+    elif tipo_de_ataque == "Tierra" and pokemon == "Agua":
+       probabilidad = random.binomial(n=1, p=.5, size=1)
+    elif tipo_de_ataque == "Tierra" and pokemon == "Bicho":
+       probabilidad = random.binomial(n=1, p=.25, size=1)
+    elif tipo_de_ataque == "Tierra" and pokemon == "Volador":
+       probabilidad = random.binomial(n=1, p=0, size=1)
+    elif tipo_de_ataque == "Tierra" and pokemon == "Normal":
+       probabilidad = random.binomial(n=1, p=.25, size=1)
+    elif tipo_de_ataque == "Tierra" and pokemon == "Veneno":
+        probabilidad = random.binomial(n=1, p=1, size=1)
+    elif tipo_de_ataque == "Tierra" and pokemon == "Eléctrico":
+       probabilidad = random.binomial(n=1, p=1, size=1)
+    elif tipo_de_ataque == "Tierra" and pokemon == "Tierra":
+       probabilidad = random.binomial(n=1, p=.5, size=1)
+    elif tipo_de_ataque == "Tierra" and pokemon == "Psíquico":
+        probabilidad = random.binomial(n=1, p=.5, size=1)
+
+    # Tipo de ataque - Psíquico
+    if tipo_de_ataque == "Psíquico" and pokemon == "Planta":
+        probabilidad = random.binomial(n=1, p=.5, size=1)
+    elif tipo_de_ataque == "Psíquico" and pokemon == "Fuego":
+       probabilidad = random.binomial(n=1, p=.5, size=1)
+    elif tipo_de_ataque == "Psíquico" and pokemon == "Agua":
+       probabilidad = random.binomial(n=1, p=.5, size=1)
+    elif tipo_de_ataque == "Psíquico" and pokemon == "Bicho":
+       probabilidad = random.binomial(n=1, p=.5, size=1)
+    elif tipo_de_ataque == "Psíquico" and pokemon == "Volador":
+       probabilidad = random.binomial(n=1, p=.5, size=1)
+    elif tipo_de_ataque == "Psíquico" and pokemon == "Normal":
+       probabilidad = random.binomial(n=1, p=.5, size=1)
+    elif tipo_de_ataque == "Psíquico" and pokemon == "Veneno":
+        probabilidad = random.binomial(n=1, p=1, size=1)
+    elif tipo_de_ataque == "Psíquico" and pokemon == "Eléctrico":
+       probabilidad = random.binomial(n=1, p=.5, size=1)
+    elif tipo_de_ataque == "Psíquico" and pokemon == "Tierra":
+       probabilidad = random.binomial(n=1, p=.5, size=1)
+    elif tipo_de_ataque == "Psíquico" and pokemon == "Psíquico":
+        probabilidad = random.binomial(n=1, p=.25, size=1)
+    return probabilidad
+
 # Bloque de codigo batallas salvajes
 def batalla():
-    global movimientos_pokemon_usuario, ataque_a_usar, movimientos_pokemon_enemigo, movimiento_1, movimiento_2, movimiento_3, movimiento_4
+    global movimientos_pokemon_usuario, ataque_a_usar, movimientos_pokemon_enemigo, movimiento_1, movimiento_2, movimiento_3, movimiento_4, pokemon_enemigo
+
+    # Variables a utilizar
     movimiento_valido = False
     opcion_menu = False
     datos_de_combate_usuario()
@@ -970,16 +1201,24 @@ def batalla():
 
                 # Se guarda el ataque a utilizar
                 if eleccion == 0:
-                    ataque_a_usar.append(movimiento_1)
+                    ataque_a_usar = movimiento_1
+                    ataque = probabilidad_de_acertar_el_golpe(ataque_a_usar["tipo_de_movimiento"], pokemon_enemigo["tipo"])
                     movimiento_valido = True
                 elif eleccion == 1:
-                    ataque_a_usar.append(movimiento_2)
+                    ataque_a_usar = movimiento_2
+                    ataque = probabilidad_de_acertar_el_golpe(ataque_a_usar["tipo_de_movimiento"], pokemon_enemigo["tipo"])
+                    if ataque == 1:
+                        print("Golpe acertado ")
+                    else:
+                        print("golpe fallido")
                     movimiento_valido = True
                 elif eleccion == 2:
-                    ataque_a_usar.append(movimiento_3)
+                    ataque_a_usar = movimiento_3
+                    ataque = probabilidad_de_acertar_el_golpe(ataque_a_usar["tipo_de_movimiento"], pokemon_enemigo["tipo"])
                     movimiento_valido = True
                 elif eleccion == 3:
-                    ataque_a_usar.append(movimiento_4)
+                    ataque_a_usar = movimiento_4
+                    ataque = probabilidad_de_acertar_el_golpe(ataque_a_usar["tipo_de_movimiento"], pokemon_enemigo["tipo"])
                     movimiento_valido = True
                 else:
                     print("Opción inválida ")
