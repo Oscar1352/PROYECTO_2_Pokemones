@@ -883,8 +883,8 @@ def numero_aleatorio(limite_inferior, limite_superior):
 #mostrar los datos en pantalla
 def mostrar_datos_en_pantalla():
     global pokemon_inicial, pokemon_enemigo
-    print("\x1b[1;34m","Pokémon del usuario Nombre:", pokemon_inicial["nombre"],"Nivel:  ",int(pokemon_inicial["nivel"]),"Puntos de vida:  ",int(pokemon_inicial["puntos_de_vida"]))
-    print("\x1b[1;31m","Pokémon Salvaje Nombre: ", pokemon_enemigo["nombre"],"Nivel:  ",int(pokemon_enemigo["nivel"]),"Puntos de vida:  ",int(pokemon_enemigo["puntos_de_vida"]))
+    print("\x1b[1;34m","Pokémon del usuario Nombre:", pokemon_inicial["nombre"],"Nivel:  ",int(pokemon_inicial["nivel"]),"Puntos de vida:  ",int(pokemon_inicial["puntos_de_vida"]), "\x1b[1;0m")
+    print("\x1b[1;31m","Pokémon Salvaje Nombre: ", pokemon_enemigo["nombre"],"Nivel:  ",int(pokemon_enemigo["nivel"]),"Puntos de vida:  ",int(pokemon_enemigo["puntos_de_vida"]), "\x1b[1;0m")
 
 # Bloque de codigo para modificar los datos iniciales
 def modificar_estadísticas_iniciales():
@@ -929,8 +929,6 @@ def datos_de_combate_enemigo():
     pokemon_enemigo["puntos_de_salud"] = numero_aleatorio(1, 15)
     pokemon_enemigo["puntos_de_vida"] = ((pokemon_enemigo["salud"] + 2 * pokemon_enemigo["puntos_de_salud"]) * (pokemon_enemigo["nivel"] / 100) + 10 + pokemon_enemigo["nivel"])
     pokemon_enemigo["dato_de_combate"] = (((pokemon_enemigo["ataque"] + 2 * pokemon_enemigo["ataque"]) * (pokemon_enemigo["nivel"] / 100)) + 5)
-
-
 
 # Calcular los movimientos aleatorios del enemigo
 def movimientos_enemigo():
@@ -1177,7 +1175,7 @@ def probabilidad_de_acertar_el_golpe(tipo_de_ataque, pokemon):
 
 # Probabilidades de hacer un golpe crítico
 def golpe_critico():
-    critico = random.binomial(n=1, p= 1, size=1)
+    critico = random.binomial(n=1, p= .0625, size=1)
     return critico
 
 #Combate de pokemones
@@ -1206,15 +1204,19 @@ def combate_usuario(pokemon_atacante, pokemon_defensor):
                     daño_usuario = (0.01 * b * efectividad_usuario * numero_aleatorio(85, 100)) * ((((0.2) * pokemon_atacante["nivel"] + 1) * pokemon_atacante["ataque"] * int(pokemon_inicial_global["ataque"])) / (25 * pokemon_defensor["defensa"]) + 2)
                     # Dar la ventaja del golpe crítico
                     daño_usuario = daño_usuario * 1.5
-                    print("Usted ha recibido la ventaje de un golpe crítico")
+                    print("Usted ha recibido la ventaja de un golpe crítico")
                 else:
                     daño_usuario = (0.01 * b * efectividad_usuario * numero_aleatorio(85, 100)) * ((((0.2) * pokemon_atacante["nivel"] + 1) * pokemon_atacante["ataque"] * int(pokemon_inicial_global["ataque"])) / (25 * pokemon_defensor["defensa"]) + 2)
 
-                pokemon_enemigo[""]
+                print(pokemon_enemigo["puntos_de_vida"])
+                pokemon_enemigo["puntos_de_vida"] = pokemon_enemigo["puntos_de_vida"] - daño_usuario
+                print(float(pokemon_enemigo["puntos_de_vida"]))
 
                 combate_enemigo(pokemon_enemigo, pokemon_inicial)
-            #El pokemon ha fallado el ataque
+                time.sleep(1.5)
+                combate_usuario(pokemon_inicial, pokemon_enemigo)
 
+            #El pokemon ha fallado el ataque
             else:
                 print("\x1b[1;31m" + "Ataque fallido"+ "\x1b[1;0m")
                 print("\nTurno del Pokémon enemigo: ")
@@ -1239,6 +1241,7 @@ def combate_usuario(pokemon_atacante, pokemon_defensor):
                 combate_de_pokemones()
             opcion_menu_ataque = True
 
+# combate de parte del enemigo
 def combate_enemigo(pokemon_atacante, pokemon_defensor):
     global pokemon_enemigo, pokemon_inicial,ataque_a_usar,pokemon_inicial_global
 
@@ -1255,19 +1258,61 @@ def combate_enemigo(pokemon_atacante, pokemon_defensor):
             daño_enemigo = (0.01 * b * probabilidad_enemigo * numero_aleatorio(85, 100)) * ((((0.2) * pokemon_atacante["nivel"] + 1) * pokemon_atacante["ataque"] * int(pokemon_inicial_global["ataque"])) / (25 * pokemon_defensor["defensa"]) + 2)
             # Dar la ventaja del golpe crítico
             daño_enemigo = daño_enemigo * 1.5
-            print("Usted ha recibido la ventaje de un golpe crítico")
+            print("Usted ha recibido la ventaja de un golpe crítico")
         else:
             daño_enemigo = (0.01 * b * probabilidad_enemigo * numero_aleatorio(85, 100)) * ((((0.2) * pokemon_atacante["nivel"] + 1) * pokemon_atacante["ataque"] * int(pokemon_inicial_global["ataque"])) / (25 * pokemon_defensor["defensa"]) + 2)
+        print(pokemon_inicial["puntos_de_vida"])
+        pokemon_inicial["puntos_de_vida"] = pokemon_inicial["puntos_de_vida"] - daño_enemigo
+        print(float(pokemon_inicial["puntos_de_vida"]))
     else:
-        print("Ataque fallido ")
+        print("\x1b[1;31m" + "Ataque fallido" + "\x1b[1;0m")
 
+# Selección de ataque de usuario
+def seleccion_movimientos_usuario_batalla():
+    global movimientos_pokemon_usuario, ataque_a_usar, movimientos_pokemon_enemigo, movimiento_1, movimiento_2, movimiento_3, movimiento_4, pokemon_enemigo
+
+    movimiento_valido = False
+    # Imprimo los movimientos que tiene posibilidad el usuario
+    print("\n\x1b[1;34m" + "\nAtaques disponibles a usar: ")
+    for i in range(0, len(movimientos_pokemon_usuario)):
+        print("\x1b[1;0m", i, "-- ", movimientos_pokemon_usuario[i])
+    # Escoger el ataque a utilizar durante el programa
+    while not movimiento_valido:
+        eleccion = int(input(f"Por favor de escoger el ataque que usará 0 - {len(movimientos_pokemon_usuario) - 1}: "))
+
+        # Se guarda el ataque a utilizar
+        if eleccion == 0:
+            # Se establece el moviiento a al usuario
+            ataque_a_usar = movimiento_1
+            combate_usuario(pokemon_inicial, pokemon_enemigo)
+            movimiento_valido = True
+
+        elif eleccion == 1:
+            # Se establece el moviiento 2 al usuario
+            ataque_a_usar = movimiento_2
+            combate_usuario(pokemon_inicial, pokemon_enemigo)
+            movimiento_valido = True
+
+        elif eleccion == 2:
+            # Se establece el moviiento 3 al usuario
+            ataque_a_usar = movimiento_3
+            combate_usuario(pokemon_inicial, pokemon_enemigo)
+            movimiento_valido = True
+
+        elif eleccion == 3:
+            # Se establece el moviiento 3 al usuario
+            ataque_a_usar = movimiento_4
+            combate_usuario(pokemon_inicial, pokemon_enemigo)
+            movimiento_valido = True
+
+        else:
+            print("Opción inválida ")
+            movimiento_valido = False
 
 # Bloque de codigo batallas salvajes
 def batalla():
-    global movimientos_pokemon_usuario, ataque_a_usar, movimientos_pokemon_enemigo, movimiento_1, movimiento_2, movimiento_3, movimiento_4, pokemon_enemigo
 
     # Variables a utilizar
-    movimiento_valido = False
     opcion_menu = False
     datos_de_combate_usuario()
     datos_de_combate_enemigo()
@@ -1285,43 +1330,8 @@ def batalla():
 
         # Se establecen las opciones para el ataque
         if opcionMenu == "a":
-            # Imprimo los movimientos que tiene posibilidad el usuario
-            mostrar_datos_en_pantalla()
-            print("\nAtaques disponibles a usar: ")
-            for i in range(0, len(movimientos_pokemon_usuario)):
-                print("\x1b[1;0m", i, "-- ", movimientos_pokemon_usuario[i])
-            # Escoger el ataque a utilizar durante el programa
-            while not movimiento_valido:
-                eleccion = int(input(f"Por favor de escoger el ataque que usará 0 - {len(movimientos_pokemon_usuario) - 1}: "))
-
-                # Se guarda el ataque a utilizar
-                if eleccion == 0:
-                    # Se establece el moviiento a al usuario
-                    ataque_a_usar = movimiento_1
-                    combate_usuario(pokemon_inicial, pokemon_enemigo)
-                    movimiento_valido = True
-
-                elif eleccion == 1:
-                    # Se establece el moviiento 2 al usuario
-                    ataque_a_usar = movimiento_2
-                    combate_usuario(pokemon_inicial, pokemon_enemigo)
-                    movimiento_valido = True
-
-                elif eleccion == 2:
-                    # Se establece el moviiento 3 al usuario
-                    ataque_a_usar = movimiento_3
-                    combate_usuario(pokemon_inicial, pokemon_enemigo)
-                    movimiento_valido = True
-
-                elif eleccion == 3:
-                    # Se establece el moviiento 3 al usuario
-                    ataque_a_usar = movimiento_4
-                    combate_usuario(pokemon_inicial, pokemon_enemigo)
-                    combate_enemigo(pokemon_enemigo, pokemon_inicial)
-                    movimiento_valido = True
-
-                else:
-                    print("Opción inválida ")
+            seleccion_movimientos_usuario_batalla()
+            combate_usuario(pokemon_inicial, pokemon_enemigo)
             opcion_menu = True
 
         # Se regresa al menú principal
