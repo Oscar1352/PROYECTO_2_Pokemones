@@ -1190,6 +1190,7 @@ def combate_usuario(pokemon_atacante, pokemon_defensor):
     while not opcion_menu_ataque:
         opcion_menu_ataque = input("\nInserta la variable del menú que desees ingresar: ")
         if opcion_menu_ataque == "a":
+            seleccion_movimientos_usuario_batalla()
             # Ataque de parte del usuario
             efectividad_usuario = probabilidad_de_acertar_el_golpe(ataque_a_usar["tipo_de_movimiento"], pokemon_defensor["tipo"])
             if efectividad_usuario == 1:
@@ -1208,22 +1209,26 @@ def combate_usuario(pokemon_atacante, pokemon_defensor):
                 else:
                     daño_usuario = (0.01 * b * efectividad_usuario * numero_aleatorio(85, 100)) * ((((0.2) * pokemon_atacante["nivel"] + 1) * pokemon_atacante["ataque"] * int(pokemon_inicial_global["ataque"])) / (25 * pokemon_defensor["defensa"]) + 2)
 
-                print(pokemon_enemigo["puntos_de_vida"])
+                # Tiempo para simular realidad en el ataque
+                print("\n\x1b[1;32m" + "Turno del Usuario: " + "\x1b[1;0m")
+                time.sleep(3)
+                print(f"\nEl usuario hizo un total de: {daño_usuario} de daño\n")
                 pokemon_enemigo["puntos_de_vida"] = pokemon_enemigo["puntos_de_vida"] - daño_usuario
-                print(float(pokemon_enemigo["puntos_de_vida"]))
-
-                combate_enemigo(pokemon_enemigo, pokemon_inicial)
-                time.sleep(1.5)
-                combate_usuario(pokemon_inicial, pokemon_enemigo)
+                if pokemon_enemigo["puntos_de_vida"] <= 0:
+                    print("\n\x1b[1;32m" + "FELICIDADES, USTED HA GANADO" + "\n\x1b[1;0m")
+                else:
+                    print("\n\x1b[1;32m" + "Turno del Pokémon enemigo: " + "\x1b[1;0m")
+                    combate_enemigo(pokemon_enemigo, pokemon_inicial)
 
             #El pokemon ha fallado el ataque
             else:
+                print("\n\x1b[1;32m" + "Turno del Usuario: " + "\x1b[1;0m")
+                # Tiempo para simular realidad en el ataque
+                time.sleep(3)
                 print("\x1b[1;31m" + "Ataque fallido"+ "\x1b[1;0m")
-                print("\nTurno del Pokémon enemigo: ")
-                time.sleep(1.5)
+                print("\n\x1b[1;32m" + "Turno del Pokémon enemigo: " + "\x1b[1;0m")
                 combate_enemigo(pokemon_enemigo, pokemon_inicial)
             opcion_menu_ataque = True
-
 
         elif opcion_menu_ataque == "b":
             # Calcular los datos para huir
@@ -1261,11 +1266,23 @@ def combate_enemigo(pokemon_atacante, pokemon_defensor):
             print("Usted ha recibido la ventaja de un golpe crítico")
         else:
             daño_enemigo = (0.01 * b * probabilidad_enemigo * numero_aleatorio(85, 100)) * ((((0.2) * pokemon_atacante["nivel"] + 1) * pokemon_atacante["ataque"] * int(pokemon_inicial_global["ataque"])) / (25 * pokemon_defensor["defensa"]) + 2)
-        print(pokemon_inicial["puntos_de_vida"])
+
+        # Tiempo para simular realidad en el ataque
+        time.sleep(3)
+        print(f"El enemigo hizo un total de: {daño_enemigo} de daño\n")
         pokemon_inicial["puntos_de_vida"] = pokemon_inicial["puntos_de_vida"] - daño_enemigo
-        print(float(pokemon_inicial["puntos_de_vida"]))
+        if pokemon_inicial["puntos_de_vida"] <= 0:
+            print("\n\x1b[1;31m"+"LO SENTIMOS MUCHO, EL POKEMON SALVAJE HA GANADO"+"\n\x1b[1;0m")
+            print("Usted será llevado de regreso al menú principal")
+            time.sleep(1.5)
+            menu()
+        else:
+            combate_usuario(pokemon_inicial, pokemon_enemigo)
     else:
-        print("\x1b[1;31m" + "Ataque fallido" + "\x1b[1;0m")
+        # Tiempo para simular realidad en el ataque
+        time.sleep(3)
+        print("\n\x1b[1;31m" + "Ataque fallido" + "\x1b[1;0m")
+        combate_usuario(pokemon_inicial, pokemon_enemigo)
 
 # Selección de ataque de usuario
 def seleccion_movimientos_usuario_batalla():
@@ -1273,9 +1290,21 @@ def seleccion_movimientos_usuario_batalla():
 
     movimiento_valido = False
     # Imprimo los movimientos que tiene posibilidad el usuario
-    print("\n\x1b[1;34m" + "\nAtaques disponibles a usar: ")
-    for i in range(0, len(movimientos_pokemon_usuario)):
-        print("\x1b[1;0m", i, "-- ", movimientos_pokemon_usuario[i])
+    print("\n\x1b[1;34m" + "\nAtaques disponibles a usar: "+ "\x1b[1;0m")
+    if len(movimientos_pokemon_usuario) == 1:
+        print(0,"--",movimiento_1)
+    elif len(movimientos_pokemon_usuario) == 2:
+        print(0,"--",movimiento_1)
+        print(1,"--",movimiento_2)
+    elif len(movimientos_pokemon_usuario) == 3:
+        print(0,"--",movimiento_1)
+        print(1,"--",movimiento_2)
+        print(2,"--",movimiento_3)
+    elif len(movimientos_pokemon_usuario) == 4:
+        print(0,"--",movimiento_1)
+        print(1,"--",movimiento_2)
+        print(2,"--",movimiento_3)
+        print(3,"--",movimiento_4)
     # Escoger el ataque a utilizar durante el programa
     while not movimiento_valido:
         eleccion = int(input(f"Por favor de escoger el ataque que usará 0 - {len(movimientos_pokemon_usuario) - 1}: "))
@@ -1284,25 +1313,21 @@ def seleccion_movimientos_usuario_batalla():
         if eleccion == 0:
             # Se establece el moviiento a al usuario
             ataque_a_usar = movimiento_1
-            combate_usuario(pokemon_inicial, pokemon_enemigo)
             movimiento_valido = True
 
         elif eleccion == 1:
             # Se establece el moviiento 2 al usuario
             ataque_a_usar = movimiento_2
-            combate_usuario(pokemon_inicial, pokemon_enemigo)
             movimiento_valido = True
 
         elif eleccion == 2:
             # Se establece el moviiento 3 al usuario
             ataque_a_usar = movimiento_3
-            combate_usuario(pokemon_inicial, pokemon_enemigo)
             movimiento_valido = True
 
         elif eleccion == 3:
             # Se establece el moviiento 3 al usuario
             ataque_a_usar = movimiento_4
-            combate_usuario(pokemon_inicial, pokemon_enemigo)
             movimiento_valido = True
 
         else:
@@ -1311,7 +1336,7 @@ def seleccion_movimientos_usuario_batalla():
 
 # Bloque de codigo batallas salvajes
 def batalla():
-
+    global pokemon_inicial, pokemon_enemigo
     # Variables a utilizar
     opcion_menu = False
     datos_de_combate_usuario()
@@ -1330,7 +1355,6 @@ def batalla():
 
         # Se establecen las opciones para el ataque
         if opcionMenu == "a":
-            seleccion_movimientos_usuario_batalla()
             combate_usuario(pokemon_inicial, pokemon_enemigo)
             opcion_menu = True
 
@@ -1356,7 +1380,7 @@ def estadísticas():
     print("Nivel: "+str(pokemon_inicial["nivel"]))
     print("Experiencia: "+str(pokemon_inicial["experiencia_base"]))
     print("Tipo: "+pokemon_inicial["tipo"])
-    print(f"Movimientos: {movimientos_pokemon_usuario}")
+    print("Movimientos:", movimientos_pokemon_usuario)
 
     # Características de datos de combate
     print("\x1b[1;34m" + "DATOS DE COMBATE")
