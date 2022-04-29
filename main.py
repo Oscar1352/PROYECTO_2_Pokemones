@@ -462,6 +462,7 @@ movimiento_1_enemigo = []
 def borrarPantalla():
     borrarPantalla = lambda: os.system ("cls") #Limpia la pantalla
 
+#FUNCIONES GENERALES
 #Función para movimientos, 30 movimientos
 def movimientos(numero_aleatorio):
     # Variables a utilziar
@@ -910,6 +911,7 @@ def datos_de_combate_usuario():
     # Se le dan los datos a utilizar al pokemon del usuario durante el combate
     pokemon_inicial["puntos_de_vida"] = float((pokemon_inicial["salud"] + 2 * pokemon_inicial_global["salud"]) * (pokemon_inicial["nivel"] / 100) + 10 + pokemon_inicial["nivel"])
     pokemon_inicial["dato_de_combate"] = (((pokemon_inicial["ataque"] + 2 * pokemon_inicial_global["ataque"]) * (pokemon_inicial["nivel"] / 100)) + 5 )
+    #Agreagr dato de combate ataque, defensa y velocidad
 
 # Calcular los datos de combate del usuario
 def datos_de_combate_enemigo():
@@ -926,8 +928,10 @@ def datos_de_combate_enemigo():
 
     # Se le dan los datos a utilizar durante el ataque
     pokemon_enemigo["puntos_de_salud"] = numero_aleatorio(1, 15)
-    pokemon_enemigo["puntos_de_vida"] = float((pokemon_enemigo["salud"] + 2 * pokemon_enemigo["puntos_de_salud"]) * (pokemon_enemigo["nivel"] / 100) + 10 + pokemon_enemigo["nivel"])
+    pokemon_enemigo["puntos_de_vida"] = float((pokemon_enemigo["salud"] + 2 * pokemon_enemigo["salud"]) * (pokemon_enemigo["nivel"] / 100) + 10 + pokemon_enemigo["nivel"])
     pokemon_enemigo["dato_de_combate"] = (((pokemon_enemigo["ataque"] + 2 * pokemon_enemigo["ataque"]) * (pokemon_enemigo["nivel"] / 100)) + 5)
+    # Generar los valores iniciales del enemigo
+    #Agreagr dato de combate ataque, defensa y velocidad
 
 # Calcular los movimientos aleatorios del enemigo
 def movimientos_enemigo():
