@@ -7,7 +7,7 @@ from numpy import random
 
 
 # Características iniciales del pokémon
-movimientos_pokemon_usuario = ["" * 4]
+movimientos_pokemon_usuario = [""  for i in range(0,2)]
 movimientos_pokemon_enemigo = []
 ataque_a_usar = []
 pokemon_inicial = {
@@ -581,6 +581,7 @@ movimiento_4 = []
 # Guardar datos de movimientos enemigo
 movimiento_1_enemigo = []
 
+#Borrar poantalla
 def borrarPantalla():
     borrarPantalla = lambda: os.system ("cls") #Limpia la pantalla
 
@@ -1021,10 +1022,10 @@ def modificar_estadísticas_iniciales():
     # Se extrae los movimientos de manera aleatoria
     movimiento_1 = movimientos(numero_aleatorio(1,30))
     movimiento_2 = movimientos(numero_aleatorio(1,30))
-    if movimiento_1 == movimiento_2:
+    while movimiento_1 == movimiento_2:
         movimiento_2 = movimientos(numero_aleatorio(1, 30))
-    movimientos_pokemon_usuario.append(movimiento_1)
-    movimientos_pokemon_usuario.append(movimiento_2)
+    movimientos_pokemon_usuario[0] = movimiento_1
+    movimientos_pokemon_usuario[1] = movimiento_2
 
 # Calcular los datos de combate del usuario
 def datos_de_combate_usuario():
@@ -1323,15 +1324,63 @@ def experiencia():
         pokemon_inicial["nivel"] = pokemon_inicial["nivel"] + 1
         pokemon_inicial["experiencia_base"] = 0
         print("Felicitaciones, ha subido de nivel")
+        sumar_movimiento()
 
 #Manejo de agregar un ataque más al usuario
 def sumar_movimiento():
     global movimientos_pokemon_usuario
     movimiento = movimientos(numero_aleatorio(1,30))
-    while movimiento["nombre"] == movimientos_pokemon_usuario[0] or  movimiento["nombre"] == movimientos_pokemon_usuario[1] or movimiento["nombre"] == movimientos_pokemon_usuario[2]:
-        movimiento = movimientos(numero_aleatorio(1, 30))
-        print(movimiento)
-    movimientos_pokemon_usuario.append(movimiento)
+    opcion_valida = False
+    #Verificar si el usuario tiene dos ataques para tener un tercero
+    if len(movimientos_pokemon_usuario) == 2:
+        while movimiento == movimientos_pokemon_usuario[0] or  movimiento== movimientos_pokemon_usuario[1] :
+            movimiento = movimientos(numero_aleatorio(1, 30))
+            print(f"Usted ha sido premiado con un nuevo movimiento, ahora tiene {len(movimientos_pokemon_usuario)}")
+        movimientos_pokemon_usuario.append(movimiento)
+
+    #Verificar si el usuario tiene tres ataques para tener un cuarto
+    elif len(movimientos_pokemon_usuario) == 3:
+        while movimiento == movimientos_pokemon_usuario[0] or  movimiento == movimientos_pokemon_usuario[1] or movimiento == movimientos_pokemon_usuario[2] :
+            movimiento = movimientos(numero_aleatorio(1, 30))
+            print(f"Usted ha sido premiado con un nuevo movimiento, ahora tiene {len(movimientos_pokemon_usuario)}")
+        movimientos_pokemon_usuario.append(movimiento)
+
+    #Cambio de movimientos
+    else:
+        print("Ya tiene demasiados movimientos, es necesario que cambie uno: ")
+        for i in range(0, len(movimientos_pokemon_usuario)):
+            print(i,"--",movimientos_pokemon_usuario[i])
+
+        while not opcion_valida:
+            opcion = int(input("Por favor ingrese el movimiento que desee reemplazar: "))
+            if opcion == 0:
+                movimiento = movimientos(numero_aleatorio(1, 30))
+                while movimiento == movimientos_pokemon_usuario[0] or movimiento == movimientos_pokemon_usuario[1] or movimiento == movimientos_pokemon_usuario[2]:
+                    movimiento = movimientos(numero_aleatorio(1, 30))
+                    print(f"Usted ha sido premiado con un nuevo movimiento, y ha cambiado un anterior")
+                movimiento = movimientos_pokemon_usuario[0]
+
+                opcion_valida = True
+            elif opcion == 1:
+                while movimiento == movimientos_pokemon_usuario[0] or movimiento == movimientos_pokemon_usuario[1] or movimiento == movimientos_pokemon_usuario[2]:
+                    movimiento = movimientos(numero_aleatorio(1, 30))
+                    print(f"Usted ha sido premiado con un nuevo movimiento, y ha cambiado un anterior")
+                movimiento = movimientos_pokemon_usuario[0]
+                opcion_valida = True
+            elif opcion == 2:
+                while movimiento == movimientos_pokemon_usuario[0] or movimiento == movimientos_pokemon_usuario[1] or movimiento == movimientos_pokemon_usuario[2]:
+                    movimiento = movimientos(numero_aleatorio(1, 30))
+                    print(f"Usted ha sido premiado con un nuevo movimiento, y ha cambiado un anterior")
+                movimiento = movimientos_pokemon_usuario[0]
+                opcion_valida = True
+            elif opcion == 3:
+                while movimiento == movimientos_pokemon_usuario[0] or movimiento == movimientos_pokemon_usuario[1] or movimiento == movimientos_pokemon_usuario[2]:
+                    movimiento = movimientos(numero_aleatorio(1, 30))
+                    print(f"Usted ha sido premiado con un nuevo movimiento, y ha cambiado un anterior")
+                movimiento = movimientos_pokemon_usuario[0]
+                opcion_valida = True
+            else:
+                print("\n\x1b[1;31m" + "Opcion inválida" + "\n\x1b[1;0m")
 
 #Combate de pokemones
 def combate_usuario(pokemon_atacante, pokemon_defensor):
@@ -1372,7 +1421,6 @@ def combate_usuario(pokemon_atacante, pokemon_defensor):
                 if pokemon_enemigo["puntos_de_vida"] <= 0:
                     print("\n\x1b[1;32m" + "FELICIDADES, USTED HA GANADO" + "\n\x1b[1;0m")
                     experiencia()
-                    sumar_movimiento()
                 else:
                     mostrar_datos_en_pantalla()
                     print("\n\x1b[1;32m" + "Turno del Pokémon enemigo: " + "\x1b[1;0m")
@@ -1522,7 +1570,7 @@ def batalla():
             opcion_menu = True
             menu()
         else:
-            print("Opción inválida. ")
+            print("\n\x1b[1;31m" + "Opción inválida. " + "\n\x1b[1;0m")
 
 # Bloque de codigo para chequear estadísticas
 def estadísticas():
@@ -1611,19 +1659,19 @@ def menu():
         # Utilizo los códigos ANSI para dar estética a la salida del videojuego
         if opcionMenu == "a":
             # Escogió el apartado de batalla
-            print("\x1b[1;32m" + "\t\t\t\t\t\tBienvenido a la batalla contra Pokémon salvaje, Buena suerte...\n")
+            print("\x1b[1;32m" + "\t\t\t\t\t\tBienvenido a la batalla contra Pokémon salvaje, Buena suerte...\n" + "\x1b[1;0m")
             batalla()
             break
         elif opcionMenu == "b":
             # Se escogió el apartado de Estadísticas
-            print("\x1b[1;32m" + "\t\t\t\t\t\tBienvenido al menú de estadísticas...\n")
+            print("\x1b[1;32m" + "\t\t\t\t\t\tBienvenido al menú de estadísticas...\n" + "\x1b[1;0m")
             estadísticas()
         elif opcionMenu == "c":
             # Se saldrá del juego
-            print("\x1b[1;31m" + "\t\t\t\t\t\tMuchas gracias por probar el maravilloso juego de Pokémon. ¡Hasta la próxima!")
+            print("\x1b[1;31m" + "\t\t\t\t\t\tMuchas gracias por probar el maravilloso juego de Pokémon. ¡Hasta la próxima!" + "\x1b[1;0m")
             exit()
         else:
-            print("\x1b[1;31m" + "No has pulsado ninguna opción correcta...\n")
+            print("\x1b[1;31m" + "No has pulsado ninguna opción correcta...\n" + "\x1b[1;0m")
             opcionMenu = input("\x1b[1;0m" +"inserta un numero valor >> ")
 
 # Bloque de codigo main
