@@ -7,7 +7,7 @@ from numpy import random
 
 
 # Características iniciales del pokémon
-movimientos_pokemon_usuario = []
+movimientos_pokemon_usuario = ["" * 4]
 movimientos_pokemon_enemigo = []
 ataque_a_usar = []
 pokemon_inicial = {
@@ -1023,8 +1023,8 @@ def modificar_estadísticas_iniciales():
     movimiento_2 = movimientos(numero_aleatorio(1,30))
     if movimiento_1 == movimiento_2:
         movimiento_2 = movimientos(numero_aleatorio(1, 30))
-    movimientos_pokemon_usuario.append(movimiento_1["nombre"])
-    movimientos_pokemon_usuario.append(movimiento_2["nombre"])
+    movimientos_pokemon_usuario.append(movimiento_1)
+    movimientos_pokemon_usuario.append(movimiento_2)
 
 # Calcular los datos de combate del usuario
 def datos_de_combate_usuario():
@@ -1310,6 +1310,29 @@ def golpe_critico():
     critico = random.binomial(n=1, p= .0625, size=1)
     return critico
 
+#Manejo de experiencia
+def experiencia():
+    global pokemon_enemigo, pokemon_inicial
+    #Utilizo la formula para demostrar cuanta experiencia ganó el usuario
+    experiencia_ganada = (pokemon_enemigo["experiencia_base"] * pokemon_enemigo["nivel"]) / 7
+    pokemon_inicial["experiencia_base"] += experiencia_ganada
+    experiencia_necesaria = 0.8 * pow(pokemon_inicial["nivel"], 3)
+
+    #Entra al comparador los datos para verificar si el usuario puede subir de nivel
+    if pokemon_inicial["experiencia_base"] >= experiencia_necesaria:
+        pokemon_inicial["nivel"] = pokemon_inicial["nivel"] + 1
+        pokemon_inicial["experiencia_base"] = 0
+        print("Felicitaciones, ha subido de nivel")
+
+#Manejo de agregar un ataque más al usuario
+def sumar_movimiento():
+    global movimientos_pokemon_usuario
+    movimiento = movimientos(numero_aleatorio(1,30))
+    while movimiento["nombre"] == movimientos_pokemon_usuario[0] or  movimiento["nombre"] == movimientos_pokemon_usuario[1] or movimiento["nombre"] == movimientos_pokemon_usuario[2]:
+        movimiento = movimientos(numero_aleatorio(1, 30))
+        print(movimiento)
+    movimientos_pokemon_usuario.append(movimiento)
+
 #Combate de pokemones
 def combate_usuario(pokemon_atacante, pokemon_defensor):
     global pokemon_enemigo, pokemon_inicial,ataque_a_usar,pokemon_inicial_global
@@ -1348,6 +1371,8 @@ def combate_usuario(pokemon_atacante, pokemon_defensor):
                 pokemon_enemigo["puntos_de_vida"] = pokemon_enemigo["puntos_de_vida"] - daño_usuario
                 if pokemon_enemigo["puntos_de_vida"] <= 0:
                     print("\n\x1b[1;32m" + "FELICIDADES, USTED HA GANADO" + "\n\x1b[1;0m")
+                    experiencia()
+                    sumar_movimiento()
                 else:
                     mostrar_datos_en_pantalla()
                     print("\n\x1b[1;32m" + "Turno del Pokémon enemigo: " + "\x1b[1;0m")
@@ -1425,19 +1450,19 @@ def seleccion_movimientos_usuario_batalla():
     # Imprimo los movimientos que tiene posibilidad el usuario
     print("\n\x1b[1;34m" + "\nAtaques disponibles a usar: "+ "\x1b[1;0m")
     if len(movimientos_pokemon_usuario) == 1:
-        print(0,"--",movimiento_1)
+        print(0,"--",movimientos_pokemon_usuario[0])
     elif len(movimientos_pokemon_usuario) == 2:
-        print(0,"--",movimiento_1)
-        print(1,"--",movimiento_2)
+        print(0,"--",movimientos_pokemon_usuario[0])
+        print(1,"--",movimientos_pokemon_usuario[1])
     elif len(movimientos_pokemon_usuario) == 3:
-        print(0,"--",movimiento_1)
-        print(1,"--",movimiento_2)
-        print(2,"--",movimiento_3)
+        print(0,"--",movimientos_pokemon_usuario[0])
+        print(1,"--",movimientos_pokemon_usuario[1])
+        print(2,"--",movimientos_pokemon_usuario[2])
     elif len(movimientos_pokemon_usuario) == 4:
-        print(0,"--",movimiento_1)
-        print(1,"--",movimiento_2)
-        print(2,"--",movimiento_3)
-        print(3,"--",movimiento_4)
+        print(0,"--",movimientos_pokemon_usuario[0])
+        print(1,"--",movimientos_pokemon_usuario[1])
+        print(2,"--",movimientos_pokemon_usuario[2])
+        print(3,"--",movimientos_pokemon_usuario[3])
     # Escoger el ataque a utilizar durante el programa
     while not movimiento_valido:
         eleccion = int(input(f"Por favor de escoger el ataque que usará 0 - {len(movimientos_pokemon_usuario) - 1}: "))
@@ -1512,7 +1537,9 @@ def estadísticas():
     print("Nivel: "+str(pokemon_inicial["nivel"]))
     print("Experiencia: "+str(pokemon_inicial["experiencia_base"]))
     print("Tipo: "+pokemon_inicial["tipo"])
-    print("Movimientos:", movimientos_pokemon_usuario)
+    print("Movimientos:")
+    for i in movimientos_pokemon_usuario:
+        print(i)
 
     # Características de datos de combate
     print("\x1b[1;34m" + "DATOS DE COMBATE")
@@ -1520,7 +1547,9 @@ def estadísticas():
     print("\x1b[1;0m" + "Ataque: "+str(pokemon_inicial["ataque"]))
     print("\x1b[1;0m" + "Defensa: "+str(pokemon_inicial["defensa"]))
     print("\x1b[1;0m" + "Velocidad: "+str(pokemon_inicial["velocidad"]))
-    print("Datos de Combate: ", pokemon_inicial["dato_de_combate"])
+    print("Datos de Combate ataque: ", pokemon_inicial["dato_de_combate_ataque"])
+    print("Datos de Combate defensa: ", pokemon_inicial["dato_de_combate_defensa"])
+    print("Datos de Combate velocidad: ", pokemon_inicial["dato_de_combate_velocidad"])
     print("Datos de Combate: ", pokemon_inicial["puntos_de_vida"])
     input("PRESIONE UNA TECLA PARA REGRESAR AL MENÚ...")
     menu()
