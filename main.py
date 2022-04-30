@@ -16,7 +16,9 @@ pokemon_inicial = {
     "tipo" : "",
     "salud" : 0,
     "puntos_de_vida" : 0,
-    "dato_de_combate" : 0,
+    "dato_de_combate_ataque" : 0,
+    "dato_de_combate_defensa" : 0,
+    "dato_de_combate_velocidad" : 0,
     "ataque" : 0,
     "defensa" : 0,
     "velocidad" : 0,
@@ -32,7 +34,13 @@ pokemon_Bulbasaur = {
     "tipo" : "Planta",
     "salud": 45,
     "puntos_de_salud": 0,
-    "dato_de_combate": 0,
+    "base_salud" : 0,
+    "base_ataque" : 0,
+    "base_defensa" : 0,
+    "base_velocidad" : 0,
+    "dato_de_combate_ataque" : 0,
+    "dato_de_combate_defensa" : 0,
+    "dato_de_combate_velocidad" : 0,
     "ataque" : 49,
     "defensa" : 49,
     "velocidad" : 45,
@@ -44,7 +52,13 @@ pokemon_Charmander = {
     "tipo" : "",
     "salud": 0,
     "puntos_de_salud": 0,
-    "dato_de_combate": 0,
+    "base_salud": 0,
+    "base_ataque": 0,
+    "base_defensa": 0,
+    "base_velocidad": 0,
+    "dato_de_combate_ataque" : 0,
+    "dato_de_combate_defensa" : 0,
+    "dato_de_combate_velocidad" : 0,
     "ataque" : 0,
     "defensa" : 0,
     "velocidad" : 0,
@@ -56,7 +70,13 @@ pokemon_Squirtle = {
     "tipo" : "",
     "salud": 0,
     "puntos_de_salud": 0,
-    "dato_de_combate": 0,
+    "base_salud": 0,
+    "base_ataque": 0,
+    "base_defensa": 0,
+    "base_velocidad": 0,
+    "dato_de_combate_ataque" : 0,
+    "dato_de_combate_defensa" : 0,
+    "dato_de_combate_velocidad" : 0,
     "ataque" : 0,
     "defensa" : 0,
     "velocidad" : 0,
@@ -68,7 +88,13 @@ pokemon_Caterpie = {
     "tipo" : "",
     "salud": 0,
     "puntos_de_salud": 0,
-    "dato_de_combate": 0,
+    "base_salud": 0,
+    "base_ataque": 0,
+    "base_defensa": 0,
+    "base_velocidad": 0,
+    "dato_de_combate_ataque" : 0,
+    "dato_de_combate_defensa" : 0,
+    "dato_de_combate_velocidad" : 0,
     "ataque" : 0,
     "defensa" : 0,
     "velocidad" : 0,
@@ -80,7 +106,13 @@ pokemon_Weedle = {
     "tipo" : "",
     "salud": 0,
     "puntos_de_salud": 0,
-    "dato_de_combate": 0,
+    "base_salud": 0,
+    "base_ataque": 0,
+    "base_defensa": 0,
+    "base_velocidad": 0,
+    "dato_de_combate_ataque" : 0,
+    "dato_de_combate_defensa" : 0,
+    "dato_de_combate_velocidad" : 0,
     "ataque" : 0,
     "defensa" : 0,
     "velocidad" : 0,
@@ -92,7 +124,13 @@ pokemon_Pidgey = {
     "tipo" : "",
     "salud": 0,
     "puntos_de_salud": 0,
-    "dato_de_combate": 0,
+    "base_salud": 0,
+    "base_ataque": 0,
+    "base_defensa": 0,
+    "base_velocidad": 0,
+    "dato_de_combate_ataque" : 0,
+    "dato_de_combate_defensa" : 0,
+    "dato_de_combate_velocidad" : 0,
     "ataque" : 0,
     "defensa" : 0,
     "velocidad" : 0,
@@ -104,7 +142,13 @@ pokemon_Rattata = {
     "tipo" : "",
     "salud": 0,
     "puntos_de_salud": 0,
-    "dato_de_combate": 0,
+    "base_salud": 0,
+    "base_ataque": 0,
+    "base_defensa": 0,
+    "base_velocidad": 0,
+    "dato_de_combate_ataque" : 0,
+    "dato_de_combate_defensa" : 0,
+    "dato_de_combate_velocidad" : 0,
     "ataque" : 0,
     "defensa" : 0,
     "velocidad" : 0,
@@ -116,7 +160,13 @@ pokemon_Spearow = {
     "tipo" : "",
     "salud": 0,
     "puntos_de_salud": 0,
-    "dato_de_combate": 0,
+    "base_salud": 0,
+    "base_ataque": 0,
+    "base_defensa": 0,
+    "base_velocidad": 0,
+    "dato_de_combate_ataque" : 0,
+    "dato_de_combate_defensa" : 0,
+    "dato_de_combate_velocidad" : 0,
     "ataque" : 0,
     "defensa" : 0,
     "velocidad" : 0,
@@ -128,7 +178,13 @@ pokemon_Ekans = {
     "tipo" : "",
     "salud": 0,
     "puntos_de_salud": 0,
-    "dato_de_combate": 0,
+    "base_salud": 0,
+    "base_ataque": 0,
+    "base_defensa": 0,
+    "base_velocidad": 0,
+    "dato_de_combate_ataque" : 0,
+    "dato_de_combate_defensa" : 0,
+    "dato_de_combate_velocidad" : 0,
     "ataque" : 0,
     "defensa" : 0,
     "velocidad" : 0,
@@ -140,7 +196,13 @@ pokemon_Pikachu = {
     "tipo" : "",
     "salud": 0,
     "puntos_de_salud": 0,
-    "dato_de_combate": 0,
+    "base_salud": 0,
+    "base_ataque": 0,
+    "base_defensa": 0,
+    "base_velocidad": 0,
+    "dato_de_combate_ataque" : 0,
+    "dato_de_combate_defensa" : 0,
+    "dato_de_combate_velocidad" : 0,
     "ataque" : 0,
     "defensa" : 0,
     "velocidad" : 0,
@@ -152,7 +214,13 @@ pokemon_Sandshrew = {
     "tipo" : "",
     "salud": 0,
     "puntos_de_salud": 0,
-    "dato_de_combate": 0,
+    "base_salud": 0,
+    "base_ataque": 0,
+    "base_defensa": 0,
+    "base_velocidad": 0,
+    "dato_de_combate_ataque" : 0,
+    "dato_de_combate_defensa" : 0,
+    "dato_de_combate_velocidad" : 0,
     "ataque" : 0,
     "defensa" : 0,
     "velocidad" : 0,
@@ -164,7 +232,13 @@ pokemon_Vulpix = {
     "tipo" : "",
     "salud": 0,
     "puntos_de_salud": 0,
-    "dato_de_combate": 0,
+    "base_salud": 0,
+    "base_ataque": 0,
+    "base_defensa": 0,
+    "base_velocidad": 0,
+    "dato_de_combate_ataque" : 0,
+    "dato_de_combate_defensa" : 0,
+    "dato_de_combate_velocidad" : 0,
     "ataque" : 0,
     "defensa" : 0,
     "velocidad" : 0,
@@ -176,7 +250,13 @@ pokemon_Jigglypuff = {
     "tipo" : "",
     "salud": 0,
     "puntos_de_salud": 0,
-    "dato_de_combate": 0,
+    "base_salud": 0,
+    "base_ataque": 0,
+    "base_defensa": 0,
+    "base_velocidad": 0,
+    "dato_de_combate_ataque" : 0,
+    "dato_de_combate_defensa" : 0,
+    "dato_de_combate_velocidad" : 0,
     "ataque" : 0,
     "defensa" : 0,
     "velocidad" : 0,
@@ -188,7 +268,13 @@ pokemon_Zubat = {
     "tipo" : "",
     "salud": 0,
     "puntos_de_salud": 0,
-    "dato_de_combate": 0,
+    "base_salud": 0,
+    "base_ataque": 0,
+    "base_defensa": 0,
+    "base_velocidad": 0,
+    "dato_de_combate_ataque" : 0,
+    "dato_de_combate_defensa" : 0,
+    "dato_de_combate_velocidad" : 0,
     "ataque" : 0,
     "defensa" : 0,
     "velocidad" : 0,
@@ -200,7 +286,13 @@ pokemon_Oddish = {
     "tipo" : "",
     "salud": 0,
     "puntos_de_salud": 0,
-    "dato_de_combate": 0,
+    "base_salud": 0,
+    "base_ataque": 0,
+    "base_defensa": 0,
+    "base_velocidad": 0,
+    "dato_de_combate_ataque" : 0,
+    "dato_de_combate_defensa" : 0,
+    "dato_de_combate_velocidad" : 0,
     "ataque" : 0,
     "defensa" : 0,
     "velocidad" : 0,
@@ -212,7 +304,13 @@ pokemon_Gloom = {
     "tipo" : "",
     "salud": 0,
     "puntos_de_salud": 0,
-    "dato_de_combate": 0,
+    "base_salud": 0,
+    "base_ataque": 0,
+    "base_defensa": 0,
+    "base_velocidad": 0,
+    "dato_de_combate_ataque" : 0,
+    "dato_de_combate_defensa" : 0,
+    "dato_de_combate_velocidad" : 0,
     "ataque" : 0,
     "defensa" : 0,
     "velocidad" : 0,
@@ -224,7 +322,13 @@ pokemon_Diglett = {
     "tipo" : "",
     "salud": 0,
     "puntos_de_salud": 0,
-    "dato_de_combate": 0,
+    "base_salud": 0,
+    "base_ataque": 0,
+    "base_defensa": 0,
+    "base_velocidad": 0,
+    "dato_de_combate_ataque" : 0,
+    "dato_de_combate_defensa" : 0,
+    "dato_de_combate_velocidad" : 0,
     "ataque" : 0,
     "defensa" : 0,
     "velocidad" : 0,
@@ -236,7 +340,13 @@ pokemon_Meowth = {
     "tipo" : "",
     "salud": 0,
     "puntos_de_salud": 0,
-    "dato_de_combate": 0,
+    "base_salud": 0,
+    "base_ataque": 0,
+    "base_defensa": 0,
+    "base_velocidad": 0,
+    "dato_de_combate_ataque" : 0,
+    "dato_de_combate_defensa" : 0,
+    "dato_de_combate_velocidad" : 0,
     "ataque" : 0,
     "defensa" : 0,
     "velocidad" : 0,
@@ -248,7 +358,13 @@ pokemon_Psyduck = {
     "tipo" : "",
     "salud": 0,
     "puntos_de_salud": 0,
-    "dato_de_combate": 0,
+    "base_salud": 0,
+    "base_ataque": 0,
+    "base_defensa": 0,
+    "base_velocidad": 0,
+    "dato_de_combate_ataque" : 0,
+    "dato_de_combate_defensa" : 0,
+    "dato_de_combate_velocidad" : 0,
     "ataque" : 0,
     "defensa" : 0,
     "velocidad" : 0,
@@ -260,7 +376,13 @@ pokemon_Mewtwo = {
     "tipo" : "",
     "salud": 0,
     "puntos_de_salud": 0,
-    "dato_de_combate": 0,
+    "base_salud": 0,
+    "base_ataque": 0,
+    "base_defensa": 0,
+    "base_velocidad": 0,
+    "dato_de_combate_ataque" : 0,
+    "dato_de_combate_defensa" : 0,
+    "dato_de_combate_velocidad" : 0,
     "ataque" : 0,
     "defensa" : 0,
     "velocidad" : 0,
@@ -910,7 +1032,10 @@ def datos_de_combate_usuario():
 
     # Se le dan los datos a utilizar al pokemon del usuario durante el combate
     pokemon_inicial["puntos_de_vida"] = float((pokemon_inicial["salud"] + 2 * pokemon_inicial_global["salud"]) * (pokemon_inicial["nivel"] / 100) + 10 + pokemon_inicial["nivel"])
-    pokemon_inicial["dato_de_combate"] = (((pokemon_inicial["ataque"] + 2 * pokemon_inicial_global["ataque"]) * (pokemon_inicial["nivel"] / 100)) + 5 )
+    pokemon_inicial["dato_de_combate_ataque"] = (((pokemon_inicial["ataque"] + 2 * pokemon_inicial_global["ataque"]) * (pokemon_inicial["nivel"] / 100)) + 5 )
+    pokemon_inicial["dato_de_combate_defensa"] = (((pokemon_inicial["defensa"] + 2 * pokemon_inicial_global["defensa"]) * (pokemon_inicial["nivel"] / 100)) + 5 )
+    pokemon_inicial["dato_de_combate_velocidad"] = (((pokemon_inicial["velocidad"] + 2 * pokemon_inicial_global["velocidad"]) * (pokemon_inicial["nivel"] / 100)) + 5 )
+
     #Agreagr dato de combate ataque, defensa y velocidad
 
 # Calcular los datos de combate del usuario
@@ -922,21 +1047,27 @@ def datos_de_combate_enemigo():
 
     # Se le da el nivel a utilizar
     if random.binomial(n=1, p=.5, size=1) == 1:
-        pokemon_enemigo["nivel"] = pokemon_inicial["nivel"] + 4
+        pokemon_enemigo["nivel"] = pokemon_inicial["nivel"] + numero_aleatorio(1,4)
     else:
-        pokemon_enemigo["nivel"] = pokemon_inicial["nivel"] - 4
+        pokemon_enemigo["nivel"] = pokemon_inicial["nivel"] - numero_aleatorio(1,4)
 
     # Se le dan los datos a utilizar durante el ataque
-    pokemon_enemigo["puntos_de_salud"] = numero_aleatorio(1, 15)
-    pokemon_enemigo["puntos_de_vida"] = float((pokemon_enemigo["salud"] + 2 * pokemon_enemigo["salud"]) * (pokemon_enemigo["nivel"] / 100) + 10 + pokemon_enemigo["nivel"])
-    pokemon_enemigo["dato_de_combate"] = (((pokemon_enemigo["ataque"] + 2 * pokemon_enemigo["ataque"]) * (pokemon_enemigo["nivel"] / 100)) + 5)
+    pokemon_enemigo["base_salud"] = numero_aleatorio(1, 15)
+    pokemon_enemigo["base_ataque"] = numero_aleatorio(1, 15)
+    pokemon_enemigo["base_defensa"] = numero_aleatorio(1, 15)
+    pokemon_enemigo["base_velocidad"] = numero_aleatorio(1, 15)
+
+    pokemon_enemigo["puntos_de_vida"] = float((pokemon_enemigo["base_salud"] + 2 * pokemon_enemigo["salud"]) * (pokemon_enemigo["nivel"] / 100) + 10 + pokemon_enemigo["nivel"])
+    pokemon_enemigo["dato_de_combate_ataque"] = (((pokemon_enemigo["base_ataque"] + 2 * pokemon_enemigo["ataque"]) * (pokemon_enemigo["nivel"] / 100)) + 5)
+    pokemon_enemigo["dato_de_combate_defensa"] = (((pokemon_enemigo["base_defensa"] + 2 * pokemon_enemigo["defensa"]) * (pokemon_enemigo["nivel"] / 100)) + 5)
+    pokemon_enemigo["dato_de_combate_velocidad"] = (((pokemon_enemigo["base_velocidad"] + 2 * pokemon_enemigo["velocidad"]) * (pokemon_enemigo["nivel"] / 100)) + 5)
+
     # Generar los valores iniciales del enemigo
     #Agreagr dato de combate ataque, defensa y velocidad
 
 # Calcular los movimientos aleatorios del enemigo
 def movimientos_enemigo():
     global movimientos_pokemon_enemigo, movimiento_1_enemigo, movimiento_2_enemigo, movimiento_3_enemigo, movimiento_4_enemigo
-
     # Se dan los movimientos de manera aleatoria al pokemon enemigo
     movimiento_1_enemigo = movimientos(numero_aleatorio(1,30))
     nombre = movimiento_1_enemigo["nombre"]
@@ -1194,6 +1325,7 @@ def combate_usuario(pokemon_atacante, pokemon_defensor):
             seleccion_movimientos_usuario_batalla()
             mostrar_datos_en_pantalla()
             # Ataque de parte del usuario
+            print("\n\x1b[1;32m" + "Turno del Usuario: " + "\x1b[1;0m")
             efectividad_usuario = probabilidad_de_acertar_el_golpe(ataque_a_usar["tipo_de_movimiento"], pokemon_defensor["tipo"])
 
             if efectividad_usuario == 1:
@@ -1204,13 +1336,12 @@ def combate_usuario(pokemon_atacante, pokemon_defensor):
                     b= 1
 
                 # Golpe crítico
-                daño_usuario = (0.01 * b * efectividad_usuario * numero_aleatorio(85, 100)) * ((((0.2) * pokemon_atacante["nivel"] + 1) * pokemon_inicial_global["ataque"] * ataque_a_usar["potencia"]) / (25 * pokemon_defensor["defensa"]) + 2)
+                daño_usuario = (0.01 * b * efectividad_usuario * numero_aleatorio(85, 100)) * ((((0.2) * pokemon_atacante["nivel"] + 1) * pokemon_inicial_global["dato_de_combate_ataque"] * ataque_a_usar["potencia"]) / (25 * pokemon_defensor["dato_de_combate_defensa"]) + 2)
                 if golpe_critico() == 1:
                     # Dar la ventaja del golpe crítico
                     daño_usuario = daño_usuario * 1.5
                     print("Usted ha recibido la ventaja de un golpe crítico")
 
-                print("\n\x1b[1;32m" + "Turno del Usuario: " + "\x1b[1;0m")
                 # Tiempo para simular realidad en el ataque
                 time.sleep(3)
                 print(f"El usuario hizo un total de: {daño_usuario} de daño\n")
@@ -1224,7 +1355,6 @@ def combate_usuario(pokemon_atacante, pokemon_defensor):
 
             #El pokemon ha fallado el ataque
             else:
-                print("\n\x1b[1;32m" + "Turno del Usuario: " + "\x1b[1;0m")
                 # Tiempo para simular realidad en el ataque
                 time.sleep(3)
                 print("\x1b[1;31m" + "Ataque fallido"+ "\x1b[1;0m")
@@ -1235,18 +1365,18 @@ def combate_usuario(pokemon_atacante, pokemon_defensor):
 
         elif opcion_menu_ataque == "b":
             # Calcular los datos para huir
-            f = ((pokemon_inicial["velocidad"] * 128) / pokemon_enemigo["velocidad"] + 30) % 256
+            f = ((pokemon_inicial["dato_de_combate_velocidad"] * 128) / pokemon_enemigo["dato_de_combate_velocidad"] + 30) % 256
             numero = numero_aleatorio(0, 255)
             opcion_menu_ataque = True
 
             if numero < f:
-                print("Usted logró huir")
+                print("\n\x1b[1;32m"+"Usted logró huir"+"\n\x1b[1;0m")
                 time.sleep(1.5)
                 menu()
             else:
                 print("\x1b[1;31m" +"No es posible la huida" +"\x1b[1;0m")
                 time.sleep(1.5)
-                combate_de_pokemones()
+                combate_usuario(pokemon_inicial, pokemon_enemigo)
             opcion_menu_ataque = True
 
 # combate de parte del enemigo
@@ -1263,7 +1393,7 @@ def combate_enemigo(pokemon_atacante, pokemon_defensor):
         else:
             b= 1
         # Golpe crítico
-        daño_enemigo = (0.01 * b * probabilidad_enemigo * numero_aleatorio(85, 100)) * (((0.2 * pokemon_atacante["nivel"] + 1) * pokemon_atacante["ataque"] * potencia_ataque) / (25 * pokemon_defensor["defensa"]) + 2)
+        daño_enemigo = (0.01 * b * probabilidad_enemigo * numero_aleatorio(85, 100)) * (((0.2 * pokemon_atacante["nivel"] + 1) * pokemon_atacante["dato_de_combate_ataque"] * potencia_ataque) / (25 * pokemon_defensor["dato_de_combate_defensa"]) + 2)
         if golpe_critico() == 1:
             # Dar la ventaja del golpe crítico
             daño_enemigo = daño_enemigo * 1.5
@@ -1271,7 +1401,7 @@ def combate_enemigo(pokemon_atacante, pokemon_defensor):
         # Tiempo para simular realidad en el ataque
         time.sleep(3)
         print("El golpe utilizado por el enemigo fue: ")
-        print(movimientos_enemigo())
+        print(f"Nombre: {nombre_ataque}, Tipo de movimiento: {tipo_de_moviento}, Potencia de ataque: {potencia_ataque}")
         print(f"El enemigo hizo un total de: {daño_enemigo} de daño\n")
         pokemon_inicial["puntos_de_vida"] = pokemon_inicial["puntos_de_vida"] - daño_enemigo
         if pokemon_inicial["puntos_de_vida"] <= 0:
