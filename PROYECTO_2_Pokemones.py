@@ -5,9 +5,8 @@ import os, random, time
 from numpy import random
 # Variables globales
 
-
 # Características iniciales del pokémon
-movimientos_pokemon_usuario = [""  for i in range(0,2)]
+movimientos_pokemon_usuario = ["" for i in range(0, 2)]
 movimientos_pokemon_enemigo = []
 ataque_a_usar = []
 pokemon_inicial = {
@@ -1318,6 +1317,7 @@ def experiencia():
     experiencia_ganada = (pokemon_enemigo["experiencia_base"] * pokemon_enemigo["nivel"]) / 7
     pokemon_inicial["experiencia_base"] += experiencia_ganada
     experiencia_necesaria = 0.8 * pow(pokemon_inicial["nivel"], 3)
+    print(f"Ha ganado un total de {experiencia_ganada} experiencia")
 
     #Entra al comparador los datos para verificar si el usuario puede subir de nivel
     if pokemon_inicial["experiencia_base"] >= experiencia_necesaria:
@@ -1421,6 +1421,9 @@ def combate_usuario(pokemon_atacante, pokemon_defensor):
                 if pokemon_enemigo["puntos_de_vida"] <= 0:
                     print("\n\x1b[1;32m" + "FELICIDADES, USTED HA GANADO" + "\n\x1b[1;0m")
                     experiencia()
+                    print("Usted será llevado de regreso al menú principal")
+                    time.sleep(1.5)
+                    menu()
                 else:
                     mostrar_datos_en_pantalla()
                     print("\n\x1b[1;32m" + "Turno del Pokémon enemigo: " + "\x1b[1;0m")
@@ -1604,7 +1607,7 @@ def estadísticas():
 
 # Bloque de codigo inicio del juego
 def seleccion_pokemon():
-    global pokemon_inicial, pokemon_inicial_global
+    global pokemon_inicial, pokemon_inicial_global, pokemon_Bulbasaur, pokemon_Charmander, pokemon_Squirtle
     opcionPokemon = ""
     os.system("cls")  # Función para limpiar la pantalla y mostrar el menú
     print("\n\x1b[1;34m" + "\t\t\t\t\tMENÚ  DE SELECCIÓN DE POKÉMON INICIAL: ")
