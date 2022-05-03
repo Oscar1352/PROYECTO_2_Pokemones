@@ -1,0 +1,52 @@
+
+dpython:S1192Ú"KDefine a constant instead of duplicating this literal "\x1b[1;32m" 5 times.(Ãüìç
+epython:S1192ç
+"MDefine a constant instead of duplicating this literal "\n\x1b[1;31m" 3 times.(ëûæ
+epython:S1192Ú"LDefine a constant instead of duplicating this literal "ElÃ©ctrico" 24 times.(Ñğ¬œ
+ipython:S1192ï"KDefine a constant instead of duplicating this literal "\x1b[1;31m" 7 times.(ùÙ×‚ÿÿÿÿÿ
+cpython:S1192î"KDefine a constant instead of duplicating this literal "\x1b[1;0m" 22 times.(½ŠÏ
+wpython:S1192ï
+"YDefine a constant instead of duplicating this literal "Selecciona una opciÃ³n: " 3 times.(™ßƒ®øÿÿÿÿ
+dpython:S1192ç
+"LDefine a constant instead of duplicating this literal "\n\x1b[1;0m" 8 times.(ëûæ
+‰python:S1192Ú"pDefine a constant instead of duplicating this literal "\t\t\t\t\t\tUsted ha escogido correctamente a: " 3 times.(Ãüìç
+”python:S1192ó
+"vDefine a constant instead of duplicating this literal "\nInserta la variable del menÃº que desees ingresar: " 4 times.(ÊğÅ¡ÿÿÿÿÿ
+kpython:S1192ø
+"MDefine a constant instead of duplicating this literal "\n\x1b[1;32m" 5 times.(¶æÌùÿÿÿÿ
+kpython:S1192î
+"MDefine a constant instead of duplicating this literal "\n\x1b[1;34m" 5 times.(–û‡ìşÿÿÿÿ
+dpython:S1192ş"KDefine a constant instead of duplicating this literal "PsÃ­quico" 24 times.(Í¿éÛ
+Bpython:S1481	"%Remove the unused local variable "i".(´©âıÿÿÿÿ
+wpython:S117É"_Rename this local variable "borrarPantalla" to match the regular expression ^[_a-z][a-z0-9_]*$.(Ê ª
+rpython:S1542È"TRename function "borrarPantalla" to match the regular expression ^[a-z_][a-z0-9_]*$.(¹âíûÿÿÿÿ
+Kpython:S1481É"2Remove the unused local variable "borrarPantalla".(Ê ª
+rpython:S3776Í"TRefactor this function to reduce its Cognitive Complexity from 30 to the 15 allowed.(„Û–Èşÿÿÿÿ
+rpython:S3776”"TRefactor this function to reduce its Cognitive Complexity from 20 to the 15 allowed.(ÉßÿÁıÿÿÿÿ
+€python:S1542ò"gRename function "modificar_estadÃ­sticas_iniciales" to match the regular expression ^[a-z_][a-z0-9_]*$.(Õú›Ú
+Wpython:S905µ":Remove or refactor this statement; it has no side effects.(ì³îŠşÿÿÿÿ
+7python:S125´"Remove this commented out code.(„ĞÅÁ
+npython:S3776¹"URefactor this function to reduce its Cognitive Complexity from 200 to the 15 allowed.(î¨Ç÷
+‚python:S1871±	"dEither merge this branch with the identical one on line "1199" or change one of the implementations.(šßÛ›ÿÿÿÿÿ
+‚python:S1871³	"dEither merge this branch with the identical one on line "1199" or change one of the implementations.(šßÛ›ÿÿÿÿÿ
+‚python:S1871µ	"dEither merge this branch with the identical one on line "1199" or change one of the implementations.(šßÛ›ÿÿÿÿÿ
+‚python:S1871·	"dEither merge this branch with the identical one on line "1199" or change one of the implementations.(šßÛ›ÿÿÿÿÿ
+‚python:S1871¹	"dEither merge this branch with the identical one on line "1199" or change one of the implementations.(šßÛ›ÿÿÿÿÿ
+‚python:S1871»	"dEither merge this branch with the identical one on line "1199" or change one of the implementations.(šßÛ›ÿÿÿÿÿ
+‚python:S1871½	"dEither merge this branch with the identical one on line "1199" or change one of the implementations.(šßÛ›ÿÿÿÿÿ
+‚python:S1871¿	"dEither merge this branch with the identical one on line "1199" or change one of the implementations.(šßÛ›ÿÿÿÿÿ
+‚python:S1871Á	"dEither merge this branch with the identical one on line "1199" or change one of the implementations.(šßÛ›ÿÿÿÿÿ
+rpython:S3776²
+"TRefactor this function to reduce its Cognitive Complexity from 40 to the 15 allowed.(œ½ÈŸùÿÿÿÿ
+}python:S1871Û
+"dEither merge this branch with the identical one on line "1365" or change one of the implementations.(´•Éù
+}python:S1871á
+"dEither merge this branch with the identical one on line "1365" or change one of the implementations.(´•Éù
+{python:S117ƒ"^Rename this local variable "daÃ±o_usuario" to match the regular expression ^[_a-z][a-z0-9_]*$.(Â‚¾Ïûÿÿÿÿ
+lpython:S3776ê
+"TRefactor this function to reduce its Cognitive Complexity from 26 to the 15 allowed.(Ï¬¾
+{python:S117À"^Rename this local variable "daÃ±o_enemigo" to match the regular expression ^[_a-z][a-z0-9_]*$.(ïÌÈ¹ıÿÿÿÿ
+xpython:S117š"[Rename this local variable "opcionMenu" to match the regular expression ^[_a-z][a-z0-9_]*$.(ÈÀ½¥ûÿÿÿÿ
+lpython:S1542«"SRename function "estadÃ­sticas" to match the regular expression ^[a-z_][a-z0-9_]*$.(´½Øí
+vpython:S117Ë"^Rename this local variable "opcionPokemon" to match the regular expression ^[_a-z][a-z0-9_]*$.(¦î‚°
+xpython:S117ô"[Rename this local variable "opcionMenu" to match the regular expression ^[_a-z][a-z0-9_]*$.(ÚåîÀÿÿÿÿÿ
